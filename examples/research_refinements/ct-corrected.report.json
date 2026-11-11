@@ -1,0 +1,949 @@
+{
+  "definition_version": "1.0.0",
+  "run": {
+    "id": "0147d208-46da-4b71-b767-e7e437273522",
+    "created": "2026-11-11T20:00:36.851082+00:00",
+    "status": "complete",
+    "config": {
+      "active_channels": null,
+      "arrays": [
+        {
+          "angle_deg": 0.0,
+          "elements": 32,
+          "name": "Array 1",
+          "pitch_m": 0.0005,
+          "x_m": 0.0,
+          "z_m": 0.004
+        }
+      ],
+      "bandpass_hz": null,
+      "bubble": {
+        "drive_pa": 20000.0,
+        "model": "lipid",
+        "radius_m": 2e-06,
+        "ringdown_cycles": 4,
+        "rtol": 1e-08,
+        "viscosity_pa_s": 0.001
+      },
+      "capture_t0_s": 0.0,
+      "channels": 32,
+      "coupling": {
+        "effective_length_m": 0.001,
+        "mode": "volume_flow_2d",
+        "passband_hz": 350000.0
+      },
+      "ct": {
+        "asset_id": "0d00e67ade38c153b78915d992f9917da13899ebac7683cc63c2a99be6ea0b8b",
+        "bone_density_kg_m3": 1900.0,
+        "bone_hu": 1000.0,
+        "bone_speed_m_s": 2800.0,
+        "bone_threshold_hu": 300.0,
+        "columns": 160,
+        "contrast": true,
+        "crop": [
+          0,
+          160,
+          0,
+          160
+        ],
+        "origin_x_m": -0.032,
+        "origin_z_m": 0.0,
+        "rows": 160,
+        "spacing_x_m": 0.0004,
+        "spacing_z_m": 0.0004
+      },
+      "duration_s": 1.2e-05,
+      "emission_kind": "pulse",
+      "frequency_hz": 250000.0,
+      "gate_end_s": 7.2e-05,
+      "gate_start_s": 0.0,
+      "gate_stride": 1,
+      "grid_n": 33,
+      "grid_x_max_m": 0.012,
+      "grid_x_min_m": -0.012,
+      "grid_z_max_m": 0.06,
+      "grid_z_min_m": 0.02,
+      "pitch_m": 0.0003,
+      "processing": {
+        "detrend_linear": false,
+        "filter_kind": "bandpass",
+        "high_hz": 600000.0,
+        "low_hz": 80000.0,
+        "notch_hz": null,
+        "notch_q": 30.0,
+        "order": 4,
+        "remove_dc": true
+      },
+      "samples": 512,
+      "sampling_hz": 5000000.0,
+      "schema_version": "1.0",
+      "seed": 42,
+      "simulation": {
+        "backend": "jwave",
+        "cfl": 0.3,
+        "density_kg_m3": 1000.0,
+        "pml_cells": 20,
+        "spacing_m": 0.0005
+      },
+      "snr_db": 30.0,
+      "sound_speed_m_s": 1500.0,
+      "sources": [
+        {
+          "amplitude": 1.0,
+          "emission_s": 8e-06,
+          "x_m": 0.0,
+          "z_m": 0.045
+        }
+      ],
+      "spreading": false
+    },
+    "parent": "5d848d51-7909-4d44-acf4-6c20a3d3a7d9",
+    "metrics": {
+      "diagnostics": {
+        "active_channels": 32,
+        "gate_actual_s": [
+          0.0,
+          7.2e-05
+        ],
+        "gate_samples": 361,
+        "method_status": "reference/experimental",
+        "pixel_batch_size": 64,
+        "receive_propagation": {
+          "equation": "tau=integral_straight_path ds/c_CT(x,z)",
+          "hu_sha256": "88088781a96f502be44bfb89ad32f918de60127dacadfdc3ab6e2c2714ad919c",
+          "id": "pam.receive.ct_slowness",
+          "limitations": "Fixed straight rays; no refraction, diffraction, amplitude correction, shear or multipath. Experimental.",
+          "medium_asset_id": "0d00e67ade38c153b78915d992f9917da13899ebac7683cc63c2a99be6ea0b8b",
+          "model": "ct_slowness",
+          "ray_step_m": 0.00025,
+          "version": "1.0.0"
+        },
+        "scratch_target_bytes": 33554432
+      },
+      "map_bytes": 34848,
+      "methods": {
+        "atp": {
+          "axial_fwhm_m": 0.0183720499049375,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1.0,
+          "lateral_fwhm_m": 0.013310711581287892,
+          "localization_error_m": 0.0025000000000000022,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": 0.0,
+          "peak_z_m": 0.0475,
+          "truth_nearest_peak_errors_m": [
+            0.0025000000000000022
+          ]
+        },
+        "cf": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1.0,
+          "lateral_fwhm_m": 0.010345668024076611,
+          "localization_error_m": 0.0037500000000000033,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": 0.0,
+          "peak_z_m": 0.041249999999999995,
+          "truth_nearest_peak_errors_m": [
+            0.0037500000000000033
+          ]
+        },
+        "das": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1.0,
+          "lateral_fwhm_m": 0.011682448961694023,
+          "localization_error_m": 0.0037500000000000033,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": 0.0,
+          "peak_z_m": 0.041249999999999995,
+          "truth_nearest_peak_errors_m": [
+            0.0037500000000000033
+          ]
+        },
+        "tea": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1.0,
+          "lateral_fwhm_m": 0.013723824654034074,
+          "localization_error_m": 0.0037499999999999964,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": 0.0,
+          "peak_z_m": 0.048749999999999995,
+          "truth_nearest_peak_errors_m": [
+            0.0037499999999999964
+          ]
+        }
+      },
+      "rf_bytes": 131072,
+      "rf_peak": 3.8072246367398356e-06,
+      "rf_rms": 5.810083799732232e-07,
+      "runtime_ms": 417.18330000003334,
+      "runtime_scope": "selected reconstruction methods, shared wall time"
+    },
+    "provenance": {
+      "backend": "numpy-cpu",
+      "config_sha256": "920b2ec29578657ada4bbe8d250a19bad25cf445cbc4f2e4973b58445dc8a5e8",
+      "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+      "engine_source_sha256": "cbd972193b64803f7c993862f965bae9ee76c67196991fe206313aefde184f9b",
+      "engine_version": "0.10.0",
+      "frontend_dependencies": {
+        "lucide-react": "0.548.0",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "zod": "4.6.7"
+      },
+      "git_commit": "uncommitted",
+      "node": "24.22.2",
+      "os": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "fastapi": "0.162.4",
+        "h5py": "3.15.1",
+        "matplotlib": "3.10.7",
+        "numpy": "2.3.4",
+        "pydantic": "2.12.3",
+        "pydicom": "3.0.2",
+        "python-gdcm": "3.2.6",
+        "scipy": "1.16.3"
+      },
+      "precision": "float64",
+      "python": "3.13.12",
+      "reconstruction_options": {
+        "atp_emission_s": 2.2342857142857143e-05,
+        "atp_mode": "emission",
+        "atp_plane_z_m": 0.0,
+        "atp_timing_known": true,
+        "atp_window_s": 1.2e-05,
+        "cf_exponent": 1.0,
+        "methods": [
+          "das",
+          "tea",
+          "cf",
+          "atp"
+        ],
+        "ray_step_m": 0.00025,
+        "rcb_loading": 0.001,
+        "rcb_radius": 0.1,
+        "rcb_subarray": 16,
+        "receive_model": "ct_slowness"
+      },
+      "simulation": {
+        "adapter_version": "1.0.0",
+        "bubble": {
+          "adapter_version": "1.0.0",
+          "atol": 1e-10,
+          "compute": "jax-cpu",
+          "converged": true,
+          "devices": [
+            "TFRT_CPU_0"
+          ],
+          "drive": "Hann-windowed sine; centre equals source emission_s",
+          "emission_999_energy_upper_hz": 606523.9551478084,
+          "energy_above_acquisition_nyquist_fraction": 2.1610797900239774e-05,
+          "equation": "Keller-Miksis",
+          "final_emission_relative_peak": 2.103334740219057e-06,
+          "id": "jbubble",
+          "license": "MIT",
+          "max_radius_ratio": 1.0134712223573175,
+          "max_steps": 100000,
+          "max_wall_mach": 2.9770148929059705e-05,
+          "min_radius_ratio": 0.9868741492583004,
+          "os": "Windows-11-10.0.26200",
+          "oversampling": 7,
+          "package": "jbubble",
+          "packages": {
+            "diffrax": "0.7.2",
+            "equinox": "0.13.4",
+            "jax": "0.8.2",
+            "jaxlib": "0.8.2",
+            "jbubble": "0.2.0",
+            "numpy": "2.3.4",
+            "scipy": "1.16.3"
+          },
+          "parameters": {
+            "P_amb": 101325.0,
+            "R0": 2e-06,
+            "c_L": 1500.0,
+            "cycle_num": 3.0,
+            "freq": 250000.0,
+            "gamma": 1.095,
+            "mu": 0.001,
+            "pressure": 20000.0,
+            "rho_L": 1000.0
+          },
+          "peak_emission_pa_at_reference": 0.29814605482827117,
+          "precision": "float64",
+          "preset": "lipid",
+          "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+          "python": "3.13.12",
+          "reference_distance_m": 0.001,
+          "rtol": 1e-08,
+          "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+          "runtime": "isolated-native-cpu",
+          "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+          "runtime_ms": 2305.9373999931267,
+          "shell_parameters": {
+            "R_buckle_ratio": 0.98058,
+            "chi": 0.5,
+            "kappa_s": 7.5e-09,
+            "sigma_rupture": 0.072,
+            "smoothing": 0.01
+          },
+          "solver": "diffrax.Dopri5",
+          "source": "https://github.com/imperial-nsb/jbubble",
+          "source_sampling_hz": 35000000.0,
+          "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+          "validation": "experimental",
+          "version": "0.2.0"
+        },
+        "compute": "jax-cpu",
+        "coupling": {
+          "assumptions": "one-way equivalent line source; no acoustic feedback or 3D pressure equivalence",
+          "effective_length_m": 0.001,
+          "filter": "causal 80 dB Kaiser FIR, full convolution; group delay retained",
+          "filter_taps": 1005,
+          "injection_equation": "jwave Sources value=rho*c*Q_3D/(2*L*dx); summed density rate=rho*Q_3D/(L*dx^2)",
+          "mode": "volume_flow_2d",
+          "normalization_pa": 20000.0,
+          "passband_hz": 350000.0,
+          "q_equation": "Q_3D=4*pi*R^2*Rdot [m^3/s]; Q_2D=Q_3D/L [m^2/s]",
+          "source_delay_s": 1.4342857142857143e-05,
+          "source_time_range_s": [
+            -6e-06,
+            5.068571428571428e-05
+          ],
+          "stopband_hz": 525000.0,
+          "waveform_sha256": "3c2acdaee83239eeb7dec1db02e5c0fbea97de50ff355c8e1aad9155c2e0ec10"
+        },
+        "ct_source": {
+          "coordinate_convention": "x=column,z=row",
+          "source": {
+            "citation": "Original analytical geometry; no patient data",
+            "kind": "synthetic",
+            "label": "Synthetic curved-skull HU phantom"
+          },
+          "spacing_x_m": 0.0004,
+          "spacing_z_m": 0.0004
+        },
+        "id": "jbubble-jwave",
+        "precision": "float64",
+        "propagation": {
+          "adapter_version": "1.0.0",
+          "attenuation": "none",
+          "boundary": "absorbing PML; no rigid or reflecting boundary",
+          "compute": "jax-cpu",
+          "ct_model": {
+            "actual_medium_cfl": 0.2800000011920929,
+            "contrast": true,
+            "density_range_kg_m3": [
+              1000.0,
+              1900.0
+            ],
+            "extent_m": [
+              -0.032,
+              0.0316,
+              0.0,
+              0.0636
+            ],
+            "id": "pam.ct.fluid_hu",
+            "model": "thresholded linear HU bone fraction, fluid c/rho; air/soft tissue replaced by host fluid; zero absorption; no shear modes",
+            "speed_range_m_s": [
+              1500.0,
+              2800.0
+            ],
+            "status": "experimental",
+            "version": "0.1.0"
+          },
+          "devices": [
+            "TFRT_CPU_0"
+          ],
+          "doi": "10.1016/j.softx.2023.101338",
+          "id": "jwave",
+          "license": "LGPL-3.0-only",
+          "live_geometry": {
+            "extent_m": [
+              -0.048,
+              0.05,
+              -0.016,
+              0.082
+            ],
+            "observer": "ordered actual solver samples; no effect on numerical state",
+            "pressure_shape": [
+              50,
+              50
+            ],
+            "spatial_filter": "Fourier low-pass at 0.45/stride cycles per original sample, before preview decimation"
+          },
+          "os": "Windows-11-10.0.26200",
+          "package": "jwave",
+          "packages": {
+            "equinox": "0.11.12",
+            "jax": "0.4.38",
+            "jaxdf": "0.2.8",
+            "jaxlib": "0.4.38",
+            "jwave": "0.2.1",
+            "numpy": "2.3.4",
+            "scipy": "1.18.1"
+          },
+          "plan": {
+            "actual_cfl": 0.27999999999999997,
+            "dimension": "2D x-z; line-source spreading, not a 3D point emitter",
+            "dt_s": 5e-08,
+            "mapping": "bilinear source injection and receiver interpolation; channel order preserved",
+            "origin_xz_m": [
+              -0.048,
+              -0.016
+            ],
+            "pml_cells": 20,
+            "points_per_shortest_wavelength": 5.714285714285714,
+            "sensor_grid_xz": [
+              [
+                80.5,
+                40.0
+              ],
+              [
+                81.5,
+                40.0
+              ],
+              [
+                82.5,
+                40.0
+              ],
+              [
+                83.5,
+                40.0
+              ],
+              [
+                84.5,
+                40.0
+              ],
+              [
+                85.5,
+                40.0
+              ],
+              [
+                86.5,
+                40.0
+              ],
+              [
+                87.49999999999999,
+                40.0
+              ],
+              [
+                88.5,
+                40.0
+              ],
+              [
+                89.5,
+                40.0
+              ],
+              [
+                90.5,
+                40.0
+              ],
+              [
+                91.5,
+                40.0
+              ],
+              [
+                92.5,
+                40.0
+              ],
+              [
+                93.5,
+                40.0
+              ],
+              [
+                94.5,
+                40.0
+              ],
+              [
+                95.5,
+                40.0
+              ],
+              [
+                96.5,
+                40.0
+              ],
+              [
+                97.5,
+                40.0
+              ],
+              [
+                98.5,
+                40.0
+              ],
+              [
+                99.5,
+                40.0
+              ],
+              [
+                100.5,
+                40.0
+              ],
+              [
+                101.5,
+                40.0
+              ],
+              [
+                102.5,
+                40.0
+              ],
+              [
+                103.5,
+                40.0
+              ],
+              [
+                104.50000000000001,
+                40.0
+              ],
+              [
+                105.5,
+                40.0
+              ],
+              [
+                106.5,
+                40.0
+              ],
+              [
+                107.5,
+                40.0
+              ],
+              [
+                108.5,
+                40.0
+              ],
+              [
+                109.5,
+                40.0
+              ],
+              [
+                110.5,
+                40.0
+              ],
+              [
+                111.5,
+                40.0
+              ]
+            ],
+            "shape": [
+              200,
+              200
+            ],
+            "source_band_upper_hz": 525000.0,
+            "source_grid_xz": [
+              [
+                96.0,
+                122.0
+              ]
+            ],
+            "spacing_m": 0.0005,
+            "start_s": 0.0,
+            "steps": 2094,
+            "substeps": 4,
+            "time_convention": "source evaluated at step midpoint; pressure recorded after step at start+(n+1)*dt; resampled to capture_t0+n/fs"
+          },
+          "precision": "float64",
+          "python": "3.12.12",
+          "runner_sha256": "279cfe56c87fdc2adffc497ed0f56ef371d62913a8c21ff066e0daa5ad3df7e6",
+          "runtime": "isolated-native-cpu",
+          "runtime_lock_sha256": "2e3825c31443a39e2474ef3517d3b3ef74cfa7981fce191cbcffc8086dae4bbd",
+          "runtime_ms": 7496.543499997642,
+          "signal_unit": "arbitrary_unit",
+          "source": "https://github.com/ucl-bug/jwave/tree/v0.2.1",
+          "validation": "experimental",
+          "version": "0.2.1"
+        },
+        "rf_unit": "2D model pressure divided by drive pressure"
+      }
+    },
+    "error": null,
+    "methods": {
+      "atp": {
+        "method_id": "pam.atp.short_pulse",
+        "method_version": "1.0.0",
+        "status": "experimental",
+        "quantity": "timing_gated_coherent_exposure",
+        "unit": "a.u.^2 s",
+        "definition": "integral over calibrated emission-time window of (mean_m s_m(u+distance_m/c))^2 du; optional axial plane-wave excitation time",
+        "reference": "Davies et al. (2021), DOI 10.1109/TUFFC.2020.3026165; source-emitter/plane-wave variants"
+      },
+      "cf": {
+        "method_id": "pam.cf.weighted_das",
+        "method_version": "1.0.0",
+        "status": "experimental",
+        "quantity": "coherence_weighted_peak_power",
+        "unit": "a.u.^2",
+        "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+        "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+      },
+      "das": {
+        "method_id": "pam.das.passive",
+        "method_version": "1.0.0",
+        "status": "reference-only",
+        "quantity": "peak_coherent_power",
+        "unit": "a.u.^2",
+        "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+      },
+      "tea": {
+        "method_id": "pam.tea.time_exposure",
+        "method_version": "1.0.0",
+        "status": "reference-only",
+        "quantity": "coherent_exposure",
+        "unit": "a.u.^2 s",
+        "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+      }
+    },
+    "warnings": [
+      "Experimental one-way jbubble volume-flow \u2192 j-Wave 2D coupling. An explicit out-of-plane equivalent line length defines the 3D-to-2D conversion. FIR bandwidth filtering, CT-derived fluid medium and no acoustic feedback. RF is 2D model pressure divided by drive pressure; no 3D pressure equivalence or calibrated measurement.",
+      "Receive layout uses point elements with actual array positions and angles; finite element width, directivity and transmit steering are not modelled.",
+      "Experimental CT-derived 2D fluid c/rho model with thresholded HU mixture. Air/soft tissue are replaced by host fluid. No absorption or elastic/shear modes. Receive-delay model is recorded separately; optional CT slowness uses fixed rays without refraction. HU calibration is user-defined, not a patient-specific acoustic measurement."
+    ]
+  },
+  "benchmark": {
+    "id": "pam.benchmark.map",
+    "version": "1.1.0",
+    "run_id": "0147d208-46da-4b71-b767-e7e437273522",
+    "created": "2026-11-11T20:00:36.851082+00:00",
+    "settings": {
+      "roi_radius_m": 0.002,
+      "histogram_bins": 100
+    },
+    "methods": {
+      "atp": {
+        "localization_error_m": 0.0025000000000000022,
+        "lateral_fwhm_m": 0.013310711581287892,
+        "axial_fwhm_m": 0.0183720499049375,
+        "roi_concentration": 0.05837888152259634,
+        "background_peak_db": 0.0,
+        "contrast_db": 6.447237007394863,
+        "cnr": 2.6796496509556595,
+        "gcnr": 0.9832402234636871,
+        "normalized_entropy": 0.8908827843982338,
+        "half_power_area_m2": 0.00019874999999999998,
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.0475,
+        "truth_nearest_peak_errors_m": [
+          0.0025000000000000022
+        ],
+        "background_peak_ratio": 1.0,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 15,
+        "background_pixels": 1074,
+        "roi_clipped": false,
+        "half_power_boundary": false,
+        "warnings": [
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "9012521bcc35fb9dbd12097b7728f730b3a07b89986c0879b4aa92d6eafadd3c"
+      },
+      "cf": {
+        "localization_error_m": 0.0037500000000000033,
+        "lateral_fwhm_m": 0.010345668024076611,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.03486138963956056,
+        "background_peak_db": 0.0,
+        "contrast_db": 3.9950417785384147,
+        "cnr": 1.5657727516932123,
+        "gcnr": 0.8975791433891993,
+        "normalized_entropy": 0.9224156713463771,
+        "half_power_area_m2": 0.0003909375,
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.041249999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037500000000000033
+        ],
+        "background_peak_ratio": 1.0,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 15,
+        "background_pixels": 1074,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "e443e34e498a7d5ad3e08fc5315f06c0bb78d67e4dd6e37f6bb5fc63ae73f708"
+      },
+      "das": {
+        "localization_error_m": 0.0037500000000000033,
+        "lateral_fwhm_m": 0.011682448961694023,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.02940788335117837,
+        "background_peak_db": 0.0,
+        "contrast_db": 3.214089989136342,
+        "cnr": 1.477213780140604,
+        "gcnr": 0.904096834264432,
+        "normalized_entropy": 0.9546435335083824,
+        "half_power_area_m2": 0.00045281250000000004,
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.041249999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037500000000000033
+        ],
+        "background_peak_ratio": 1.0,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 15,
+        "background_pixels": 1074,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "2090aa4b27e03d68e9031c31cc1667ef68eec836775568b924fce5c38bf5d3d5"
+      },
+      "tea": {
+        "localization_error_m": 0.0037499999999999964,
+        "lateral_fwhm_m": 0.013723824654034074,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.02985470051100712,
+        "background_peak_db": 0.0,
+        "contrast_db": 3.2807152615616673,
+        "cnr": 1.5237348283303926,
+        "gcnr": 0.9273743016759777,
+        "normalized_entropy": 0.9553117486150123,
+        "half_power_area_m2": 0.00045000000000000004,
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.048749999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037499999999999964
+        ],
+        "background_peak_ratio": 1.0,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 15,
+        "background_pixels": 1074,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "ccd47b4011f864cf71f7735a839520f4c2fd2a9228eb58e145bc71ba38d0d9bf"
+      }
+    },
+    "fingerprints": {
+      "raw_rf": "2354223824247f101c15fa274ba604bc852369b7e84a43d168ab7374702a059f",
+      "capture": "bb4b9eb54c63cf45a5dc9229145c1d47f63734d86a42e739c9e9cbfe6d312b78",
+      "analysis": "6b6297babd172a5ac41098231b0cf7f66c28cfcb9126dfac85ac4505821754c2",
+      "engine": "cbd972193b64803f7c993862f965bae9ee76c67196991fe206313aefde184f9b",
+      "method_options": "{\"atp_emission_s\":2.2342857142857143e-05,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":true,\"atp_window_s\":1.2e-05,\"cf_exponent\":1.0,\"methods\":[\"atp\",\"cf\",\"das\",\"tea\"],\"ray_step_m\":0.00025,\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16,\"receive_model\":\"ct_slowness\"}",
+      "implementation": "5522c06d53d80fa92cbec292ac01630ee6e7da61cc48f4a82e4ebd8bb6762b8d"
+    },
+    "context": {
+      "capture": {
+        "schema_version": "1.0",
+        "simulation": {
+          "backend": "jwave",
+          "spacing_m": 0.0005,
+          "cfl": 0.3,
+          "pml_cells": 20,
+          "density_kg_m3": 1000.0
+        },
+        "bubble": {
+          "model": "lipid",
+          "radius_m": 2e-06,
+          "drive_pa": 20000.0,
+          "viscosity_pa_s": 0.001,
+          "ringdown_cycles": 4,
+          "rtol": 1e-08
+        },
+        "coupling": {
+          "mode": "volume_flow_2d",
+          "effective_length_m": 0.001,
+          "passband_hz": 350000.0
+        },
+        "arrays": [
+          {
+            "name": "Array 1",
+            "elements": 32,
+            "pitch_m": 0.0005,
+            "x_m": 0.0,
+            "z_m": 0.004,
+            "angle_deg": 0.0
+          }
+        ],
+        "ct": {
+          "asset_id": "0d00e67ade38c153b78915d992f9917da13899ebac7683cc63c2a99be6ea0b8b",
+          "rows": 160,
+          "columns": 160,
+          "spacing_x_m": 0.0004,
+          "spacing_z_m": 0.0004,
+          "crop": [
+            0,
+            160,
+            0,
+            160
+          ],
+          "origin_x_m": -0.032,
+          "origin_z_m": 0.0,
+          "contrast": true,
+          "bone_threshold_hu": 300.0,
+          "bone_hu": 1000.0,
+          "bone_speed_m_s": 2800.0,
+          "bone_density_kg_m3": 1900.0
+        },
+        "sound_speed_m_s": 1500.0,
+        "channels": 32,
+        "pitch_m": 0.0003,
+        "sampling_hz": 5000000.0,
+        "samples": 512,
+        "capture_t0_s": 0.0,
+        "frequency_hz": 250000.0,
+        "duration_s": 1.2e-05,
+        "emission_kind": "pulse",
+        "bandpass_hz": null,
+        "spreading": false,
+        "snr_db": 30.0,
+        "seed": 42,
+        "sources": [
+          {
+            "x_m": 0.0,
+            "z_m": 0.045,
+            "emission_s": 8e-06,
+            "amplitude": 1.0
+          }
+        ]
+      },
+      "analysis": {
+        "active_channels": null,
+        "gate_end_s": 7.2e-05,
+        "gate_start_s": 0.0,
+        "gate_stride": 1,
+        "grid_n": 33,
+        "grid_x_max_m": 0.012,
+        "grid_x_min_m": -0.012,
+        "grid_z_max_m": 0.06,
+        "grid_z_min_m": 0.02,
+        "processing": {
+          "remove_dc": true,
+          "detrend_linear": false,
+          "filter_kind": "bandpass",
+          "low_hz": 80000.0,
+          "high_hz": 600000.0,
+          "order": 4,
+          "notch_hz": null,
+          "notch_q": 30.0
+        }
+      },
+      "method_options": {
+        "atp_emission_s": 2.2342857142857143e-05,
+        "atp_mode": "emission",
+        "atp_plane_z_m": 0.0,
+        "atp_timing_known": true,
+        "atp_window_s": 1.2e-05,
+        "cf_exponent": 1.0,
+        "methods": [
+          "atp",
+          "cf",
+          "das",
+          "tea"
+        ],
+        "ray_step_m": 0.00025,
+        "rcb_loading": 0.001,
+        "rcb_radius": 0.1,
+        "rcb_subarray": 16,
+        "receive_model": "ct_slowness"
+      },
+      "implementation": {
+        "methods": {
+          "atp": {
+            "method_id": "pam.atp.short_pulse",
+            "method_version": "1.0.0",
+            "status": "experimental",
+            "quantity": "timing_gated_coherent_exposure",
+            "unit": "a.u.^2 s",
+            "definition": "integral over calibrated emission-time window of (mean_m s_m(u+distance_m/c))^2 du; optional axial plane-wave excitation time",
+            "reference": "Davies et al. (2021), DOI 10.1109/TUFFC.2020.3026165; source-emitter/plane-wave variants"
+          },
+          "cf": {
+            "method_id": "pam.cf.weighted_das",
+            "method_version": "1.0.0",
+            "status": "experimental",
+            "quantity": "coherence_weighted_peak_power",
+            "unit": "a.u.^2",
+            "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+            "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+          },
+          "das": {
+            "method_id": "pam.das.passive",
+            "method_version": "1.0.0",
+            "status": "reference-only",
+            "quantity": "peak_coherent_power",
+            "unit": "a.u.^2",
+            "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+          },
+          "tea": {
+            "method_id": "pam.tea.time_exposure",
+            "method_version": "1.0.0",
+            "status": "reference-only",
+            "quantity": "coherent_exposure",
+            "unit": "a.u.^2 s",
+            "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+          }
+        },
+        "packages": {
+          "fastapi": "0.162.4",
+          "h5py": "3.15.1",
+          "matplotlib": "3.10.7",
+          "numpy": "2.3.4",
+          "pydantic": "2.12.3",
+          "pydicom": "3.0.2",
+          "python-gdcm": "3.2.6",
+          "scipy": "1.16.3"
+        },
+        "engine_version": "0.10.0"
+      }
+    },
+    "definitions": {
+      "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+      "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+      "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+      "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+      "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+      "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+      "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+      "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+      "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+      "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+    },
+    "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+    "runtime_ms": 417.18330000003334,
+    "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+    "rf_bytes": 131072,
+    "map_bytes": 34848,
+    "grid_spacing_m": [
+      0.0007500000000000007,
+      0.0012500000000000011
+    ],
+    "notes": [
+      "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+      "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+      "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+    ]
+  },
+  "results_h5_sha256": "6e16bf631bf0de5b9265965da331c34c42726031e9ae3c6f0a81f99a2068bf9b",
+  "rf_sha256": "2354223824247f101c15fa274ba604bc852369b7e84a43d168ab7374702a059f",
+  "references": [
+    "Gyongy, Miklos and Coussios, Constantin-C.. Passive cavitation mapping for localization and tracking of bubble dynamics. 2010. doi:10.1121/1.3467491",
+    "Harris, Charles R. and others. Array programming with NumPy. 2020. doi:10.1038/s41586-020-2649-2",
+    "Virtanen, Pauli and others. SciPy 1.0: fundamental algorithms for scientific computing in Python. 2020. doi:10.1038/s41592-019-0686-2",
+    "Mallart, Rene and Fink, Mathias. Adaptive focusing in scattering media through sound-speed inhomogeneities: The van Cittert Zernike approach and focusing criterion. 1994. doi:10.1121/1.410562",
+    "Li, Jian and Stoica, Petre and Wang, Zhisong. On robust Capon beamforming and diagonal loading. 2003. doi:10.1109/TSP.2003.812831",
+    "Davies, Harry J. and Morse, Sophie V. and Copping, Matthew J. and Sujarittam, Krit and Bourgin, Victor D. and Tang, Meng-Xing and Choi, James J.. Imaging With Therapeutic Acoustic Wavelets: Short Pulses Enable Acoustic Localization When Time of Arrival is Combined With Delay and Sum. 2021. doi:10.1109/TUFFC.2020.3026165",
+    "Stanziola, Antonio and Arridge, Simon R. and Cox, Ben T. and Treeby, Bradley E.. j-Wave: An open-source differentiable wave simulator. 2023. doi:10.1016/j.softx.2023.101338",
+    "Tilbury, Callum Rhys and Mohammed, Shima and MacIntosh-LaRocque, Anthea and Xu, Rui and Moseley, Ben and Choi, James J.. jbubble: differentiable microbubble dynamics in JAX. 2026. https://github.com/imperial-nsb/jbubble",
+    "Marmottant, Philippe and van der Meer, Sander and Emmer, Marcia and Versluis, Michel and de Jong, Nico and Hilgenfeldt, Sascha and Lohse, Detlef. A model for large amplitude oscillations of coated bubbles accounting for buckling and rupture. 2005. doi:10.1121/1.2109427",
+    "Blagosklonova, Evgenia and Dolotova, Daria and Polunina, Natalia and Grigorieva, Elena and Pakhomov, Denis and Krylov, Vladimir and Gavrilov, Andrey. Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection. doi:10.5281/zenodo.15697196",
+    "Rodriguez-Molares, Rindal, D'Hooge, Masoy, Austeng, Lediju Bell and Torp. Generalized Contrast-to-Noise Ratio (2020). doi:10.1109/TUFFC.2019.2956855. PAM truth-disk use here is descriptive.",
+    "ReportLab: Andy Robinson, Robin Becker, ReportLab team and community. ReportLab Toolkit 5.1.0; BSD license. No remote rendering.",
+    "SciPy bootstrap percentile mean intervals: Virtanen and contributors; scipy.stats.bootstrap. Small-sample coverage is not validated for these PAM scores."
+  ],
+  "credit": "Aisy Fawwaz | MRes Project | Bioengineering | Imperial College London",
+  "limitations": "Synthetic/model research output; reference/experimental methods. Not a clinical calibration or safety assessment.",
+  "pdf_sha256": "2908e34aa5249a12e7578ab1602c9a45276b251e51dd960ec13860d619c989e8"
+}

@@ -1,0 +1,1123 @@
+{
+  "study": {
+    "id": "5c87b45e-6c51-48a8-867e-5b18ef9bbacd",
+    "name": "SNR and source position",
+    "kind": "sweep",
+    "created": "2026-11-11T19:46:17.976641+00:00",
+    "status": "complete",
+    "request": {
+      "name": "SNR and source position",
+      "kind": "sweep",
+      "config": {
+        "schema_version": "1.0",
+        "sound_speed_m_s": 1500.0,
+        "channels": 32,
+        "pitch_m": 0.0003,
+        "sampling_hz": 20000000.0,
+        "samples": 4096,
+        "capture_t0_s": 0.0,
+        "frequency_hz": 1000000.0,
+        "duration_s": 4e-06,
+        "emission_kind": "pulse",
+        "bandpass_hz": null,
+        "spreading": false,
+        "snr_db": 30.0,
+        "seed": 42,
+        "sources": [
+          {
+            "x_m": 0.0,
+            "z_m": 0.03,
+            "emission_s": 8e-06,
+            "amplitude": 1.0
+          }
+        ],
+        "active_channels": null,
+        "grid_x_min_m": -0.012,
+        "grid_x_max_m": 0.012,
+        "grid_z_min_m": 0.015,
+        "grid_z_max_m": 0.045,
+        "grid_n": 65,
+        "gate_start_s": 4e-06,
+        "gate_end_s": 1.2e-05,
+        "gate_stride": 4
+      },
+      "options": {
+        "methods": [
+          "das",
+          "tea",
+          "cf"
+        ],
+        "cf_exponent": 1.0,
+        "rcb_radius": 0.1,
+        "rcb_loading": 0.001,
+        "rcb_subarray": 16,
+        "atp_timing_known": false,
+        "atp_mode": "emission",
+        "atp_emission_s": 8e-06,
+        "atp_window_s": 4e-06,
+        "atp_plane_z_m": 0.0
+      },
+      "axes": [
+        {
+          "parameter": "snr_db",
+          "values": [
+            10.0,
+            30.0
+          ]
+        },
+        {
+          "parameter": "source.x_m",
+          "values": [
+            -0.003,
+            0.003
+          ]
+        }
+      ],
+      "trials": 16,
+      "seed": 2026,
+      "speed_sigma_m_s": 0.0,
+      "sensor_sigma_m": 0.0,
+      "relative_tolerance": 0.02,
+      "stop_on_failure": true,
+      "settings": {
+        "roi_radius_m": 0.002,
+        "histogram_bins": 100
+      }
+    },
+    "definition_version": "1.0.0",
+    "environment": {
+      "engine_version": "0.10.0",
+      "python": "3.13.12",
+      "os": "Windows-11-10.0.26200-SP0",
+      "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+      "backend": "numpy-cpu",
+      "precision": "float64",
+      "git_commit": "uncommitted",
+      "engine_source_sha256": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+      "node": "not recorded (CLI)",
+      "frontend_dependencies": {
+        "lucide-react": "0.548.0",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "zod": "4.6.7"
+      },
+      "packages": {
+        "numpy": "2.3.4",
+        "scipy": "1.16.3",
+        "h5py": "3.15.1",
+        "pydantic": "2.12.3",
+        "fastapi": "0.162.4",
+        "matplotlib": "3.10.7",
+        "pydicom": "3.0.2",
+        "python-gdcm": "3.2.6"
+      }
+    },
+    "plan": {
+      "case_count": 4,
+      "array_bytes_upper_estimate": 8794208,
+      "notes": [
+        "Cases run sequentially; solver previews and HDF5 overhead are additional.",
+        "Sweep scenarios may change multiple physical conditions; no causal ranking is implied."
+      ],
+      "cases": [
+        {
+          "index": 0,
+          "parameters": {
+            "snr_db": 10.0,
+            "source.x_m": -0.003
+          },
+          "config_sha256": "f78217bda27ccc6737260080706ff3255e7a554bf73f002bb2a3e7022deb47e2"
+        },
+        {
+          "index": 1,
+          "parameters": {
+            "snr_db": 10.0,
+            "source.x_m": 0.003
+          },
+          "config_sha256": "15d77464a848a4b6259a94fc8f33886377aa42aca9902c063928c8111456eb05"
+        },
+        {
+          "index": 2,
+          "parameters": {
+            "snr_db": 30.0,
+            "source.x_m": -0.003
+          },
+          "config_sha256": "5d888709086a9e011e0b7c8868c668fc2d705ac588e3a3865b164b3036193a36"
+        },
+        {
+          "index": 3,
+          "parameters": {
+            "snr_db": 30.0,
+            "source.x_m": 0.003
+          },
+          "config_sha256": "97fa43aabefdedb6f2f4f0da59ad0809d581d2a0db75da31b517952fa618443e"
+        }
+      ]
+    },
+    "completed": 4,
+    "total": 4,
+    "cases": [
+      {
+        "index": 0,
+        "parameters": {
+          "snr_db": 10.0,
+          "source.x_m": -0.003
+        },
+        "config_sha256": "f78217bda27ccc6737260080706ff3255e7a554bf73f002bb2a3e7022deb47e2",
+        "status": "complete",
+        "run_id": "4c6a4292-5056-4f55-b1e6-b20b28af47ab",
+        "report": {
+          "id": "pam.benchmark.map",
+          "version": "1.1.0",
+          "run_id": "4c6a4292-5056-4f55-b1e6-b20b28af47ab",
+          "created": "2026-11-11T19:46:18.058104+00:00",
+          "settings": {
+            "roi_radius_m": 0.002,
+            "histogram_bins": 100
+          },
+          "methods": {
+            "cf": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.002565373397185917,
+              "axial_fwhm_m": 0.013036559974257633,
+              "roi_concentration": 0.22060708064563328,
+              "background_peak_db": -0.026686026448441175,
+              "contrast_db": 12.190682879780738,
+              "cnr": 2.810004920701552,
+              "gcnr": 0.967741935483871,
+              "normalized_entropy": 0.7239064490198457,
+              "half_power_area_m2": 3.83203125e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9938741552973964,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "3dda9213611f91ea0ecd878eaea64209b0443a7f82b5d2d5acef7b90a36e0f06"
+            },
+            "das": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.003737543696936188,
+              "axial_fwhm_m": 0.013049567523121152,
+              "roi_concentration": 0.17908012281620161,
+              "background_peak_db": -0.026909282102369383,
+              "contrast_db": 11.055660464501571,
+              "cnr": 3.113339489030481,
+              "gcnr": 0.9593163216177178,
+              "normalized_entropy": 0.7819118020577996,
+              "half_power_area_m2": 4.5878906249999994e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9938230650048503,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "3038aacb6e9ed885985ee90d58af9cfc06d5845e99e49781ff97a3a5263f4b7c"
+            },
+            "tea": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0042734411691133945,
+              "axial_fwhm_m": 0.011947604381039471,
+              "roi_concentration": 0.1913864473294016,
+              "background_peak_db": -0.01741171819563992,
+              "contrast_db": 11.407958462637264,
+              "cnr": 3.6790972703752547,
+              "gcnr": 0.9706307173808377,
+              "normalized_entropy": 0.7863067377813201,
+              "half_power_area_m2": 4.781249999999999e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.995998829821671,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "f56ab76363ec16b18dedbda5c37b32bed338c6d0b3b218f6e7c176ce77465178"
+            }
+          },
+          "fingerprints": {
+            "raw_rf": "0add1f065c3d60362e5eeed2fff237200fbad00b7a18ca747aced0c8ada107e4",
+            "capture": "601a70c97325974462408341af36f6509ceead8bee3b875df4b4c8704ac38bca",
+            "analysis": "7e33f3b9f8f7426ed0ea2dcf6d13bf4d02a5b3abd8d62988c43502178a4e3854",
+            "engine": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+            "method_options": "{\"atp_emission_s\":8e-06,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":false,\"atp_window_s\":4e-06,\"cf_exponent\":1.0,\"methods\":[\"cf\",\"das\",\"tea\"],\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16}",
+            "implementation": "a358915aa0b25d2f7def651a5ea33b59466500b88102f02224a2d726f3bf5b8b"
+          },
+          "context": {
+            "capture": {
+              "schema_version": "1.0",
+              "sound_speed_m_s": 1500.0,
+              "channels": 32,
+              "pitch_m": 0.0003,
+              "sampling_hz": 20000000.0,
+              "samples": 4096,
+              "capture_t0_s": 0.0,
+              "frequency_hz": 1000000.0,
+              "duration_s": 4e-06,
+              "emission_kind": "pulse",
+              "bandpass_hz": null,
+              "spreading": false,
+              "snr_db": 10.0,
+              "seed": 42,
+              "sources": [
+                {
+                  "x_m": -0.003,
+                  "z_m": 0.03,
+                  "emission_s": 8e-06,
+                  "amplitude": 1.0
+                }
+              ]
+            },
+            "analysis": {
+              "active_channels": null,
+              "gate_end_s": 1.2e-05,
+              "gate_start_s": 4e-06,
+              "gate_stride": 4,
+              "grid_n": 65,
+              "grid_x_max_m": 0.012,
+              "grid_x_min_m": -0.012,
+              "grid_z_max_m": 0.045,
+              "grid_z_min_m": 0.015,
+              "processing": null
+            },
+            "method_options": {
+              "atp_emission_s": 8e-06,
+              "atp_mode": "emission",
+              "atp_plane_z_m": 0.0,
+              "atp_timing_known": false,
+              "atp_window_s": 4e-06,
+              "cf_exponent": 1.0,
+              "methods": [
+                "cf",
+                "das",
+                "tea"
+              ],
+              "rcb_loading": 0.001,
+              "rcb_radius": 0.1,
+              "rcb_subarray": 16
+            },
+            "implementation": {
+              "methods": {
+                "cf": {
+                  "method_id": "pam.cf.weighted_das",
+                  "method_version": "1.0.0",
+                  "status": "experimental",
+                  "quantity": "coherence_weighted_peak_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+                  "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+                },
+                "das": {
+                  "method_id": "pam.das.passive",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "peak_coherent_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+                },
+                "tea": {
+                  "method_id": "pam.tea.time_exposure",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "coherent_exposure",
+                  "unit": "a.u.^2 s",
+                  "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+                }
+              },
+              "packages": {
+                "fastapi": "0.162.4",
+                "h5py": "3.15.1",
+                "matplotlib": "3.10.7",
+                "numpy": "2.3.4",
+                "pydantic": "2.12.3",
+                "pydicom": "3.0.2",
+                "python-gdcm": "3.2.6",
+                "scipy": "1.16.3"
+              },
+              "engine_version": "0.10.0"
+            }
+          },
+          "definitions": {
+            "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+            "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+            "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+            "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+            "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+            "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+            "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+            "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+          },
+          "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+          "runtime_ms": 157.3826999956509,
+          "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+          "rf_bytes": 1048576,
+          "map_bytes": 101400,
+          "grid_spacing_m": [
+            0.00037500000000000033,
+            0.0004687500000000004
+          ],
+          "notes": [
+            "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+            "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+            "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+          ]
+        },
+        "error": null
+      },
+      {
+        "index": 1,
+        "parameters": {
+          "snr_db": 10.0,
+          "source.x_m": 0.003
+        },
+        "config_sha256": "15d77464a848a4b6259a94fc8f33886377aa42aca9902c063928c8111456eb05",
+        "status": "complete",
+        "run_id": "58f3d4de-14d9-4b1b-bbf8-cc85885b10f0",
+        "report": {
+          "id": "pam.benchmark.map",
+          "version": "1.1.0",
+          "run_id": "58f3d4de-14d9-4b1b-bbf8-cc85885b10f0",
+          "created": "2026-11-11T19:46:18.369282+00:00",
+          "settings": {
+            "roi_radius_m": 0.002,
+            "histogram_bins": 100
+          },
+          "methods": {
+            "cf": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0025523211763214624,
+              "axial_fwhm_m": 0.013027709656539113,
+              "roi_concentration": 0.2206758798280715,
+              "background_peak_db": -0.028153436733849124,
+              "contrast_db": 12.192420713433984,
+              "cnr": 2.808494922255466,
+              "gcnr": 0.9650938854116514,
+              "normalized_entropy": 0.7237301940328948,
+              "half_power_area_m2": 3.8320312500000004e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9935383981422813,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "1a17a784120a544f2b6d97a25b695cce09edc4272aaa435f18ad7203fbde076d"
+            },
+            "das": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0037306815578163305,
+              "axial_fwhm_m": 0.013040666908833303,
+              "roi_concentration": 0.17905730884245144,
+              "background_peak_db": -0.028746329674063535,
+              "contrast_db": 11.054943838435687,
+              "cnr": 3.1040431247639506,
+              "gcnr": 0.9607607125662012,
+              "normalized_entropy": 0.7820294928418483,
+              "half_power_area_m2": 4.5703124999999995e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9934027708848562,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "8784b612cab9aeb66e8fd791a18ec27e7dfe2c8967c68c02961f6f0dff0336b4"
+            },
+            "tea": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.004271094914927004,
+              "axial_fwhm_m": 0.011942422220185604,
+              "roi_concentration": 0.1912542872521317,
+              "background_peak_db": -0.019785246220917943,
+              "contrast_db": 11.404233059940022,
+              "cnr": 3.6739004023591426,
+              "gcnr": 0.9687048627828598,
+              "normalized_entropy": 0.7865641179833103,
+              "half_power_area_m2": 4.763671875e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9954546402565745,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "2abe2d1530b00a74e071689dd51ac04e2583651f1397482ba5d8d98cdeba0d97"
+            }
+          },
+          "fingerprints": {
+            "raw_rf": "a27b81d526b0899f90bc6c02c96b66b44a9e7cc218567a445d669d8a155f17f3",
+            "capture": "50e16bcf98f2173ee5f907e42a85c27bbe2e9fb490f23475e20e92fca71a1780",
+            "analysis": "7e33f3b9f8f7426ed0ea2dcf6d13bf4d02a5b3abd8d62988c43502178a4e3854",
+            "engine": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+            "method_options": "{\"atp_emission_s\":8e-06,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":false,\"atp_window_s\":4e-06,\"cf_exponent\":1.0,\"methods\":[\"cf\",\"das\",\"tea\"],\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16}",
+            "implementation": "a358915aa0b25d2f7def651a5ea33b59466500b88102f02224a2d726f3bf5b8b"
+          },
+          "context": {
+            "capture": {
+              "schema_version": "1.0",
+              "sound_speed_m_s": 1500.0,
+              "channels": 32,
+              "pitch_m": 0.0003,
+              "sampling_hz": 20000000.0,
+              "samples": 4096,
+              "capture_t0_s": 0.0,
+              "frequency_hz": 1000000.0,
+              "duration_s": 4e-06,
+              "emission_kind": "pulse",
+              "bandpass_hz": null,
+              "spreading": false,
+              "snr_db": 10.0,
+              "seed": 42,
+              "sources": [
+                {
+                  "x_m": 0.003,
+                  "z_m": 0.03,
+                  "emission_s": 8e-06,
+                  "amplitude": 1.0
+                }
+              ]
+            },
+            "analysis": {
+              "active_channels": null,
+              "gate_end_s": 1.2e-05,
+              "gate_start_s": 4e-06,
+              "gate_stride": 4,
+              "grid_n": 65,
+              "grid_x_max_m": 0.012,
+              "grid_x_min_m": -0.012,
+              "grid_z_max_m": 0.045,
+              "grid_z_min_m": 0.015,
+              "processing": null
+            },
+            "method_options": {
+              "atp_emission_s": 8e-06,
+              "atp_mode": "emission",
+              "atp_plane_z_m": 0.0,
+              "atp_timing_known": false,
+              "atp_window_s": 4e-06,
+              "cf_exponent": 1.0,
+              "methods": [
+                "cf",
+                "das",
+                "tea"
+              ],
+              "rcb_loading": 0.001,
+              "rcb_radius": 0.1,
+              "rcb_subarray": 16
+            },
+            "implementation": {
+              "methods": {
+                "cf": {
+                  "method_id": "pam.cf.weighted_das",
+                  "method_version": "1.0.0",
+                  "status": "experimental",
+                  "quantity": "coherence_weighted_peak_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+                  "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+                },
+                "das": {
+                  "method_id": "pam.das.passive",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "peak_coherent_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+                },
+                "tea": {
+                  "method_id": "pam.tea.time_exposure",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "coherent_exposure",
+                  "unit": "a.u.^2 s",
+                  "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+                }
+              },
+              "packages": {
+                "fastapi": "0.162.4",
+                "h5py": "3.15.1",
+                "matplotlib": "3.10.7",
+                "numpy": "2.3.4",
+                "pydantic": "2.12.3",
+                "pydicom": "3.0.2",
+                "python-gdcm": "3.2.6",
+                "scipy": "1.16.3"
+              },
+              "engine_version": "0.10.0"
+            }
+          },
+          "definitions": {
+            "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+            "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+            "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+            "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+            "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+            "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+            "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+            "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+          },
+          "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+          "runtime_ms": 154.46090000477852,
+          "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+          "rf_bytes": 1048576,
+          "map_bytes": 101400,
+          "grid_spacing_m": [
+            0.00037500000000000033,
+            0.0004687500000000004
+          ],
+          "notes": [
+            "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+            "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+            "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+          ]
+        },
+        "error": null
+      },
+      {
+        "index": 2,
+        "parameters": {
+          "snr_db": 30.0,
+          "source.x_m": -0.003
+        },
+        "config_sha256": "5d888709086a9e011e0b7c8868c668fc2d705ac588e3a3865b164b3036193a36",
+        "status": "complete",
+        "run_id": "886e0914-3f6f-44e1-b24d-a557d6b63d78",
+        "report": {
+          "id": "pam.benchmark.map",
+          "version": "1.1.0",
+          "run_id": "886e0914-3f6f-44e1-b24d-a557d6b63d78",
+          "created": "2026-11-11T19:46:18.677111+00:00",
+          "settings": {
+            "roi_radius_m": 0.002,
+            "histogram_bins": 100
+          },
+          "methods": {
+            "cf": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0025613460120134787,
+              "axial_fwhm_m": 0.013035401360716438,
+              "roi_concentration": 0.22054210915252986,
+              "background_peak_db": -0.025089091875943062,
+              "contrast_db": 12.189046256671718,
+              "cnr": 2.8104721968364164,
+              "gcnr": 0.9682233991333654,
+              "normalized_entropy": 0.7239053484244239,
+              "half_power_area_m2": 3.8671874999999996e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9942396777493935,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "a0aa4768ebb658f99a25feb2fb304bd412fd8992c72cf6e0e6f6cfdb22dd7aaf"
+            },
+            "das": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0037357620832150166,
+              "axial_fwhm_m": 0.013047616995171495,
+              "roi_concentration": 0.17903392167611756,
+              "background_peak_db": -0.02523635867862119,
+              "contrast_db": 11.054345726766757,
+              "cnr": 3.1097755638697215,
+              "gcnr": 0.9614829080404429,
+              "normalized_entropy": 0.7816911342963603,
+              "half_power_area_m2": 4.658203124999999e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.994205964215816,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "ce2545a4104423fc2d0bdf33d4d92e501578f8ce30c89234ab08e38c54ad0c87"
+            },
+            "tea": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.004272383292442847,
+              "axial_fwhm_m": 0.011948771589686422,
+              "roi_concentration": 0.1914835980444476,
+              "background_peak_db": -0.01610020035545338,
+              "contrast_db": 11.410826997849373,
+              "cnr": 3.677034897861316,
+              "gcnr": 0.9711121810303323,
+              "normalized_entropy": 0.785767655613955,
+              "half_power_area_m2": 4.781249999999999e-05,
+              "peak_x_m": -0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9962996550790649,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "65ad2d9fc1af8751ed2273091576a4b0413227252ab25a2df2efcb7de8bfea64"
+            }
+          },
+          "fingerprints": {
+            "raw_rf": "abe26b8764bdbffa30b12aeca1622ac760b8bba7e96546d359db7171d7d318a9",
+            "capture": "29e8b5126bc5bd9e7d1fd0e1c325097c196b06fa6bc41917543fa19ceec8878b",
+            "analysis": "7e33f3b9f8f7426ed0ea2dcf6d13bf4d02a5b3abd8d62988c43502178a4e3854",
+            "engine": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+            "method_options": "{\"atp_emission_s\":8e-06,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":false,\"atp_window_s\":4e-06,\"cf_exponent\":1.0,\"methods\":[\"cf\",\"das\",\"tea\"],\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16}",
+            "implementation": "a358915aa0b25d2f7def651a5ea33b59466500b88102f02224a2d726f3bf5b8b"
+          },
+          "context": {
+            "capture": {
+              "schema_version": "1.0",
+              "sound_speed_m_s": 1500.0,
+              "channels": 32,
+              "pitch_m": 0.0003,
+              "sampling_hz": 20000000.0,
+              "samples": 4096,
+              "capture_t0_s": 0.0,
+              "frequency_hz": 1000000.0,
+              "duration_s": 4e-06,
+              "emission_kind": "pulse",
+              "bandpass_hz": null,
+              "spreading": false,
+              "snr_db": 30.0,
+              "seed": 42,
+              "sources": [
+                {
+                  "x_m": -0.003,
+                  "z_m": 0.03,
+                  "emission_s": 8e-06,
+                  "amplitude": 1.0
+                }
+              ]
+            },
+            "analysis": {
+              "active_channels": null,
+              "gate_end_s": 1.2e-05,
+              "gate_start_s": 4e-06,
+              "gate_stride": 4,
+              "grid_n": 65,
+              "grid_x_max_m": 0.012,
+              "grid_x_min_m": -0.012,
+              "grid_z_max_m": 0.045,
+              "grid_z_min_m": 0.015,
+              "processing": null
+            },
+            "method_options": {
+              "atp_emission_s": 8e-06,
+              "atp_mode": "emission",
+              "atp_plane_z_m": 0.0,
+              "atp_timing_known": false,
+              "atp_window_s": 4e-06,
+              "cf_exponent": 1.0,
+              "methods": [
+                "cf",
+                "das",
+                "tea"
+              ],
+              "rcb_loading": 0.001,
+              "rcb_radius": 0.1,
+              "rcb_subarray": 16
+            },
+            "implementation": {
+              "methods": {
+                "cf": {
+                  "method_id": "pam.cf.weighted_das",
+                  "method_version": "1.0.0",
+                  "status": "experimental",
+                  "quantity": "coherence_weighted_peak_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+                  "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+                },
+                "das": {
+                  "method_id": "pam.das.passive",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "peak_coherent_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+                },
+                "tea": {
+                  "method_id": "pam.tea.time_exposure",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "coherent_exposure",
+                  "unit": "a.u.^2 s",
+                  "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+                }
+              },
+              "packages": {
+                "fastapi": "0.162.4",
+                "h5py": "3.15.1",
+                "matplotlib": "3.10.7",
+                "numpy": "2.3.4",
+                "pydantic": "2.12.3",
+                "pydicom": "3.0.2",
+                "python-gdcm": "3.2.6",
+                "scipy": "1.16.3"
+              },
+              "engine_version": "0.10.0"
+            }
+          },
+          "definitions": {
+            "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+            "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+            "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+            "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+            "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+            "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+            "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+            "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+          },
+          "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+          "runtime_ms": 165.55269999662414,
+          "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+          "rf_bytes": 1048576,
+          "map_bytes": 101400,
+          "grid_spacing_m": [
+            0.00037500000000000033,
+            0.0004687500000000004
+          ],
+          "notes": [
+            "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+            "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+            "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+          ]
+        },
+        "error": null
+      },
+      {
+        "index": 3,
+        "parameters": {
+          "snr_db": 30.0,
+          "source.x_m": 0.003
+        },
+        "config_sha256": "97fa43aabefdedb6f2f4f0da59ad0809d581d2a0db75da31b517952fa618443e",
+        "status": "complete",
+        "run_id": "fb27b1ad-18dc-4eec-b13f-89e0466a9042",
+        "report": {
+          "id": "pam.benchmark.map",
+          "version": "1.1.0",
+          "run_id": "fb27b1ad-18dc-4eec-b13f-89e0466a9042",
+          "created": "2026-11-11T19:46:18.988360+00:00",
+          "settings": {
+            "roi_radius_m": 0.002,
+            "histogram_bins": 100
+          },
+          "methods": {
+            "cf": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.002560087931108985,
+              "axial_fwhm_m": 0.01303454000615889,
+              "roi_concentration": 0.22055124148766725,
+              "background_peak_db": -0.024649650617233024,
+              "contrast_db": 12.189277029052342,
+              "cnr": 2.8103832133966393,
+              "gcnr": 0.9675012036591237,
+              "normalized_entropy": 0.7238875884378129,
+              "half_power_area_m2": 3.849609375e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9943402850697227,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "261add08b0cd2d161440359b92de5ba986fc5a291f8056d730349a308021283b"
+            },
+            "das": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.0037351210819601176,
+              "axial_fwhm_m": 0.013046725058865234,
+              "roi_concentration": 0.17903194087444285,
+              "background_peak_db": -0.024840140590551636,
+              "contrast_db": 11.054284385881026,
+              "cnr": 3.1088184799080296,
+              "gcnr": 0.9612421762156957,
+              "normalized_entropy": 0.7817012774812238,
+              "half_power_area_m2": 4.658203124999999e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.9942966723349678,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "03a0ff1513bba35ecd476a7eb03c23f81585ef0c44f734df68d1ec5c4895201d"
+            },
+            "tea": {
+              "localization_error_m": 8.673617379884035e-19,
+              "lateral_fwhm_m": 0.004272161925819622,
+              "axial_fwhm_m": 0.011948256907506314,
+              "roi_concentration": 0.19147022576670264,
+              "background_peak_db": -0.01671921842882364,
+              "contrast_db": 11.410450275441885,
+              "cnr": 3.6765174212967695,
+              "gcnr": 0.9703899855560905,
+              "normalized_entropy": 0.7857937518762019,
+              "half_power_area_m2": 4.781249999999999e-05,
+              "peak_x_m": 0.002999999999999999,
+              "peak_z_m": 0.03,
+              "truth_nearest_peak_errors_m": [
+                8.673617379884035e-19
+              ],
+              "background_peak_ratio": 0.996157658445813,
+              "background_exclusion_radius_m": 0.002,
+              "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+              "target_pixels": 71,
+              "background_pixels": 4154,
+              "roi_clipped": false,
+              "half_power_boundary": false,
+              "warnings": [
+                "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+              ],
+              "map_sha256": "13947091b2742362e11997ce2b551093a050a8d32c1a5e480d1304ee821be99a"
+            }
+          },
+          "fingerprints": {
+            "raw_rf": "a901a9f41b54ee425915b5903e93157d7b84359d809b7dbcad30cf479ab95b4b",
+            "capture": "52f21efd72e3ee1793384f2add6f7ef3f003475dc95666c9327089f6f3e2d7e8",
+            "analysis": "7e33f3b9f8f7426ed0ea2dcf6d13bf4d02a5b3abd8d62988c43502178a4e3854",
+            "engine": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+            "method_options": "{\"atp_emission_s\":8e-06,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":false,\"atp_window_s\":4e-06,\"cf_exponent\":1.0,\"methods\":[\"cf\",\"das\",\"tea\"],\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16}",
+            "implementation": "a358915aa0b25d2f7def651a5ea33b59466500b88102f02224a2d726f3bf5b8b"
+          },
+          "context": {
+            "capture": {
+              "schema_version": "1.0",
+              "sound_speed_m_s": 1500.0,
+              "channels": 32,
+              "pitch_m": 0.0003,
+              "sampling_hz": 20000000.0,
+              "samples": 4096,
+              "capture_t0_s": 0.0,
+              "frequency_hz": 1000000.0,
+              "duration_s": 4e-06,
+              "emission_kind": "pulse",
+              "bandpass_hz": null,
+              "spreading": false,
+              "snr_db": 30.0,
+              "seed": 42,
+              "sources": [
+                {
+                  "x_m": 0.003,
+                  "z_m": 0.03,
+                  "emission_s": 8e-06,
+                  "amplitude": 1.0
+                }
+              ]
+            },
+            "analysis": {
+              "active_channels": null,
+              "gate_end_s": 1.2e-05,
+              "gate_start_s": 4e-06,
+              "gate_stride": 4,
+              "grid_n": 65,
+              "grid_x_max_m": 0.012,
+              "grid_x_min_m": -0.012,
+              "grid_z_max_m": 0.045,
+              "grid_z_min_m": 0.015,
+              "processing": null
+            },
+            "method_options": {
+              "atp_emission_s": 8e-06,
+              "atp_mode": "emission",
+              "atp_plane_z_m": 0.0,
+              "atp_timing_known": false,
+              "atp_window_s": 4e-06,
+              "cf_exponent": 1.0,
+              "methods": [
+                "cf",
+                "das",
+                "tea"
+              ],
+              "rcb_loading": 0.001,
+              "rcb_radius": 0.1,
+              "rcb_subarray": 16
+            },
+            "implementation": {
+              "methods": {
+                "cf": {
+                  "method_id": "pam.cf.weighted_das",
+                  "method_version": "1.0.0",
+                  "status": "experimental",
+                  "quantity": "coherence_weighted_peak_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+                  "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+                },
+                "das": {
+                  "method_id": "pam.das.passive",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "peak_coherent_power",
+                  "unit": "a.u.^2",
+                  "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+                },
+                "tea": {
+                  "method_id": "pam.tea.time_exposure",
+                  "method_version": "1.0.0",
+                  "status": "reference-only",
+                  "quantity": "coherent_exposure",
+                  "unit": "a.u.^2 s",
+                  "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+                }
+              },
+              "packages": {
+                "fastapi": "0.162.4",
+                "h5py": "3.15.1",
+                "matplotlib": "3.10.7",
+                "numpy": "2.3.4",
+                "pydantic": "2.12.3",
+                "pydicom": "3.0.2",
+                "python-gdcm": "3.2.6",
+                "scipy": "1.16.3"
+              },
+              "engine_version": "0.10.0"
+            }
+          },
+          "definitions": {
+            "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+            "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+            "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+            "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+            "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+            "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+            "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+            "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+            "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+          },
+          "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+          "runtime_ms": 151.15540000260808,
+          "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+          "rf_bytes": 1048576,
+          "map_bytes": 101400,
+          "grid_spacing_m": [
+            0.00037500000000000033,
+            0.0004687500000000004
+          ],
+          "notes": [
+            "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+            "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+            "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+          ]
+        },
+        "error": null
+      }
+    ],
+    "summary": {
+      "note": "Per-case descriptive scenario results; no aggregate winner."
+    },
+    "finished": "2026-11-11T19:46:19.269577+00:00"
+  },
+  "references": [
+    "Gyongy, Miklos and Coussios, Constantin-C.. Passive cavitation mapping for localization and tracking of bubble dynamics. 2010. doi:10.1121/1.3467491",
+    "Harris, Charles R. and others. Array programming with NumPy. 2020. doi:10.1038/s41586-020-2649-2",
+    "Virtanen, Pauli and others. SciPy 1.0: fundamental algorithms for scientific computing in Python. 2020. doi:10.1038/s41592-019-0686-2",
+    "Mallart, Rene and Fink, Mathias. Adaptive focusing in scattering media through sound-speed inhomogeneities: The van Cittert Zernike approach and focusing criterion. 1994. doi:10.1121/1.410562",
+    "Li, Jian and Stoica, Petre and Wang, Zhisong. On robust Capon beamforming and diagonal loading. 2003. doi:10.1109/TSP.2003.812831",
+    "Davies, Harry J. and Morse, Sophie V. and Copping, Matthew J. and Sujarittam, Krit and Bourgin, Victor D. and Tang, Meng-Xing and Choi, James J.. Imaging With Therapeutic Acoustic Wavelets: Short Pulses Enable Acoustic Localization When Time of Arrival is Combined With Delay and Sum. 2021. doi:10.1109/TUFFC.2020.3026165",
+    "Stanziola, Antonio and Arridge, Simon R. and Cox, Ben T. and Treeby, Bradley E.. j-Wave: An open-source differentiable wave simulator. 2023. doi:10.1016/j.softx.2023.101338",
+    "Tilbury, Callum Rhys and Mohammed, Shima and MacIntosh-LaRocque, Anthea and Xu, Rui and Moseley, Ben and Choi, James J.. jbubble: differentiable microbubble dynamics in JAX. 2026. https://github.com/imperial-nsb/jbubble",
+    "Marmottant, Philippe and van der Meer, Sander and Emmer, Marcia and Versluis, Michel and de Jong, Nico and Hilgenfeldt, Sascha and Lohse, Detlef. A model for large amplitude oscillations of coated bubbles accounting for buckling and rupture. 2005. doi:10.1121/1.2109427",
+    "Blagosklonova, Evgenia and Dolotova, Daria and Polunina, Natalia and Grigorieva, Elena and Pakhomov, Denis and Krylov, Vladimir and Gavrilov, Andrey. Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection. doi:10.5281/zenodo.15697196",
+    "Rodriguez-Molares, Rindal, D'Hooge, Masoy, Austeng, Lediju Bell and Torp. Generalized Contrast-to-Noise Ratio (2020). doi:10.1109/TUFFC.2019.2956855. PAM truth-disk use here is descriptive.",
+    "ReportLab: Andy Robinson, Robin Becker, ReportLab team and community. ReportLab Toolkit 5.1.0; BSD license. No remote rendering.",
+    "SciPy bootstrap percentile mean intervals: Virtanen and contributors; scipy.stats.bootstrap. Small-sample coverage is not validated for these PAM scores."
+  ],
+  "credit": "Aisy Fawwaz | MRes Project | Bioengineering | Imperial College London",
+  "pdf_sha256": "447815a91f92b13befead768e01d4ba1431c63c63ce65927dc4b885b3b0b475f"
+}

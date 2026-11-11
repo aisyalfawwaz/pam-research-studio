@@ -1,0 +1,23 @@
+# jbubble CPU adapter 1.0.0
+
+Optional unmodified **jbubble 0.2.0 beta**, using **JAX 0.8.2**, **Equinox 0.13.4**, **Diffrax 0.7.2**, Python **3.13** in `.adapters/jbubble/.venv`. This environment is separate from both the engine and j-Wave's incompatible JAX stack.
+
+```powershell
+pwsh -File scripts/setup-jbubble.ps1
+```
+
+Restart the app. Model → Simulation backend → Solver → **jBubble · 3D monopole RF**. Choose free or lipid-coated bubble, radius, drive pressure, viscosity, ringdown cycles and ODE tolerance. Drive frequency/duration are the ordinary source controls. Simulate generates actual bubble dynamics and RF; the **Bubble dynamics** document shows radius, driving pressure, emission at 1 mm, and wall velocity. Reconstruct runs the selected PAM methods. Immutable HDF5 outputs, metadata, export/import and CLI reproduction include the full trajectory.
+
+This adapter solves Keller-Miksis with upstream free/lipid presets, explicit gas/shell constants and a Hann sine drive. Density=1000 kg/m³; ambient pressure=101325 Pa; sound speed is the configured homogeneous value. Lipid uses the smooth Marmottant law, not a label for every shell model. Actual preset constants, ODE tolerances and solver identity are recorded. Adaptive Dopri5 must converge; radius must remain finite/positive; wall Mach must stay below 0.1. The supported input bounds and time limits are adapter limits, not a promise every combination converges.
+
+The emitted pressure is calculated by upstream **QuasiAcoustic** at 1 mm. The bridge applies spherical 1/r scaling and the receiver's distance/c delay **once**. RF is dimensionless simulated pressure divided by drive pressure (1 Pa in the zero-drive limit). Raw model pressure remains in Pa in the trajectory, with explicit labels. Source emission time is the drive centre; source amplitude weights identical independent emissions, rather than changing the nonlinear drive. There is no spatial driving field, mutual bubble interaction, clinical calibration or biological inference.
+
+Trajectory columns: `source_time_s,radius_m,wall_velocity_m_s,drive_pa,emission_pa_at_1mm,wall_acceleration_m_s2`. Time is relative to the drive centre. At least 128 output samples per carrier cycle and four times acquisition fs are saved. A polyphase low-pass precedes acquisition-rate decimation. More than 1% emission energy above acquisition Nyquist rejects the run; smaller loss is recorded. Full-rate gate quadrature (**stride 1**) is required for nonlinear harmonics. Receiver pitch can still alias harmonic spatial frequencies; warnings and actual localization/background measurements expose this. The default fixture is intentionally not described as well-localized by every method. ATP's short window is referenced to the known drive centre and can exclude ringdown.
+
+Ringdown is finite: inspect final emission/peak and increase ringdown for convergence, especially for a free bubble. Waveform predictions are not measurements. Pressure, sampling, ODE and spatial-aperture convergence are separate requirements. No gradient fitting, sweeps or tissue mechanics are implemented. Version 0.4 also supports an explicit **one-way volume-flow → j-Wave coupling** selected through its own typed graph and coupling settings. It uses the j-Wave medium density for bubble dynamics and does not use the 1 mm pressure as the propagated source. The original jbubble-only 3D monopole path remains separate. See [coupling, timing and units](../../docs/WORKFLOW_AND_COUPLING.md).
+
+Cancellation terminates only this adapter's known process tree. The renderer selects fixed bounded settings and cannot supply code or executable paths. No network is used after setup. Dependency versions/hashes are locked in `uv.lock`; runtime/runner hashes and actual devices are in run provenance. Installed inventory: `dependencies.json`; full collected notices: `docs/JBUBBLE_THIRD_PARTY_NOTICES.txt`.
+
+Tests exercise zero-drive equilibrium, weak-drive linear limit, an independent dimensional monopole identity, arrival/channel/time-origin checks, convergence flags, five maps, trajectory export/import without RF, and cancellation. This is synthetic implementation evidence, not independent validation of the model or its upstream beta API.
+
+License: MIT, copyright 2026 Noninvasive Surgery & Biopsy Laboratory, verified from [upstream](https://github.com/imperial-nsb/jbubble). Cite jbubble's [CITATION.cff](https://github.com/imperial-nsb/jbubble/blob/main/CITATION.cff): Callum Rhys Tilbury, Shima Mohammed, Anthea MacIntosh-LaRocque, Rui Xu, Ben Moseley and James J. Choi, version 0.2.0 (2026-10-06). No paper DOI is invented; the repository citation is exported. All upstream code remains installed and unmodified, not vendored.

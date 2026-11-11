@@ -1,0 +1,702 @@
+{
+  "$defs": {
+    "BubbleSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "default": "lipid",
+          "enum": [
+            "free",
+            "lipid"
+          ],
+          "title": "Model",
+          "type": "string"
+        },
+        "radius_m": {
+          "default": 2e-06,
+          "maximum": 1e-05,
+          "minimum": 5e-07,
+          "title": "Radius M",
+          "type": "number"
+        },
+        "drive_pa": {
+          "default": 100000.0,
+          "maximum": 300000.0,
+          "minimum": 0,
+          "title": "Drive Pa",
+          "type": "number"
+        },
+        "viscosity_pa_s": {
+          "default": 0.001,
+          "maximum": 0.01,
+          "minimum": 0.0001,
+          "title": "Viscosity Pa S",
+          "type": "number"
+        },
+        "ringdown_cycles": {
+          "default": 8,
+          "maximum": 40,
+          "minimum": 2,
+          "title": "Ringdown Cycles",
+          "type": "integer"
+        },
+        "rtol": {
+          "default": 1e-08,
+          "maximum": 1e-05,
+          "minimum": 1e-10,
+          "title": "Rtol",
+          "type": "number"
+        }
+      },
+      "title": "BubbleSettings",
+      "type": "object"
+    },
+    "CTSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "asset_id": {
+          "pattern": "^[a-f0-9]{64}$",
+          "title": "Asset Id",
+          "type": "string"
+        },
+        "rows": {
+          "maximum": 1024,
+          "minimum": 8,
+          "title": "Rows",
+          "type": "integer"
+        },
+        "columns": {
+          "maximum": 1024,
+          "minimum": 8,
+          "title": "Columns",
+          "type": "integer"
+        },
+        "spacing_x_m": {
+          "maximum": 0.005,
+          "minimum": 5e-05,
+          "title": "Spacing X M",
+          "type": "number"
+        },
+        "spacing_z_m": {
+          "maximum": 0.005,
+          "minimum": 5e-05,
+          "title": "Spacing Z M",
+          "type": "number"
+        },
+        "crop": {
+          "maxItems": 4,
+          "minItems": 4,
+          "prefixItems": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            },
+            {
+              "type": "integer"
+            }
+          ],
+          "title": "Crop",
+          "type": "array"
+        },
+        "origin_x_m": {
+          "default": -0.032,
+          "maximum": 0.3,
+          "minimum": -0.3,
+          "title": "Origin X M",
+          "type": "number"
+        },
+        "origin_z_m": {
+          "default": 0,
+          "maximum": 0.3,
+          "minimum": -0.3,
+          "title": "Origin Z M",
+          "type": "number"
+        },
+        "contrast": {
+          "default": true,
+          "title": "Contrast",
+          "type": "boolean"
+        },
+        "bone_threshold_hu": {
+          "default": 300,
+          "maximum": 1000,
+          "minimum": 100,
+          "title": "Bone Threshold Hu",
+          "type": "number"
+        },
+        "bone_hu": {
+          "default": 1000,
+          "maximum": 3000,
+          "minimum": 500,
+          "title": "Bone Hu",
+          "type": "number"
+        },
+        "bone_speed_m_s": {
+          "default": 2800,
+          "maximum": 3500,
+          "minimum": 1800,
+          "title": "Bone Speed M S",
+          "type": "number"
+        },
+        "bone_density_kg_m3": {
+          "default": 1900,
+          "maximum": 2500,
+          "minimum": 1200,
+          "title": "Bone Density Kg M3",
+          "type": "number"
+        }
+      },
+      "required": [
+        "asset_id",
+        "rows",
+        "columns",
+        "spacing_x_m",
+        "spacing_z_m",
+        "crop"
+      ],
+      "title": "CTSettings",
+      "type": "object"
+    },
+    "CouplingSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "const": "volume_flow_2d",
+          "default": "volume_flow_2d",
+          "title": "Mode",
+          "type": "string"
+        },
+        "effective_length_m": {
+          "default": 0.001,
+          "maximum": 0.1,
+          "minimum": 1e-05,
+          "title": "Effective Length M",
+          "type": "number"
+        },
+        "passband_hz": {
+          "default": 1000000.0,
+          "maximum": 10000000.0,
+          "minimum": 100000.0,
+          "title": "Passband Hz",
+          "type": "number"
+        }
+      },
+      "title": "CouplingSettings",
+      "type": "object"
+    },
+    "JWaveSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "backend": {
+          "const": "jwave",
+          "default": "jwave",
+          "title": "Backend",
+          "type": "string"
+        },
+        "spacing_m": {
+          "default": 0.0002,
+          "maximum": 0.002,
+          "minimum": 5e-05,
+          "title": "Spacing M",
+          "type": "number"
+        },
+        "cfl": {
+          "default": 0.3,
+          "maximum": 0.5,
+          "minimum": 0.1,
+          "title": "Cfl",
+          "type": "number"
+        },
+        "pml_cells": {
+          "default": 20,
+          "maximum": 40,
+          "minimum": 12,
+          "title": "Pml Cells",
+          "type": "integer"
+        },
+        "density_kg_m3": {
+          "default": 1000,
+          "maximum": 3000,
+          "minimum": 500,
+          "title": "Density Kg M3",
+          "type": "number"
+        }
+      },
+      "title": "JWaveSettings",
+      "type": "object"
+    },
+    "ProcessingSettings": {
+      "additionalProperties": false,
+      "properties": {
+        "remove_dc": {
+          "default": false,
+          "title": "Remove Dc",
+          "type": "boolean"
+        },
+        "detrend_linear": {
+          "default": false,
+          "title": "Detrend Linear",
+          "type": "boolean"
+        },
+        "filter_kind": {
+          "default": "none",
+          "enum": [
+            "none",
+            "lowpass",
+            "highpass",
+            "bandpass"
+          ],
+          "title": "Filter Kind",
+          "type": "string"
+        },
+        "low_hz": {
+          "default": 200000.0,
+          "exclusiveMinimum": 0,
+          "maximum": 40000000.0,
+          "title": "Low Hz",
+          "type": "number"
+        },
+        "high_hz": {
+          "default": 2000000.0,
+          "exclusiveMinimum": 0,
+          "maximum": 45000000.0,
+          "title": "High Hz",
+          "type": "number"
+        },
+        "order": {
+          "default": 4,
+          "maximum": 8,
+          "minimum": 2,
+          "title": "Order",
+          "type": "integer"
+        },
+        "notch_hz": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "maximum": 45000000.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Notch Hz"
+        },
+        "notch_q": {
+          "default": 30,
+          "maximum": 100,
+          "minimum": 2,
+          "title": "Notch Q",
+          "type": "number"
+        }
+      },
+      "title": "ProcessingSettings",
+      "type": "object"
+    },
+    "ReceiveArray": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "default": "Array 1",
+          "maxLength": 40,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "elements": {
+          "default": 16,
+          "maximum": 1024,
+          "minimum": 2,
+          "title": "Elements",
+          "type": "integer"
+        },
+        "pitch_m": {
+          "default": 0.0003,
+          "maximum": 0.002,
+          "minimum": 5e-05,
+          "title": "Pitch M",
+          "type": "number"
+        },
+        "x_m": {
+          "default": 0,
+          "maximum": 0.1,
+          "minimum": -0.1,
+          "title": "X M",
+          "type": "number"
+        },
+        "z_m": {
+          "default": 0,
+          "maximum": 0.15,
+          "minimum": -0.1,
+          "title": "Z M",
+          "type": "number"
+        },
+        "angle_deg": {
+          "default": 0,
+          "maximum": 180,
+          "minimum": -180,
+          "title": "Angle Deg",
+          "type": "number"
+        }
+      },
+      "title": "ReceiveArray",
+      "type": "object"
+    },
+    "Source": {
+      "additionalProperties": false,
+      "properties": {
+        "x_m": {
+          "default": 0,
+          "maximum": 0.1,
+          "minimum": -0.1,
+          "title": "X M",
+          "type": "number"
+        },
+        "z_m": {
+          "default": 0.03,
+          "maximum": 0.15,
+          "minimum": 0.001,
+          "title": "Z M",
+          "type": "number"
+        },
+        "emission_s": {
+          "default": 8e-06,
+          "maximum": 0.0001,
+          "minimum": 0,
+          "title": "Emission S",
+          "type": "number"
+        },
+        "amplitude": {
+          "default": 1,
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "title": "Amplitude",
+          "type": "number"
+        },
+        "bubble": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/BubbleSettings"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "title": "Source",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "simulation": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/JWaveSettings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "bubble": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/BubbleSettings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "coupling": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CouplingSettings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "arrays": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/ReceiveArray"
+          },
+          "maxItems": 8,
+          "minItems": 1,
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Arrays"
+    },
+    "processing": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ProcessingSettings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "ct": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/CTSettings"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "receiver_offsets_m": {
+      "anyOf": [
+        {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "maxItems": 1024,
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Receiver Offsets M"
+    },
+    "sound_speed_m_s": {
+      "default": 1500,
+      "maximum": 3000,
+      "minimum": 300,
+      "title": "Sound Speed M S",
+      "type": "number"
+    },
+    "channels": {
+      "default": 64,
+      "maximum": 1024,
+      "minimum": 4,
+      "title": "Channels",
+      "type": "integer"
+    },
+    "pitch_m": {
+      "default": 0.0003,
+      "maximum": 0.002,
+      "minimum": 5e-05,
+      "title": "Pitch M",
+      "type": "number"
+    },
+    "sampling_hz": {
+      "default": 20000000.0,
+      "maximum": 100000000.0,
+      "minimum": 1000000.0,
+      "title": "Sampling Hz",
+      "type": "number"
+    },
+    "samples": {
+      "default": 4096,
+      "maximum": 16384,
+      "minimum": 512,
+      "title": "Samples",
+      "type": "integer"
+    },
+    "capture_t0_s": {
+      "default": 0,
+      "maximum": 0.0001,
+      "minimum": -0.0001,
+      "title": "Capture T0 S",
+      "type": "number"
+    },
+    "frequency_hz": {
+      "default": 1000000.0,
+      "maximum": 10000000.0,
+      "minimum": 100000.0,
+      "title": "Frequency Hz",
+      "type": "number"
+    },
+    "duration_s": {
+      "default": 4e-06,
+      "maximum": 2e-05,
+      "minimum": 1e-06,
+      "title": "Duration S",
+      "type": "number"
+    },
+    "emission_kind": {
+      "default": "pulse",
+      "enum": [
+        "pulse",
+        "harmonic",
+        "broadband"
+      ],
+      "title": "Emission Kind",
+      "type": "string"
+    },
+    "bandpass_hz": {
+      "anyOf": [
+        {
+          "maxItems": 2,
+          "minItems": 2,
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Bandpass Hz"
+    },
+    "spreading": {
+      "default": false,
+      "title": "Spreading",
+      "type": "boolean"
+    },
+    "snr_db": {
+      "anyOf": [
+        {
+          "maximum": 100,
+          "minimum": -10,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": 30,
+      "title": "Snr Db"
+    },
+    "seed": {
+      "default": 42,
+      "maximum": 4294967295,
+      "minimum": 0,
+      "title": "Seed",
+      "type": "integer"
+    },
+    "sources": {
+      "items": {
+        "$ref": "#/$defs/Source"
+      },
+      "maxItems": 8,
+      "minItems": 1,
+      "title": "Sources",
+      "type": "array"
+    },
+    "active_channels": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Active Channels"
+    },
+    "grid_x_min_m": {
+      "default": -0.012,
+      "maximum": 0.1,
+      "minimum": -0.1,
+      "title": "Grid X Min M",
+      "type": "number"
+    },
+    "grid_x_max_m": {
+      "default": 0.012,
+      "maximum": 0.1,
+      "minimum": -0.1,
+      "title": "Grid X Max M",
+      "type": "number"
+    },
+    "grid_z_min_m": {
+      "default": 0.015,
+      "maximum": 0.15,
+      "minimum": 0.001,
+      "title": "Grid Z Min M",
+      "type": "number"
+    },
+    "grid_z_max_m": {
+      "default": 0.045,
+      "maximum": 0.15,
+      "minimum": 0.001,
+      "title": "Grid Z Max M",
+      "type": "number"
+    },
+    "grid_n": {
+      "default": 128,
+      "maximum": 192,
+      "minimum": 17,
+      "title": "Grid N",
+      "type": "integer"
+    },
+    "gate_start_s": {
+      "default": 4e-06,
+      "maximum": 0.0001,
+      "minimum": 0,
+      "title": "Gate Start S",
+      "type": "number"
+    },
+    "gate_end_s": {
+      "default": 1.2e-05,
+      "maximum": 0.0004,
+      "minimum": 0,
+      "title": "Gate End S",
+      "type": "number"
+    },
+    "gate_stride": {
+      "default": 4,
+      "maximum": 16,
+      "minimum": 1,
+      "title": "Gate Stride",
+      "type": "integer"
+    }
+  },
+  "title": "Config",
+  "type": "object"
+}

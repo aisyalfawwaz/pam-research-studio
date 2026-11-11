@@ -1,0 +1,11 @@
+[project]
+name = "pamstudio-jwave-runtime"
+version = "1.0.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "jwave==0.2.1", "jax==0.4.38", "jaxlib==0.4.38", "jaxdf==0.2.8",
+  "equinox==0.11.12", "numpy==2.3.4", "scipy==1.18.1", "matplotlib==3.11.2",
+]
+
+[tool.uv]
+package = false

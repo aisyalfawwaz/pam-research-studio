@@ -1,0 +1,126 @@
+{
+  "project": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\.local\\workspace-refinements-v08-dd05d087",
+  "packages": {
+    "full_aperture": {
+      "run_id": "7d66852c-70fa-4d0b-98b5-07f56acbf363",
+      "sha256": "cba3f85a308bc1ea7d895753fbcdda0cfdd776be9f253018b2f4f9e8234dbf40"
+    },
+    "alternate_aperture": {
+      "run_id": "f5ab3cb7-985b-4dd0-8891-c514fcbc39a6",
+      "sha256": "2e7603df65335e614e1301c4b6b82318db0cd3fa0cca9b76dee212f303bc2b4e"
+    }
+  },
+  "metric_version": "1.1.0",
+  "source": "Imported v0.7 RF and maps; original scientific provenance/runtime retained; new read-only benchmark 1.1 context/deltas",
+  "comparison": {
+    "matched": false,
+    "differences": [
+      "analysis"
+    ],
+    "details": [
+      {
+        "field": "analysis.active_channels",
+        "current": [
+          0,
+          2,
+          4,
+          6,
+          8,
+          10,
+          12,
+          14,
+          16,
+          18,
+          20,
+          22,
+          24,
+          26,
+          28,
+          30,
+          32,
+          34,
+          36,
+          38,
+          40,
+          42,
+          44,
+          46,
+          48,
+          50,
+          52,
+          54,
+          56,
+          58,
+          60,
+          62
+        ],
+        "reference": null
+      }
+    ],
+    "detail_count": 1,
+    "deltas": {
+      "atp": {
+        "localization_error_m": 0.0,
+        "lateral_fwhm_m": 4.102741304511451e-07,
+        "axial_fwhm_m": -8.00880496434897e-08,
+        "roi_concentration": -0.0006232760258574332,
+        "background_peak_db": -0.0011206916209091644,
+        "contrast_db": -0.010996059496022781,
+        "cnr": 0.00094832600541217,
+        "gcnr": -0.002506725360723938,
+        "normalized_entropy": 0.0005702395497578783,
+        "half_power_area_m2": -4.3945312499999904e-08
+      },
+      "cf": {
+        "localization_error_m": 0.0,
+        "lateral_fwhm_m": -8.3399392845733e-07,
+        "axial_fwhm_m": -8.267328988238731e-07,
+        "roi_concentration": -5.9977232707064676e-05,
+        "background_peak_db": -4.4122349671119054e-05,
+        "contrast_db": -0.0012382563133943592,
+        "cnr": -0.0003849582953265873,
+        "gcnr": -0.004340914649058503,
+        "normalized_entropy": 3.496808340996971e-06,
+        "half_power_area_m2": 0.0
+      },
+      "das": {
+        "localization_error_m": 0.0,
+        "lateral_fwhm_m": -2.266223709344352e-06,
+        "axial_fwhm_m": -9.306898105729267e-07,
+        "roi_concentration": -0.00015673165069218786,
+        "background_peak_db": -0.00012963359821642484,
+        "contrast_db": -0.0037055877308862506,
+        "cnr": 0.00026744747857376794,
+        "gcnr": -0.007360569435327147,
+        "normalized_entropy": 0.0003657570845593261,
+        "half_power_area_m2": 0.0
+      },
+      "rcb": {
+        "localization_error_m": -4.6875000000001776e-05,
+        "lateral_fwhm_m": -0.000740631558450254,
+        "axial_fwhm_m": -0.00032693428423588924,
+        "roi_concentration": 0.014301176328935461,
+        "background_peak_db": -0.016474029876431696,
+        "contrast_db": 0.3500709075564412,
+        "cnr": -0.38597002885062903,
+        "gcnr": 0.003668378576669129,
+        "normalized_entropy": -0.05903925227488582,
+        "half_power_area_m2": -1.0546874999999997e-05
+      },
+      "tea": {
+        "localization_error_m": 0.0,
+        "lateral_fwhm_m": 4.103833831049439e-07,
+        "axial_fwhm_m": -2.9310005307883746e-07,
+        "roi_concentration": -0.00031446598429640815,
+        "background_peak_db": -0.0008497771574030311,
+        "contrast_db": -0.007010888559262796,
+        "cnr": 0.0006962386063207315,
+        "gcnr": -0.006908779652726849,
+        "normalized_entropy": 0.0005144149642397622,
+        "half_power_area_m2": -1.7578124999999623e-07
+      }
+    },
+    "delta_convention": "current minus reference; SI units; descriptive differences, not significance or confidence intervals",
+    "label": "Scenario comparison; settings or data differ"
+  }
+}

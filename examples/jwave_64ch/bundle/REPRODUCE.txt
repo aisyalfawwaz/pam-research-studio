@@ -1,0 +1,4 @@
+From PAM Research Studio source checkout, after uv sync --locked:
+Install the optional runtime first: pwsh -File scripts/setup-jwave.ps1
+uv run python -m pamstudio.cli reproduce PATH_TO_THIS_FOLDER
+Requires this engine source and pinned environment. A package is data, never executable plugin code.

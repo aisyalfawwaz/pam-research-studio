@@ -1,0 +1,3 @@
+From PAM Research Studio 0.1.0 source checkout, after uv sync --locked:
+uv run python -m pamstudio.cli reproduce PATH_TO_THIS_FOLDER
+Requires this engine source and pinned environment. A package is data, never executable plugin code.

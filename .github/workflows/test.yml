@@ -1,0 +1,34 @@
+name: Offline reference pipeline
+on: [push, pull_request]
+jobs:
+  validate:
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.25.0'
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: '0.10.6'
+      - run: uv sync --locked --python 3.13
+      - run: pnpm install --frozen-lockfile
+      - run: uv run ruff check engine
+      - run: uv run pytest -q
+      - run: pnpm test
+      - run: pnpm build
+      - if: runner.os == 'Windows'
+        run: pnpm exec playwright test
+      - if: runner.os == 'Linux'
+        run: xvfb-run --auto-servernum pnpm exec playwright test
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-${{ matrix.os }}
+          path: test-results

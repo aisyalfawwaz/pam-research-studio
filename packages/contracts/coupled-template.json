@@ -1,0 +1,298 @@
+{
+  "workflow": {
+    "schema_version": "1.0",
+    "nodes": [
+      {
+        "id": "drive",
+        "kind": "drive",
+        "x": 40.0,
+        "y": 40.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "scene",
+        "kind": "scene",
+        "x": 40.0,
+        "y": 230.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "probe",
+        "kind": "probe",
+        "x": 260.0,
+        "y": 230.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "source",
+        "kind": "bubble",
+        "x": 260.0,
+        "y": 40.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "bubble_scope",
+        "kind": "bubble_scope",
+        "x": 480.0,
+        "y": 230.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "coupler",
+        "kind": "coupler",
+        "x": 480.0,
+        "y": 40.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "prop",
+        "kind": "jwave",
+        "x": 700.0,
+        "y": 40.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "rf_scope",
+        "kind": "rf_scope",
+        "x": 700.0,
+        "y": 230.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "method_das",
+        "kind": "reconstruct",
+        "x": 40.0,
+        "y": 430.0,
+        "label": "",
+        "method": "das"
+      },
+      {
+        "id": "method_tea",
+        "kind": "reconstruct",
+        "x": 260.0,
+        "y": 430.0,
+        "label": "",
+        "method": "tea"
+      },
+      {
+        "id": "method_cf",
+        "kind": "reconstruct",
+        "x": 480.0,
+        "y": 430.0,
+        "label": "",
+        "method": "cf"
+      },
+      {
+        "id": "method_rcb",
+        "kind": "reconstruct",
+        "x": 700.0,
+        "y": 430.0,
+        "label": "",
+        "method": "rcb"
+      },
+      {
+        "id": "method_atp",
+        "kind": "reconstruct",
+        "x": 920.0,
+        "y": 430.0,
+        "label": "",
+        "method": "atp"
+      },
+      {
+        "id": "maps",
+        "kind": "map_scope",
+        "x": 480.0,
+        "y": 620.0,
+        "label": "",
+        "method": "das"
+      }
+    ],
+    "edges": [
+      {
+        "source": "drive",
+        "target": "source",
+        "port": "drive"
+      },
+      {
+        "source": "source",
+        "target": "bubble_scope",
+        "port": "in"
+      },
+      {
+        "source": "source",
+        "target": "coupler",
+        "port": "curve"
+      },
+      {
+        "source": "coupler",
+        "target": "prop",
+        "port": "source"
+      },
+      {
+        "source": "scene",
+        "target": "prop",
+        "port": "scene"
+      },
+      {
+        "source": "probe",
+        "target": "prop",
+        "port": "probe"
+      },
+      {
+        "source": "prop",
+        "target": "rf_scope",
+        "port": "in"
+      },
+      {
+        "source": "prop",
+        "target": "method_das",
+        "port": "rf"
+      },
+      {
+        "source": "method_das",
+        "target": "maps",
+        "port": "in"
+      },
+      {
+        "source": "prop",
+        "target": "method_tea",
+        "port": "rf"
+      },
+      {
+        "source": "method_tea",
+        "target": "maps",
+        "port": "in"
+      },
+      {
+        "source": "prop",
+        "target": "method_cf",
+        "port": "rf"
+      },
+      {
+        "source": "method_cf",
+        "target": "maps",
+        "port": "in"
+      },
+      {
+        "source": "prop",
+        "target": "method_rcb",
+        "port": "rf"
+      },
+      {
+        "source": "method_rcb",
+        "target": "maps",
+        "port": "in"
+      },
+      {
+        "source": "prop",
+        "target": "method_atp",
+        "port": "rf"
+      },
+      {
+        "source": "method_atp",
+        "target": "maps",
+        "port": "in"
+      }
+    ],
+    "analysis": null
+  },
+  "config": {
+    "schema_version": "1.0",
+    "simulation": {
+      "backend": "jwave",
+      "spacing_m": 0.00025,
+      "cfl": 0.3,
+      "pml_cells": 20,
+      "density_kg_m3": 1000.0
+    },
+    "bubble": {
+      "model": "lipid",
+      "radius_m": 2e-06,
+      "drive_pa": 20000.0,
+      "viscosity_pa_s": 0.001,
+      "ringdown_cycles": 4,
+      "rtol": 1e-08
+    },
+    "coupling": {
+      "mode": "volume_flow_2d",
+      "effective_length_m": 0.001,
+      "passband_hz": 700000.0
+    },
+    "arrays": [
+      {
+        "name": "Array 1",
+        "elements": 16,
+        "pitch_m": 0.0003,
+        "x_m": -0.003,
+        "z_m": 0.0,
+        "angle_deg": 0.0
+      },
+      {
+        "name": "Array 2",
+        "elements": 16,
+        "pitch_m": 0.0003,
+        "x_m": 0.009,
+        "z_m": 0.008,
+        "angle_deg": 90.0
+      }
+    ],
+    "sound_speed_m_s": 1500.0,
+    "channels": 32,
+    "pitch_m": 0.0003,
+    "sampling_hz": 10000000.0,
+    "samples": 512,
+    "capture_t0_s": 0.0,
+    "frequency_hz": 500000.0,
+    "duration_s": 4e-06,
+    "emission_kind": "pulse",
+    "bandpass_hz": null,
+    "spreading": false,
+    "snr_db": 30.0,
+    "seed": 42,
+    "sources": [
+      {
+        "x_m": 0.0,
+        "z_m": 0.012,
+        "emission_s": 8e-06,
+        "amplitude": 1.0
+      }
+    ],
+    "active_channels": null,
+    "grid_x_min_m": -0.008,
+    "grid_x_max_m": 0.012,
+    "grid_z_min_m": 0.004,
+    "grid_z_max_m": 0.02,
+    "grid_n": 65,
+    "gate_start_s": 4e-06,
+    "gate_end_s": 3.6e-05,
+    "gate_stride": 1
+  },
+  "options": {
+    "methods": [
+      "das",
+      "tea",
+      "cf",
+      "rcb",
+      "atp"
+    ],
+    "cf_exponent": 1.0,
+    "rcb_radius": 0.1,
+    "rcb_loading": 0.001,
+    "rcb_subarray": 16,
+    "atp_timing_known": true,
+    "atp_mode": "emission",
+    "atp_emission_s": 8e-06,
+    "atp_window_s": 4e-06,
+    "atp_plane_z_m": 0.0,
+    "receive_model": "homogeneous",
+    "ray_step_m": 0.00025
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "receive_model": {
+      "default": "homogeneous",
+      "enum": [
+        "homogeneous",
+        "ct_slowness"
+      ],
+      "title": "Receive Model",
+      "type": "string"
+    },
+    "ray_step_m": {
+      "default": 0.00025,
+      "maximum": 0.002,
+      "minimum": 5e-05,
+      "title": "Ray Step M",
+      "type": "number"
+    },
+    "assumed_sound_speed_m_s": {
+      "anyOf": [
+        {
+          "maximum": 3000,
+          "minimum": 300,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Assumed Sound Speed M S"
+    },
+    "assumed_receiver_offsets_m": {
+      "anyOf": [
+        {
+          "items": {
+            "maxItems": 2,
+            "minItems": 2,
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "type": "array"
+          },
+          "maxItems": 1024,
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Assumed Receiver Offsets M"
+    },
+    "methods": {
+      "items": {
+        "enum": [
+          "das",
+          "tea",
+          "cf",
+          "rcb",
+          "atp"
+        ],
+        "type": "string"
+      },
+      "maxItems": 5,
+      "minItems": 1,
+      "title": "Methods",
+      "type": "array"
+    },
+    "cf_exponent": {
+      "default": 1.0,
+      "maximum": 4,
+      "minimum": 0,
+      "title": "Cf Exponent",
+      "type": "number"
+    },
+    "rcb_radius": {
+      "default": 0.1,
+      "exclusiveMaximum": 1,
+      "minimum": 0,
+      "title": "Rcb Radius",
+      "type": "number"
+    },
+    "rcb_loading": {
+      "default": 0.001,
+      "maximum": 0.1,
+      "minimum": 1e-08,
+      "title": "Rcb Loading",
+      "type": "number"
+    },
+    "rcb_subarray": {
+      "default": 16,
+      "maximum": 64,
+      "minimum": 2,
+      "title": "Rcb Subarray",
+      "type": "integer"
+    },
+    "atp_timing_known": {
+      "default": false,
+      "title": "Atp Timing Known",
+      "type": "boolean"
+    },
+    "atp_mode": {
+      "default": "emission",
+      "enum": [
+        "emission",
+        "plane_wave"
+      ],
+      "title": "Atp Mode",
+      "type": "string"
+    },
+    "atp_emission_s": {
+      "default": 8e-06,
+      "maximum": 0.0002,
+      "minimum": -0.0001,
+      "title": "Atp Emission S",
+      "type": "number"
+    },
+    "atp_window_s": {
+      "default": 4e-06,
+      "maximum": 2e-05,
+      "minimum": 1e-07,
+      "title": "Atp Window S",
+      "type": "number"
+    },
+    "atp_plane_z_m": {
+      "default": 0,
+      "maximum": 0.15,
+      "minimum": -0.15,
+      "title": "Atp Plane Z M",
+      "type": "number"
+    }
+  },
+  "title": "ReconstructionOptions",
+  "type": "object"
+}

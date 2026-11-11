@@ -1,0 +1,158 @@
+{
+  "run_id": "b337effe-6c05-4bda-808f-4da853ef00f0",
+  "zip_sha256": "bb89884e968b589a8ef59731a9e8ad68251ea9dae264eb09a3cac04e7f2bf2b8",
+  "total_generation_wall_s": 4.501269100001082,
+  "rf_shape": [
+    1,
+    4096,
+    1024
+  ],
+  "preview_shape": [
+    512,
+    1024
+  ],
+  "environment": {
+    "backend": "numpy-cpu",
+    "config_sha256": "f028b89955c1c98a30211ee18f574b4b3ec922a6a0c6732c62e8930be27fe63c",
+    "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "engine_source_sha256": "6aa4daa48007cbde5caf5e4f73be9b83cabb8ff508d48d0ddea29182a76b6fea",
+    "engine_version": "0.5.0",
+    "frontend_dependencies": {
+      "lucide-react": "0.548.0",
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "zod": "4.6.7"
+    },
+    "git_commit": "uncommitted",
+    "node": "not recorded (CLI)",
+    "os": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "fastapi": "0.162.4",
+      "h5py": "3.15.1",
+      "matplotlib": "3.10.7",
+      "numpy": "2.3.4",
+      "pydantic": "2.12.3",
+      "scipy": "1.16.3"
+    },
+    "precision": "float64",
+    "python": "3.13.12",
+    "reconstruction_options": {
+      "atp_emission_s": 8e-06,
+      "atp_mode": "emission",
+      "atp_plane_z_m": 0.0,
+      "atp_timing_known": true,
+      "atp_window_s": 4e-06,
+      "cf_exponent": 1.0,
+      "methods": [
+        "das",
+        "tea",
+        "cf",
+        "rcb",
+        "atp"
+      ],
+      "rcb_loading": 0.001,
+      "rcb_radius": 0.1,
+      "rcb_subarray": 4
+    },
+    "simulation": {
+      "adapter_version": "1.0.0",
+      "compute": "numpy-cpu",
+      "id": "analytic",
+      "precision": "float64"
+    }
+  },
+  "reconstruction": {
+    "diagnostics": {
+      "active_channels": 1024,
+      "gate_actual_s": [
+        6e-06,
+        9.999999999999999e-06
+      ],
+      "gate_samples": 21,
+      "method_status": "reference/experimental",
+      "pixel_batch_size": 17,
+      "rcb_condition_max": 367612.921001298,
+      "rcb_constraint_residual_max": 0.10000000000000012,
+      "rcb_covariance_terms_upper_bound": 99434496,
+      "rcb_loaded_condition_max": 3956.399891967733,
+      "rcb_snapshots": 21,
+      "rcb_spatial_smoothing": "contiguous uniform subarrays",
+      "rcb_subarray": 4,
+      "scratch_target_bytes": 33554432
+    },
+    "map_bytes": 11560,
+    "methods": {
+      "atp": {
+        "axial_fwhm_m": 0.004770431779222466,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.1153736423205528,
+        "lateral_fwhm_m": 0.0016253602616440928,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.03,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      },
+      "cf": {
+        "axial_fwhm_m": 0.003412228650752254,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.03965825811517812,
+        "lateral_fwhm_m": 0.0015012424881434712,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.03,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      },
+      "das": {
+        "axial_fwhm_m": 0.004387089866312675,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.133564715147308,
+        "lateral_fwhm_m": 0.0015640084875207997,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.03,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      },
+      "rcb": {
+        "axial_fwhm_m": 0.006370348114318795,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9828247657191768,
+        "lateral_fwhm_m": 0.015797801355700327,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.03,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      },
+      "tea": {
+        "axial_fwhm_m": 0.004770431779222463,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.11537364232055276,
+        "lateral_fwhm_m": 0.0016253602616440928,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.03,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      }
+    },
+    "rf_bytes": 33554432,
+    "runtime_ms": 2578.502299998945,
+    "runtime_scope": "selected reconstruction methods, shared wall time"
+  },
+  "warnings": [
+    "Homogeneous straight-ray scalar model; arbitrary amplitude, no calibrated pressure, scattering or nonlinear propagation."
+  ]
+}

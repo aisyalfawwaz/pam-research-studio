@@ -1,0 +1,25 @@
+{
+  "kind": "public_deidentified_CT",
+  "label": "Public head CTA axial slice \u00b7 study 197 / instance 177",
+  "title": "Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection",
+  "authors": [
+    "Evgenia Blagosklonova",
+    "Daria Dolotova",
+    "Natalia Polunina",
+    "Elena Grigorieva",
+    "Denis Pakhomov",
+    "Vladimir Krylov",
+    "Andrey Gavrilov"
+  ],
+  "doi": "10.5281/zenodo.15697196",
+  "url": "https://zenodo.org/records/15697196",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "archive": "Dataset.zip",
+  "archive_size": 25578845008,
+  "archive_md5_published": "264ff9ee868c022d108b7c7aa7396d32",
+  "archive_entry": "Studies/197/177.dcm",
+  "original_instance_sha256": "86172d1615b15891a1683b0ba600941f115943d7711f51f7ed50a9b244170838",
+  "derived_instance_sha256": "07f10ec0d736d4a63cb8229c508a6dd1210f77e0d9b6555c053a9340b6572355",
+  "modifications": "One axial slice selected. Pixel samples and HU rescale/spacing retained exactly; decompressed to explicit little endian. Metadata rebuilt with public-reference identifiers; patient/study/private fields are not copied. ImagePosition reset to local zero; no patient 3D registration. No archive-wide MD5 verification is claimed for this partial download."
+}

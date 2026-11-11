@@ -1,0 +1,66 @@
+{
+  "name": "pam-research-studio",
+  "version": "0.11.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "description": "Local-first passive acoustic mapping research desktop",
+  "author": "Aisy Fawwaz",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "postinstall": "node scripts/ensure-electron.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build-branding.mjs && tsc --noEmit && vite build && node scripts/build-electron.mjs",
+    "start": "electron .",
+    "test": "vitest run",
+    "test:e2e": "pnpm build && playwright test",
+    "check": "tsc --noEmit",
+    "package:dir": "node scripts/check-sidecar.mjs && pnpm build && electron-builder --dir"
+  },
+  "dependencies": {
+    "lucide-react": "0.548.0",
+    "mediabunny": "1.65.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "@types/node": "24.10.0",
+    "@types/react": "19.2.2",
+    "@types/react-dom": "19.2.2",
+    "@vitejs/plugin-react": "6.3.0",
+    "electron": "45.3.0",
+    "electron-builder": "26.18.0",
+    "esbuild": "0.27.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3",
+    "vite": "8.3.7",
+    "vitest": "5.1.0"
+  },
+  "build": {
+    "appId": "org.pamstudio.research",
+    "productName": "PAM Research Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "apps/desktop/public/brand/app-icon.ico",
+      "target": "nsis"
+    },
+    "extraResources": [
+      {
+        "from": "sidecar",
+        "to": "sidecar",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  }
+}

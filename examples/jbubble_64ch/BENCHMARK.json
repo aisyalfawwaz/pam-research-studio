@@ -1,0 +1,211 @@
+{
+  "run_id": "52c1ad3a-e1d9-4792-9ba7-0ac63cfb4479",
+  "zip_sha256": "4d766750698f3313c37964f6e7ad6123a7d8283e3b6f212d9dbc79554d31b398",
+  "environment": {
+    "backend": "numpy-cpu",
+    "config_sha256": "fb4b277247f42a79cb86363529159795021b38a86c4df80388d98c8eec1e0301",
+    "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "engine_source_sha256": "c10689a5313bb214866e5fb80a531af91e483c3a032b5ee477482ccc854618c1",
+    "engine_version": "0.3.0",
+    "frontend_dependencies": {
+      "lucide-react": "0.548.0",
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "zod": "4.6.7"
+    },
+    "git_commit": "uncommitted",
+    "node": "not recorded (CLI)",
+    "os": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "fastapi": "0.162.4",
+      "h5py": "3.15.1",
+      "matplotlib": "3.10.7",
+      "numpy": "2.3.4",
+      "pydantic": "2.12.3",
+      "scipy": "1.16.3"
+    },
+    "precision": "float64",
+    "python": "3.13.12",
+    "reconstruction_options": {
+      "atp_emission_s": 8e-06,
+      "atp_mode": "emission",
+      "atp_plane_z_m": 0.0,
+      "atp_timing_known": true,
+      "atp_window_s": 4e-06,
+      "cf_exponent": 1.0,
+      "methods": [
+        "das",
+        "tea",
+        "cf",
+        "rcb",
+        "atp"
+      ],
+      "rcb_loading": 0.001,
+      "rcb_radius": 0.1,
+      "rcb_subarray": 16
+    },
+    "simulation": {
+      "adapter_version": "1.0.0",
+      "atol": 1e-10,
+      "compute": "jax-cpu",
+      "converged": true,
+      "devices": [
+        "TFRT_CPU_0"
+      ],
+      "drive": "Hann-windowed sine; centre equals source emission_s",
+      "emission_999_energy_upper_hz": 16323616.894705532,
+      "energy_above_acquisition_nyquist_fraction": 0.004319237596450257,
+      "equation": "Keller-Miksis",
+      "final_emission_relative_peak": 2.0150825048542403e-08,
+      "id": "jbubble",
+      "license": "MIT",
+      "max_radius_ratio": 1.2068302503807755,
+      "max_steps": 100000,
+      "max_wall_mach": 0.003735260752182932,
+      "min_radius_ratio": 0.7488648709669441,
+      "os": "Windows-11-10.0.26200",
+      "oversampling": 7,
+      "package": "jbubble",
+      "packages": {
+        "diffrax": "0.7.2",
+        "equinox": "0.13.4",
+        "jax": "0.8.2",
+        "jaxlib": "0.8.2",
+        "jbubble": "0.2.0",
+        "numpy": "2.3.4",
+        "scipy": "1.16.3"
+      },
+      "parameters": {
+        "P_amb": 101325.0,
+        "R0": 2e-06,
+        "c_L": 1500.0,
+        "cycle_num": 4.0,
+        "freq": 1000000.0,
+        "gamma": 1.095,
+        "mu": 0.001,
+        "pressure": 100000.0,
+        "rho_L": 1000.0
+      },
+      "peak_emission_pa_at_reference": 219.72367461000448,
+      "precision": "float64",
+      "preset": "lipid",
+      "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+      "python": "3.13.12",
+      "reference_distance_m": 0.001,
+      "resampling": "polyphase anti-alias low-pass before acquisition-rate decimation",
+      "rf_normalization_pa": 100000.0,
+      "rf_unit": "dimensionless simulated pressure / drive pressure",
+      "rtol": 1e-08,
+      "runner_sha256": "0c9b8f4d47c7453deed9a15137e5963bc4c7cd5480fe8661bbca500af57be01d",
+      "runtime": "isolated-native-cpu",
+      "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+      "runtime_ms": 2435.2964000136126,
+      "shell_parameters": {
+        "R_buckle_ratio": 0.98058,
+        "chi": 0.5,
+        "kappa_s": 7.5e-09,
+        "sigma_rupture": 0.072,
+        "smoothing": 0.01
+      },
+      "solver": "diffrax.Dopri5",
+      "source": "https://github.com/imperial-nsb/jbubble",
+      "source_sampling_hz": 140000000.0,
+      "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+      "source_weights": "Source amplitude scales identical independent bubble emissions, not the driving pressure",
+      "validation": "experimental",
+      "version": "0.2.0"
+    }
+  },
+  "reconstruction": {
+    "diagnostics": {
+      "active_channels": 64,
+      "gate_actual_s": [
+        4e-06,
+        1.8e-05
+      ],
+      "gate_samples": 281,
+      "method_status": "reference/experimental",
+      "rcb_condition_max": 147602.95269843307,
+      "rcb_constraint_residual_max": 0.10000000000000013,
+      "rcb_loaded_condition_max": 14227.449020913842,
+      "rcb_snapshots": 281,
+      "rcb_subarray": 16
+    },
+    "map_bytes": 655360,
+    "methods": {
+      "atp": {
+        "axial_fwhm_m": 0.005977022768796334,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.998401331576386,
+        "lateral_fwhm_m": 0.0011987517679114762,
+        "localization_error_m": 0.0017741714391142163,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": -9.448818897637816e-05,
+        "peak_z_m": 0.03177165354330709,
+        "truth_nearest_peak_errors_m": [
+          0.0017741714391142163
+        ]
+      },
+      "cf": {
+        "axial_fwhm_m": 0.00969268250159722,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.0008325806276966788,
+        "localization_error_m": 0.002010096037748489,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": -9.448818897637816e-05,
+        "peak_z_m": 0.032007874015748033,
+        "truth_nearest_peak_errors_m": [
+          0.002010096037748489
+        ]
+      },
+      "das": {
+        "axial_fwhm_m": 0.009883187296827071,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.000915884165843402,
+        "localization_error_m": 0.002010096037748489,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": -9.448818897637816e-05,
+        "peak_z_m": 0.032007874015748033,
+        "truth_nearest_peak_errors_m": [
+          0.002010096037748489
+        ]
+      },
+      "rcb": {
+        "axial_fwhm_m": 0.011129006795357065,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.002287139875376803,
+        "localization_error_m": 0.004843441433304411,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": -9.448818897637816e-05,
+        "peak_z_m": 0.034842519685039375,
+        "truth_nearest_peak_errors_m": [
+          0.004843441433304411
+        ]
+      },
+      "tea": {
+        "axial_fwhm_m": 0.010169938116635562,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.0012507189338362879,
+        "localization_error_m": 0.0022460828323497294,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": -9.448818897637816e-05,
+        "peak_z_m": 0.032244094488188976,
+        "truth_nearest_peak_errors_m": [
+          0.0022460828323497294
+        ]
+      }
+    },
+    "rf_bytes": 2097152,
+    "runtime_ms": 17908.00749999471,
+    "runtime_scope": "selected reconstruction methods, shared wall time"
+  },
+  "warnings": [
+    "Experimental jbubble Keller-Miksis dynamics with Hann sine drive, independent identical bubbles and quasi-acoustic spherical 3D propagation. RF is simulated emission pressure divided by drive pressure; plots in Pa are model predictions, not calibrated measurements. No bubble interactions, transmit field, attenuation or clinical inference.",
+    "Receiver pitch exceeds half the resolved bubble-emission wavelength; harmonics may produce grating lobes. Consider smaller pitch or a validated receive bandpass.",
+    "Acquisition anti-alias filtering discards some simulated bubble-emission energy; inspect the recorded spectral-loss fraction."
+  ]
+}

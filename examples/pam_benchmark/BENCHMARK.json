@@ -1,0 +1,21 @@
+{
+  "project": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\.local\\pam-benchmark-v07-7571e902",
+  "packages": {
+    "full_aperture": {
+      "run_id": "a0dc19db-44a6-410e-a48b-8ff92167bd99",
+      "sha256": "ce4a0caa272fbf7ea8984a8453a57214058a92d13f3df13413e29f009c48ecec"
+    },
+    "alternate_aperture": {
+      "run_id": "a5e41834-8cbb-4926-8294-be1675aaee95",
+      "sha256": "574bf57248a0ac1865539827a3bffb4b055af00570217cf49318f3c344cdcbc1"
+    }
+  },
+  "scenario": "Same raw RF; 64 versus 32 alternating active channels; fixed 2 mm truth disks and 100 linear histogram bins",
+  "comparison": {
+    "matched": false,
+    "differences": [
+      "analysis"
+    ],
+    "label": "Scenario comparison; settings or data differ"
+  }
+}

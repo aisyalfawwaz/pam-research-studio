@@ -1,0 +1,1462 @@
+{
+  "manual_public_anatomy_demo": true,
+  "project": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\.local\\ct_skull_patch-v06-cdbb4f07",
+  "comparison": {
+    "relative_rf_l2_difference": 1.3678147421829232,
+    "water_rf_rms": 8.375508359816338e-07,
+    "ct_rf_rms": 4.1363859037595204e-07,
+    "rf_shape": [
+      1,
+      512,
+      32
+    ],
+    "medium_shape_zx": [
+      200,
+      200
+    ]
+  },
+  "runs": {
+    "water": {
+      "run_id": "f10f142e-a1c0-49c5-b4e1-244f3cf0a135",
+      "zip_sha256": "e5c6e464cd1c35acb5d680b3bac8b65a631ef3bc5af9c598ab8f3c239a7bb12c",
+      "wall_s": 22.427663700000267,
+      "metrics": {
+        "diagnostics": {
+          "active_channels": 32,
+          "gate_actual_s": [
+            0.0,
+            7.2e-05
+          ],
+          "gate_samples": 361,
+          "method_status": "reference/experimental",
+          "pixel_batch_size": 64,
+          "scratch_target_bytes": 33554432
+        },
+        "map_bytes": 34848,
+        "methods": {
+          "atp": {
+            "axial_fwhm_m": 0.017915885243648066,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 0.9915582847803766,
+            "lateral_fwhm_m": 0.01267981266928422,
+            "localization_error_m": 0.0,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0,
+            "peak_z_m": 0.045,
+            "truth_nearest_peak_errors_m": [
+              0.0
+            ]
+          },
+          "cf": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.009947472237258954,
+            "localization_error_m": 0.0050000000000000044,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0,
+            "peak_z_m": 0.039999999999999994,
+            "truth_nearest_peak_errors_m": [
+              0.0050000000000000044
+            ]
+          },
+          "das": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.011112799292386108,
+            "localization_error_m": 0.0050000000000000044,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0,
+            "peak_z_m": 0.039999999999999994,
+            "truth_nearest_peak_errors_m": [
+              0.0050000000000000044
+            ]
+          },
+          "tea": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.013417116935805372,
+            "localization_error_m": 0.0025000000000000022,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0,
+            "peak_z_m": 0.0475,
+            "truth_nearest_peak_errors_m": [
+              0.0025000000000000022
+            ]
+          }
+        },
+        "rf_bytes": 131072,
+        "rf_peak": 5.45130985373336e-06,
+        "rf_rms": 8.375508359816341e-07,
+        "runtime_ms": 124.05899999794201,
+        "runtime_scope": "selected reconstruction methods, shared wall time"
+      },
+      "warnings": [
+        "Experimental one-way jbubble volume-flow \u2192 j-Wave 2D coupling. An explicit out-of-plane equivalent line length defines the 3D-to-2D conversion. FIR bandwidth filtering, CT-derived fluid medium and no acoustic feedback. RF is 2D model pressure divided by drive pressure; no 3D pressure equivalence or calibrated measurement.",
+        "Receive layout uses point elements with actual array positions and angles; finite element width, directivity and transmit steering are not modelled.",
+        "Experimental CT-derived 2D fluid c/rho model with thresholded HU mixture. Air/soft tissue are replaced by host fluid. No absorption or elastic/shear modes; homogeneous straight-ray receive reconstruction remains uncorrected. HU calibration is user-defined, not a patient-specific acoustic measurement."
+      ],
+      "provenance": {
+        "backend": "numpy-cpu",
+        "config_sha256": "9c5dcc616b95741c3911fb38d69596b9ea1c07fb7c161a901d5ddc575dd1ccbf",
+        "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+        "engine_source_sha256": "df6abbc984f30564fcd3432aa147c9435eb1c0130966748b90adf1c06eda8013",
+        "engine_version": "0.6.0",
+        "frontend_dependencies": {
+          "lucide-react": "0.548.0",
+          "react": "19.3.1",
+          "react-dom": "19.3.1",
+          "zod": "4.6.7"
+        },
+        "git_commit": "uncommitted",
+        "node": "not recorded (CLI)",
+        "os": "Windows-11-10.0.26200-SP0",
+        "packages": {
+          "fastapi": "0.162.4",
+          "h5py": "3.15.1",
+          "matplotlib": "3.10.7",
+          "numpy": "2.3.4",
+          "pydantic": "2.12.3",
+          "pydicom": "3.0.2",
+          "python-gdcm": "3.2.6",
+          "scipy": "1.16.3"
+        },
+        "precision": "float64",
+        "python": "3.13.12",
+        "reconstruction_options": {
+          "atp_emission_s": 2.2342857142857143e-05,
+          "atp_mode": "emission",
+          "atp_plane_z_m": 0.0,
+          "atp_timing_known": true,
+          "atp_window_s": 1.2e-05,
+          "cf_exponent": 1.0,
+          "methods": [
+            "das",
+            "tea",
+            "cf",
+            "atp"
+          ],
+          "rcb_loading": 0.001,
+          "rcb_radius": 0.1,
+          "rcb_subarray": 16
+        },
+        "simulation": {
+          "adapter_version": "1.0.0",
+          "bubble": {
+            "adapter_version": "1.0.0",
+            "atol": 1e-10,
+            "compute": "jax-cpu",
+            "converged": true,
+            "devices": [
+              "TFRT_CPU_0"
+            ],
+            "drive": "Hann-windowed sine; centre equals source emission_s",
+            "emission_999_energy_upper_hz": 606523.9551478084,
+            "energy_above_acquisition_nyquist_fraction": 2.1610797900239774e-05,
+            "equation": "Keller-Miksis",
+            "final_emission_relative_peak": 2.103334740219057e-06,
+            "id": "jbubble",
+            "license": "MIT",
+            "max_radius_ratio": 1.0134712223573175,
+            "max_steps": 100000,
+            "max_wall_mach": 2.9770148929059705e-05,
+            "min_radius_ratio": 0.9868741492583004,
+            "os": "Windows-11-10.0.26200",
+            "oversampling": 7,
+            "package": "jbubble",
+            "packages": {
+              "diffrax": "0.7.2",
+              "equinox": "0.13.4",
+              "jax": "0.8.2",
+              "jaxlib": "0.8.2",
+              "jbubble": "0.2.0",
+              "numpy": "2.3.4",
+              "scipy": "1.16.3"
+            },
+            "parameters": {
+              "P_amb": 101325.0,
+              "R0": 2e-06,
+              "c_L": 1500.0,
+              "cycle_num": 3.0,
+              "freq": 250000.0,
+              "gamma": 1.095,
+              "mu": 0.001,
+              "pressure": 20000.0,
+              "rho_L": 1000.0
+            },
+            "peak_emission_pa_at_reference": 0.29814605482827117,
+            "precision": "float64",
+            "preset": "lipid",
+            "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+            "python": "3.13.12",
+            "reference_distance_m": 0.001,
+            "rtol": 1e-08,
+            "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+            "runtime": "isolated-native-cpu",
+            "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+            "runtime_ms": 2295.3922000015154,
+            "shell_parameters": {
+              "R_buckle_ratio": 0.98058,
+              "chi": 0.5,
+              "kappa_s": 7.5e-09,
+              "sigma_rupture": 0.072,
+              "smoothing": 0.01
+            },
+            "solver": "diffrax.Dopri5",
+            "source": "https://github.com/imperial-nsb/jbubble",
+            "source_sampling_hz": 35000000.0,
+            "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+            "validation": "experimental",
+            "version": "0.2.0"
+          },
+          "compute": "jax-cpu",
+          "coupling": {
+            "assumptions": "one-way equivalent line source; no acoustic feedback or 3D pressure equivalence",
+            "effective_length_m": 0.001,
+            "filter": "causal 80 dB Kaiser FIR, full convolution; group delay retained",
+            "filter_taps": 1005,
+            "injection_equation": "jwave Sources value=rho*c*Q_3D/(2*L*dx); summed density rate=rho*Q_3D/(L*dx^2)",
+            "mode": "volume_flow_2d",
+            "normalization_pa": 20000.0,
+            "passband_hz": 350000.0,
+            "q_equation": "Q_3D=4*pi*R^2*Rdot [m^3/s]; Q_2D=Q_3D/L [m^2/s]",
+            "source_delay_s": 1.4342857142857143e-05,
+            "source_time_range_s": [
+              -6e-06,
+              5.068571428571428e-05
+            ],
+            "stopband_hz": 525000.0,
+            "waveform_sha256": "3c2acdaee83239eeb7dec1db02e5c0fbea97de50ff355c8e1aad9155c2e0ec10"
+          },
+          "ct_source": {
+            "coordinate_convention": "simulation x follows image columns; simulation z follows image rows; physical spacing retained; no patient 3D registration",
+            "decoder": "pydicom native",
+            "gdcm_version": null,
+            "orientation_patient": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "original_file_sha256": "07f10ec0d736d4a63cb8229c508a6dd1210f77e0d9b6555c053a9340b6572355",
+            "pydicom_version": "3.0.2",
+            "rescale_intercept": -1024.0,
+            "rescale_slope": 1.0,
+            "source": {
+              "archive": "Dataset.zip",
+              "archive_entry": "Studies/197/177.dcm",
+              "archive_md5_published": "264ff9ee868c022d108b7c7aa7396d32",
+              "archive_size": 25578845008,
+              "authors": [
+                "Evgenia Blagosklonova",
+                "Daria Dolotova",
+                "Natalia Polunina",
+                "Elena Grigorieva",
+                "Denis Pakhomov",
+                "Vladimir Krylov",
+                "Andrey Gavrilov"
+              ],
+              "derived_instance_sha256": "07f10ec0d736d4a63cb8229c508a6dd1210f77e0d9b6555c053a9340b6572355",
+              "doi": "10.5281/zenodo.15697196",
+              "kind": "public_deidentified_CT",
+              "label": "Public head CTA axial slice \u00b7 study 197 / instance 177",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "modifications": "One axial slice selected. Pixel samples and HU rescale/spacing retained exactly; decompressed to explicit little endian. Metadata rebuilt with public-reference identifiers; patient/study/private fields are not copied. ImagePosition reset to local zero; no patient 3D registration. No archive-wide MD5 verification is claimed for this partial download.",
+              "original_instance_sha256": "86172d1615b15891a1683b0ba600941f115943d7711f51f7ed50a9b244170838",
+              "title": "Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection",
+              "url": "https://zenodo.org/records/15697196"
+            },
+            "spacing_x_m": 0.000505859375,
+            "spacing_z_m": 0.000505859375,
+            "transfer_syntax_uid": "1.2.840.10008.1.2.1"
+          },
+          "id": "jbubble-jwave",
+          "precision": "float64",
+          "propagation": {
+            "adapter_version": "1.0.0",
+            "attenuation": "none",
+            "boundary": "absorbing PML; no rigid or reflecting boundary",
+            "compute": "jax-cpu",
+            "ct_model": {
+              "actual_medium_cfl": 0.15000000596046448,
+              "contrast": false,
+              "density_range_kg_m3": [
+                1000.0,
+                1000.0
+              ],
+              "extent_m": [
+                -0.032,
+                0.032244140625,
+                0.0,
+                0.064244140625
+              ],
+              "id": "pam.ct.fluid_hu",
+              "model": "thresholded linear HU bone fraction, fluid c/rho; air/soft tissue replaced by host fluid; zero absorption; no shear modes",
+              "speed_range_m_s": [
+                1500.0,
+                1500.0
+              ],
+              "status": "experimental",
+              "version": "0.1.0"
+            },
+            "devices": [
+              "TFRT_CPU_0"
+            ],
+            "doi": "10.1016/j.softx.2023.101338",
+            "id": "jwave",
+            "license": "LGPL-3.0-only",
+            "live_geometry": {
+              "extent_m": [
+                -0.048,
+                0.05,
+                -0.016,
+                0.082
+              ],
+              "observer": "ordered actual solver samples; no effect on numerical state",
+              "pressure_shape": [
+                50,
+                50
+              ],
+              "spatial_filter": "Fourier low-pass at 0.45/stride cycles per original sample, before preview decimation"
+            },
+            "os": "Windows-11-10.0.26200",
+            "package": "jwave",
+            "packages": {
+              "equinox": "0.11.12",
+              "jax": "0.4.38",
+              "jaxdf": "0.2.8",
+              "jaxlib": "0.4.38",
+              "jwave": "0.2.1",
+              "numpy": "2.3.4",
+              "scipy": "1.18.1"
+            },
+            "plan": {
+              "actual_cfl": 0.27999999999999997,
+              "dimension": "2D x-z; line-source spreading, not a 3D point emitter",
+              "dt_s": 5e-08,
+              "mapping": "bilinear source injection and receiver interpolation; channel order preserved",
+              "origin_xz_m": [
+                -0.048,
+                -0.016
+              ],
+              "pml_cells": 20,
+              "points_per_shortest_wavelength": 5.714285714285714,
+              "sensor_grid_xz": [
+                [
+                  80.5,
+                  40.0
+                ],
+                [
+                  81.5,
+                  40.0
+                ],
+                [
+                  82.5,
+                  40.0
+                ],
+                [
+                  83.5,
+                  40.0
+                ],
+                [
+                  84.5,
+                  40.0
+                ],
+                [
+                  85.5,
+                  40.0
+                ],
+                [
+                  86.5,
+                  40.0
+                ],
+                [
+                  87.49999999999999,
+                  40.0
+                ],
+                [
+                  88.5,
+                  40.0
+                ],
+                [
+                  89.5,
+                  40.0
+                ],
+                [
+                  90.5,
+                  40.0
+                ],
+                [
+                  91.5,
+                  40.0
+                ],
+                [
+                  92.5,
+                  40.0
+                ],
+                [
+                  93.5,
+                  40.0
+                ],
+                [
+                  94.5,
+                  40.0
+                ],
+                [
+                  95.5,
+                  40.0
+                ],
+                [
+                  96.5,
+                  40.0
+                ],
+                [
+                  97.5,
+                  40.0
+                ],
+                [
+                  98.5,
+                  40.0
+                ],
+                [
+                  99.5,
+                  40.0
+                ],
+                [
+                  100.5,
+                  40.0
+                ],
+                [
+                  101.5,
+                  40.0
+                ],
+                [
+                  102.5,
+                  40.0
+                ],
+                [
+                  103.5,
+                  40.0
+                ],
+                [
+                  104.50000000000001,
+                  40.0
+                ],
+                [
+                  105.5,
+                  40.0
+                ],
+                [
+                  106.5,
+                  40.0
+                ],
+                [
+                  107.5,
+                  40.0
+                ],
+                [
+                  108.5,
+                  40.0
+                ],
+                [
+                  109.5,
+                  40.0
+                ],
+                [
+                  110.5,
+                  40.0
+                ],
+                [
+                  111.5,
+                  40.0
+                ]
+              ],
+              "shape": [
+                200,
+                200
+              ],
+              "source_band_upper_hz": 525000.0,
+              "source_grid_xz": [
+                [
+                  96.0,
+                  122.0
+                ]
+              ],
+              "spacing_m": 0.0005,
+              "start_s": 0.0,
+              "steps": 2094,
+              "substeps": 4,
+              "time_convention": "source evaluated at step midpoint; pressure recorded after step at start+(n+1)*dt; resampled to capture_t0+n/fs"
+            },
+            "precision": "float64",
+            "python": "3.12.12",
+            "runner_sha256": "bc1652610547e9fbb64d3379a0bb2c5558fea59bc2b76492538d1819e0409d41",
+            "runtime": "isolated-native-cpu",
+            "runtime_lock_sha256": "2e3825c31443a39e2474ef3517d3b3ef74cfa7981fce191cbcffc8086dae4bbd",
+            "runtime_ms": 6565.590300000622,
+            "signal_unit": "arbitrary_unit",
+            "source": "https://github.com/ucl-bug/jwave/tree/v0.2.1",
+            "validation": "experimental",
+            "version": "0.2.1"
+          },
+          "rf_unit": "2D model pressure divided by drive pressure"
+        },
+        "workflow": {
+          "analysis": {
+            "atp_emission_s": 8e-06,
+            "atp_mode": "emission",
+            "atp_plane_z_m": 0.0,
+            "atp_timing_known": true,
+            "atp_window_s": 1.2e-05,
+            "cf_exponent": 1.0,
+            "methods": [
+              "das",
+              "tea",
+              "cf",
+              "atp"
+            ],
+            "rcb_loading": 0.001,
+            "rcb_radius": 0.1,
+            "rcb_subarray": 16
+          },
+          "edges": [
+            {
+              "port": "drive",
+              "source": "drive",
+              "target": "source"
+            },
+            {
+              "port": "in",
+              "source": "source",
+              "target": "bubble_scope"
+            },
+            {
+              "port": "curve",
+              "source": "source",
+              "target": "coupler"
+            },
+            {
+              "port": "source",
+              "source": "coupler",
+              "target": "prop"
+            },
+            {
+              "port": "scene",
+              "source": "ct",
+              "target": "prop"
+            },
+            {
+              "port": "probe",
+              "source": "probe",
+              "target": "prop"
+            },
+            {
+              "port": "in",
+              "source": "prop",
+              "target": "rf_scope"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_das"
+            },
+            {
+              "port": "in",
+              "source": "method_das",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_tea"
+            },
+            {
+              "port": "in",
+              "source": "method_tea",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_cf"
+            },
+            {
+              "port": "in",
+              "source": "method_cf",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_atp"
+            },
+            {
+              "port": "in",
+              "source": "method_atp",
+              "target": "maps"
+            },
+            {
+              "port": "scene",
+              "source": "scene",
+              "target": "ct"
+            },
+            {
+              "port": "rf",
+              "source": "prop",
+              "target": "dsp"
+            }
+          ],
+          "nodes": [
+            {
+              "id": "drive",
+              "kind": "drive",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 40.0
+            },
+            {
+              "id": "scene",
+              "kind": "scene",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 230.0
+            },
+            {
+              "id": "probe",
+              "kind": "probe",
+              "label": "",
+              "method": "das",
+              "x": 480,
+              "y": 230.0
+            },
+            {
+              "id": "source",
+              "kind": "bubble",
+              "label": "",
+              "method": "das",
+              "x": 260.0,
+              "y": 40.0
+            },
+            {
+              "id": "bubble_scope",
+              "kind": "bubble_scope",
+              "label": "",
+              "method": "das",
+              "x": 700,
+              "y": 230.0
+            },
+            {
+              "id": "coupler",
+              "kind": "coupler",
+              "label": "",
+              "method": "das",
+              "x": 480.0,
+              "y": 40.0
+            },
+            {
+              "id": "prop",
+              "kind": "jwave",
+              "label": "",
+              "method": "das",
+              "x": 700.0,
+              "y": 40.0
+            },
+            {
+              "id": "rf_scope",
+              "kind": "rf_scope",
+              "label": "",
+              "method": "das",
+              "x": 920,
+              "y": 230.0
+            },
+            {
+              "id": "method_das",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_tea",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "tea",
+              "x": 260.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_cf",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "cf",
+              "x": 480.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_atp",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "atp",
+              "x": 920.0,
+              "y": 430.0
+            },
+            {
+              "id": "maps",
+              "kind": "map_scope",
+              "label": "",
+              "method": "das",
+              "x": 480.0,
+              "y": 620.0
+            },
+            {
+              "id": "ct",
+              "kind": "ct",
+              "label": "",
+              "method": "das",
+              "x": 260.0,
+              "y": 230.0
+            },
+            {
+              "id": "dsp",
+              "kind": "dsp",
+              "label": "",
+              "method": "das",
+              "x": 920.0,
+              "y": 40.0
+            }
+          ],
+          "schema_version": "1.0"
+        }
+      }
+    },
+    "ct": {
+      "run_id": "04703ded-b279-4161-9506-2e5951fed85b",
+      "zip_sha256": "5426d1762f32bde0ed9626dd4d66c8faf7346ba92d49e487d6fcaf53de197e63",
+      "wall_s": 17.327710199999274,
+      "metrics": {
+        "diagnostics": {
+          "active_channels": 32,
+          "gate_actual_s": [
+            0.0,
+            7.2e-05
+          ],
+          "gate_samples": 361,
+          "method_status": "reference/experimental",
+          "pixel_batch_size": 64,
+          "scratch_target_bytes": 33554432
+        },
+        "map_bytes": 34848,
+        "methods": {
+          "atp": {
+            "axial_fwhm_m": 0.01826927938272039,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.014103887684281429,
+            "localization_error_m": 0.0032499999999999994,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.002999999999999999,
+            "peak_z_m": 0.04375,
+            "truth_nearest_peak_errors_m": [
+              0.0032499999999999994
+            ]
+          },
+          "cf": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.0101464558357241,
+            "localization_error_m": 0.006642665127793217,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0022500000000000003,
+            "peak_z_m": 0.03874999999999999,
+            "truth_nearest_peak_errors_m": [
+              0.006642665127793217
+            ]
+          },
+          "das": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.01220165692111426,
+            "localization_error_m": 0.006642665127793217,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.0022500000000000003,
+            "peak_z_m": 0.03874999999999999,
+            "truth_nearest_peak_errors_m": [
+              0.006642665127793217
+            ]
+          },
+          "tea": {
+            "axial_fwhm_m": null,
+            "background_exclusion_radius_m": 0.002,
+            "background_peak_ratio": 1.0,
+            "lateral_fwhm_m": 0.013177233425961079,
+            "localization_error_m": 0.0069327123119310285,
+            "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+            "peak_x_m": 0.002999999999999999,
+            "peak_z_m": 0.03874999999999999,
+            "truth_nearest_peak_errors_m": [
+              0.0069327123119310285
+            ]
+          }
+        },
+        "rf_bytes": 131072,
+        "rf_peak": 2.8520907093064525e-06,
+        "rf_rms": 4.136385903759521e-07,
+        "runtime_ms": 121.14049999945564,
+        "runtime_scope": "selected reconstruction methods, shared wall time"
+      },
+      "warnings": [
+        "Experimental one-way jbubble volume-flow \u2192 j-Wave 2D coupling. An explicit out-of-plane equivalent line length defines the 3D-to-2D conversion. FIR bandwidth filtering, CT-derived fluid medium and no acoustic feedback. RF is 2D model pressure divided by drive pressure; no 3D pressure equivalence or calibrated measurement.",
+        "Receive layout uses point elements with actual array positions and angles; finite element width, directivity and transmit steering are not modelled.",
+        "Experimental CT-derived 2D fluid c/rho model with thresholded HU mixture. Air/soft tissue are replaced by host fluid. No absorption or elastic/shear modes; homogeneous straight-ray receive reconstruction remains uncorrected. HU calibration is user-defined, not a patient-specific acoustic measurement."
+      ],
+      "provenance": {
+        "backend": "numpy-cpu",
+        "config_sha256": "13a20a4941859d11a70bcbf8a3ae01e077f16b14c5b69e2c49dadcde93aed01c",
+        "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+        "engine_source_sha256": "df6abbc984f30564fcd3432aa147c9435eb1c0130966748b90adf1c06eda8013",
+        "engine_version": "0.6.0",
+        "frontend_dependencies": {
+          "lucide-react": "0.548.0",
+          "react": "19.3.1",
+          "react-dom": "19.3.1",
+          "zod": "4.6.7"
+        },
+        "git_commit": "uncommitted",
+        "node": "not recorded (CLI)",
+        "os": "Windows-11-10.0.26200-SP0",
+        "packages": {
+          "fastapi": "0.162.4",
+          "h5py": "3.15.1",
+          "matplotlib": "3.10.7",
+          "numpy": "2.3.4",
+          "pydantic": "2.12.3",
+          "pydicom": "3.0.2",
+          "python-gdcm": "3.2.6",
+          "scipy": "1.16.3"
+        },
+        "precision": "float64",
+        "python": "3.13.12",
+        "reconstruction_options": {
+          "atp_emission_s": 2.2342857142857143e-05,
+          "atp_mode": "emission",
+          "atp_plane_z_m": 0.0,
+          "atp_timing_known": true,
+          "atp_window_s": 1.2e-05,
+          "cf_exponent": 1.0,
+          "methods": [
+            "das",
+            "tea",
+            "cf",
+            "atp"
+          ],
+          "rcb_loading": 0.001,
+          "rcb_radius": 0.1,
+          "rcb_subarray": 16
+        },
+        "simulation": {
+          "adapter_version": "1.0.0",
+          "bubble": {
+            "adapter_version": "1.0.0",
+            "atol": 1e-10,
+            "compute": "jax-cpu",
+            "converged": true,
+            "devices": [
+              "TFRT_CPU_0"
+            ],
+            "drive": "Hann-windowed sine; centre equals source emission_s",
+            "emission_999_energy_upper_hz": 606523.9551478084,
+            "energy_above_acquisition_nyquist_fraction": 2.1610797900239774e-05,
+            "equation": "Keller-Miksis",
+            "final_emission_relative_peak": 2.103334740219057e-06,
+            "id": "jbubble",
+            "license": "MIT",
+            "max_radius_ratio": 1.0134712223573175,
+            "max_steps": 100000,
+            "max_wall_mach": 2.9770148929059705e-05,
+            "min_radius_ratio": 0.9868741492583004,
+            "os": "Windows-11-10.0.26200",
+            "oversampling": 7,
+            "package": "jbubble",
+            "packages": {
+              "diffrax": "0.7.2",
+              "equinox": "0.13.4",
+              "jax": "0.8.2",
+              "jaxlib": "0.8.2",
+              "jbubble": "0.2.0",
+              "numpy": "2.3.4",
+              "scipy": "1.16.3"
+            },
+            "parameters": {
+              "P_amb": 101325.0,
+              "R0": 2e-06,
+              "c_L": 1500.0,
+              "cycle_num": 3.0,
+              "freq": 250000.0,
+              "gamma": 1.095,
+              "mu": 0.001,
+              "pressure": 20000.0,
+              "rho_L": 1000.0
+            },
+            "peak_emission_pa_at_reference": 0.29814605482827117,
+            "precision": "float64",
+            "preset": "lipid",
+            "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+            "python": "3.13.12",
+            "reference_distance_m": 0.001,
+            "rtol": 1e-08,
+            "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+            "runtime": "isolated-native-cpu",
+            "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+            "runtime_ms": 2211.704000001191,
+            "shell_parameters": {
+              "R_buckle_ratio": 0.98058,
+              "chi": 0.5,
+              "kappa_s": 7.5e-09,
+              "sigma_rupture": 0.072,
+              "smoothing": 0.01
+            },
+            "solver": "diffrax.Dopri5",
+            "source": "https://github.com/imperial-nsb/jbubble",
+            "source_sampling_hz": 35000000.0,
+            "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+            "validation": "experimental",
+            "version": "0.2.0"
+          },
+          "compute": "jax-cpu",
+          "coupling": {
+            "assumptions": "one-way equivalent line source; no acoustic feedback or 3D pressure equivalence",
+            "effective_length_m": 0.001,
+            "filter": "causal 80 dB Kaiser FIR, full convolution; group delay retained",
+            "filter_taps": 1005,
+            "injection_equation": "jwave Sources value=rho*c*Q_3D/(2*L*dx); summed density rate=rho*Q_3D/(L*dx^2)",
+            "mode": "volume_flow_2d",
+            "normalization_pa": 20000.0,
+            "passband_hz": 350000.0,
+            "q_equation": "Q_3D=4*pi*R^2*Rdot [m^3/s]; Q_2D=Q_3D/L [m^2/s]",
+            "source_delay_s": 1.4342857142857143e-05,
+            "source_time_range_s": [
+              -6e-06,
+              5.068571428571428e-05
+            ],
+            "stopband_hz": 525000.0,
+            "waveform_sha256": "3c2acdaee83239eeb7dec1db02e5c0fbea97de50ff355c8e1aad9155c2e0ec10"
+          },
+          "ct_source": {
+            "coordinate_convention": "simulation x follows image columns; simulation z follows image rows; physical spacing retained; no patient 3D registration",
+            "decoder": "pydicom native",
+            "gdcm_version": null,
+            "orientation_patient": [
+              1.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              0.0
+            ],
+            "original_file_sha256": "07f10ec0d736d4a63cb8229c508a6dd1210f77e0d9b6555c053a9340b6572355",
+            "pydicom_version": "3.0.2",
+            "rescale_intercept": -1024.0,
+            "rescale_slope": 1.0,
+            "source": {
+              "archive": "Dataset.zip",
+              "archive_entry": "Studies/197/177.dcm",
+              "archive_md5_published": "264ff9ee868c022d108b7c7aa7396d32",
+              "archive_size": 25578845008,
+              "authors": [
+                "Evgenia Blagosklonova",
+                "Daria Dolotova",
+                "Natalia Polunina",
+                "Elena Grigorieva",
+                "Denis Pakhomov",
+                "Vladimir Krylov",
+                "Andrey Gavrilov"
+              ],
+              "derived_instance_sha256": "07f10ec0d736d4a63cb8229c508a6dd1210f77e0d9b6555c053a9340b6572355",
+              "doi": "10.5281/zenodo.15697196",
+              "kind": "public_deidentified_CT",
+              "label": "Public head CTA axial slice \u00b7 study 197 / instance 177",
+              "license": "CC BY 4.0",
+              "license_url": "https://creativecommons.org/licenses/by/4.0/",
+              "modifications": "One axial slice selected. Pixel samples and HU rescale/spacing retained exactly; decompressed to explicit little endian. Metadata rebuilt with public-reference identifiers; patient/study/private fields are not copied. ImagePosition reset to local zero; no patient 3D registration. No archive-wide MD5 verification is claimed for this partial download.",
+              "original_instance_sha256": "86172d1615b15891a1683b0ba600941f115943d7711f51f7ed50a9b244170838",
+              "title": "Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection",
+              "url": "https://zenodo.org/records/15697196"
+            },
+            "spacing_x_m": 0.000505859375,
+            "spacing_z_m": 0.000505859375,
+            "transfer_syntax_uid": "1.2.840.10008.1.2.1"
+          },
+          "id": "jbubble-jwave",
+          "precision": "float64",
+          "propagation": {
+            "adapter_version": "1.0.0",
+            "attenuation": "none",
+            "boundary": "absorbing PML; no rigid or reflecting boundary",
+            "compute": "jax-cpu",
+            "ct_model": {
+              "actual_medium_cfl": 0.2800000011920929,
+              "contrast": true,
+              "density_range_kg_m3": [
+                1000.0,
+                1900.0
+              ],
+              "extent_m": [
+                -0.032,
+                0.032244140625,
+                0.0,
+                0.064244140625
+              ],
+              "id": "pam.ct.fluid_hu",
+              "model": "thresholded linear HU bone fraction, fluid c/rho; air/soft tissue replaced by host fluid; zero absorption; no shear modes",
+              "speed_range_m_s": [
+                1500.0,
+                2800.0
+              ],
+              "status": "experimental",
+              "version": "0.1.0"
+            },
+            "devices": [
+              "TFRT_CPU_0"
+            ],
+            "doi": "10.1016/j.softx.2023.101338",
+            "id": "jwave",
+            "license": "LGPL-3.0-only",
+            "live_geometry": {
+              "extent_m": [
+                -0.048,
+                0.05,
+                -0.016,
+                0.082
+              ],
+              "observer": "ordered actual solver samples; no effect on numerical state",
+              "pressure_shape": [
+                50,
+                50
+              ],
+              "spatial_filter": "Fourier low-pass at 0.45/stride cycles per original sample, before preview decimation"
+            },
+            "os": "Windows-11-10.0.26200",
+            "package": "jwave",
+            "packages": {
+              "equinox": "0.11.12",
+              "jax": "0.4.38",
+              "jaxdf": "0.2.8",
+              "jaxlib": "0.4.38",
+              "jwave": "0.2.1",
+              "numpy": "2.3.4",
+              "scipy": "1.18.1"
+            },
+            "plan": {
+              "actual_cfl": 0.27999999999999997,
+              "dimension": "2D x-z; line-source spreading, not a 3D point emitter",
+              "dt_s": 5e-08,
+              "mapping": "bilinear source injection and receiver interpolation; channel order preserved",
+              "origin_xz_m": [
+                -0.048,
+                -0.016
+              ],
+              "pml_cells": 20,
+              "points_per_shortest_wavelength": 5.714285714285714,
+              "sensor_grid_xz": [
+                [
+                  80.5,
+                  40.0
+                ],
+                [
+                  81.5,
+                  40.0
+                ],
+                [
+                  82.5,
+                  40.0
+                ],
+                [
+                  83.5,
+                  40.0
+                ],
+                [
+                  84.5,
+                  40.0
+                ],
+                [
+                  85.5,
+                  40.0
+                ],
+                [
+                  86.5,
+                  40.0
+                ],
+                [
+                  87.49999999999999,
+                  40.0
+                ],
+                [
+                  88.5,
+                  40.0
+                ],
+                [
+                  89.5,
+                  40.0
+                ],
+                [
+                  90.5,
+                  40.0
+                ],
+                [
+                  91.5,
+                  40.0
+                ],
+                [
+                  92.5,
+                  40.0
+                ],
+                [
+                  93.5,
+                  40.0
+                ],
+                [
+                  94.5,
+                  40.0
+                ],
+                [
+                  95.5,
+                  40.0
+                ],
+                [
+                  96.5,
+                  40.0
+                ],
+                [
+                  97.5,
+                  40.0
+                ],
+                [
+                  98.5,
+                  40.0
+                ],
+                [
+                  99.5,
+                  40.0
+                ],
+                [
+                  100.5,
+                  40.0
+                ],
+                [
+                  101.5,
+                  40.0
+                ],
+                [
+                  102.5,
+                  40.0
+                ],
+                [
+                  103.5,
+                  40.0
+                ],
+                [
+                  104.50000000000001,
+                  40.0
+                ],
+                [
+                  105.5,
+                  40.0
+                ],
+                [
+                  106.5,
+                  40.0
+                ],
+                [
+                  107.5,
+                  40.0
+                ],
+                [
+                  108.5,
+                  40.0
+                ],
+                [
+                  109.5,
+                  40.0
+                ],
+                [
+                  110.5,
+                  40.0
+                ],
+                [
+                  111.5,
+                  40.0
+                ]
+              ],
+              "shape": [
+                200,
+                200
+              ],
+              "source_band_upper_hz": 525000.0,
+              "source_grid_xz": [
+                [
+                  96.0,
+                  122.0
+                ]
+              ],
+              "spacing_m": 0.0005,
+              "start_s": 0.0,
+              "steps": 2094,
+              "substeps": 4,
+              "time_convention": "source evaluated at step midpoint; pressure recorded after step at start+(n+1)*dt; resampled to capture_t0+n/fs"
+            },
+            "precision": "float64",
+            "python": "3.12.12",
+            "runner_sha256": "bc1652610547e9fbb64d3379a0bb2c5558fea59bc2b76492538d1819e0409d41",
+            "runtime": "isolated-native-cpu",
+            "runtime_lock_sha256": "2e3825c31443a39e2474ef3517d3b3ef74cfa7981fce191cbcffc8086dae4bbd",
+            "runtime_ms": 6791.44830000223,
+            "signal_unit": "arbitrary_unit",
+            "source": "https://github.com/ucl-bug/jwave/tree/v0.2.1",
+            "validation": "experimental",
+            "version": "0.2.1"
+          },
+          "rf_unit": "2D model pressure divided by drive pressure"
+        },
+        "workflow": {
+          "analysis": {
+            "atp_emission_s": 8e-06,
+            "atp_mode": "emission",
+            "atp_plane_z_m": 0.0,
+            "atp_timing_known": true,
+            "atp_window_s": 1.2e-05,
+            "cf_exponent": 1.0,
+            "methods": [
+              "das",
+              "tea",
+              "cf",
+              "atp"
+            ],
+            "rcb_loading": 0.001,
+            "rcb_radius": 0.1,
+            "rcb_subarray": 16
+          },
+          "edges": [
+            {
+              "port": "drive",
+              "source": "drive",
+              "target": "source"
+            },
+            {
+              "port": "in",
+              "source": "source",
+              "target": "bubble_scope"
+            },
+            {
+              "port": "curve",
+              "source": "source",
+              "target": "coupler"
+            },
+            {
+              "port": "source",
+              "source": "coupler",
+              "target": "prop"
+            },
+            {
+              "port": "scene",
+              "source": "ct",
+              "target": "prop"
+            },
+            {
+              "port": "probe",
+              "source": "probe",
+              "target": "prop"
+            },
+            {
+              "port": "in",
+              "source": "prop",
+              "target": "rf_scope"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_das"
+            },
+            {
+              "port": "in",
+              "source": "method_das",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_tea"
+            },
+            {
+              "port": "in",
+              "source": "method_tea",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_cf"
+            },
+            {
+              "port": "in",
+              "source": "method_cf",
+              "target": "maps"
+            },
+            {
+              "port": "rf",
+              "source": "dsp",
+              "target": "method_atp"
+            },
+            {
+              "port": "in",
+              "source": "method_atp",
+              "target": "maps"
+            },
+            {
+              "port": "scene",
+              "source": "scene",
+              "target": "ct"
+            },
+            {
+              "port": "rf",
+              "source": "prop",
+              "target": "dsp"
+            }
+          ],
+          "nodes": [
+            {
+              "id": "drive",
+              "kind": "drive",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 40.0
+            },
+            {
+              "id": "scene",
+              "kind": "scene",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 230.0
+            },
+            {
+              "id": "probe",
+              "kind": "probe",
+              "label": "",
+              "method": "das",
+              "x": 480,
+              "y": 230.0
+            },
+            {
+              "id": "source",
+              "kind": "bubble",
+              "label": "",
+              "method": "das",
+              "x": 260.0,
+              "y": 40.0
+            },
+            {
+              "id": "bubble_scope",
+              "kind": "bubble_scope",
+              "label": "",
+              "method": "das",
+              "x": 700,
+              "y": 230.0
+            },
+            {
+              "id": "coupler",
+              "kind": "coupler",
+              "label": "",
+              "method": "das",
+              "x": 480.0,
+              "y": 40.0
+            },
+            {
+              "id": "prop",
+              "kind": "jwave",
+              "label": "",
+              "method": "das",
+              "x": 700.0,
+              "y": 40.0
+            },
+            {
+              "id": "rf_scope",
+              "kind": "rf_scope",
+              "label": "",
+              "method": "das",
+              "x": 920,
+              "y": 230.0
+            },
+            {
+              "id": "method_das",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "das",
+              "x": 40.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_tea",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "tea",
+              "x": 260.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_cf",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "cf",
+              "x": 480.0,
+              "y": 430.0
+            },
+            {
+              "id": "method_atp",
+              "kind": "reconstruct",
+              "label": "",
+              "method": "atp",
+              "x": 920.0,
+              "y": 430.0
+            },
+            {
+              "id": "maps",
+              "kind": "map_scope",
+              "label": "",
+              "method": "das",
+              "x": 480.0,
+              "y": 620.0
+            },
+            {
+              "id": "ct",
+              "kind": "ct",
+              "label": "",
+              "method": "das",
+              "x": 260.0,
+              "y": 230.0
+            },
+            {
+              "id": "dsp",
+              "kind": "dsp",
+              "label": "",
+              "method": "das",
+              "x": 920.0,
+              "y": 40.0
+            }
+          ],
+          "schema_version": "1.0"
+        }
+      }
+    }
+  }
+}

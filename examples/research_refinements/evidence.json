@@ -1,0 +1,213 @@
+{
+  "project": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\.local\\research-v010-4008e2b7",
+  "studies": {
+    "sweep": "5c87b45e-6c51-48a8-867e-5b18ef9bbacd",
+    "convergence": "02b27fc5-544e-49bd-b737-b7124d419dd3",
+    "uncertainty": "1097d513-cb04-43bc-9443-415776e34410"
+  },
+  "runs": {
+    "coupled_population": "be894a37-dfed-4d8d-bdde-f4c5e4c69e34",
+    "uncertainty_trial": "b52b6d4a-e2c7-4343-8a19-7fcd3eeae1ef"
+  },
+  "files": {
+    "bubble.webm": "53f9c007db5126721d9ab3bead3808442a3e4e980a1e9b0bac86d55ea28b1a05",
+    "bubble.webm.json": "01b37bd8a724a94ff510ac43057953083e0f9dedd9c51dc71506e8e7b0ee015a",
+    "convergence.csv": "c347dddc7b21bdfafffaf4026adf9825ebcba983e8874f0e827a4674b6df335d",
+    "convergence.json": "434c8a05c5826191af87f1099f34ba1fc074ce3a0dfa2204a7202d2567f22b0b",
+    "convergence.pdf": "7c7297a61dead8b2c5b4eef87f3f802052ff82676dcc2ea435b54eb1ea34ea0b",
+    "convergence.report.json": "60c65a8954256149efa99c6e3133e8b155f9319a1719ac4b3c64bf74fbd9a22f",
+    "ct-comparison.json": "86860e8cee6ff4996556d68c69aa32708bba01c8046371b0356ed621687241e4",
+    "ct-corrected-experiment.zip": "a68244c34fee0deda445389ac7345758cb7327e5ac50e3a3811a01d6b217fc87",
+    "ct-corrected-experiment_files_300aed14\\benchmark.csv": "4a288bd6acaab6aee8b17a41e10492f57e5bef203ec167b6ab5d3c6be5a47d8c",
+    "ct-corrected-experiment_files_300aed14\\benchmark.json": "12840bcf2b2ff5db83a93e447fca93c830908d2078d892836320599fb7fd90be",
+    "ct-corrected-experiment_files_300aed14\\comparison.png": "560e7c670fb76220d97121f81334675fcbf75578bab1ce25387f34c7e8630cb0",
+    "ct-corrected-experiment_files_300aed14\\comparison.svg": "fe06bc2cc3d7bac0883748e17f1165c4320cb3833cfd020c8265712ddf756190",
+    "ct-corrected-experiment_files_300aed14\\environment.json": "31665ff98bf9dc19aa7988bdd6ca43f2fd17721c214a22eba6facd5901672d86",
+    "ct-corrected-experiment_files_300aed14\\experiment.yaml": "2688514fe76dd2561799d09f0ba5bf0f1b6464aaba602597d7d24fff535fec72",
+    "ct-corrected-experiment_files_300aed14\\manifest.json": "fb995b1bd3014508f7b3757d47e7dbb8f6c6f939f59f4f5017a3ed72ed4198ab",
+    "ct-corrected-experiment_files_300aed14\\METHODS.md": "1f845f75b9a5ea258a1f09bbf14efab8add3bce4218d2e2132b414c466cd7df8",
+    "ct-corrected-experiment_files_300aed14\\metrics.json": "14785da2db4ac99b304c53162b31b48faa5ae9b3118b3a343c0430b0cf37c14b",
+    "ct-corrected-experiment_files_300aed14\\references.bib": "5d8bbc136028a2415175c9240d5096305f6a6b6987be17ae0d2a812fb4724c70",
+    "ct-corrected-experiment_files_300aed14\\REPRODUCE.txt": "b5fb206e962d5a406a826b957ea734fb5150f6e18d8ee9096337d3a4b926c233",
+    "ct-corrected-experiment_files_300aed14\\results.h5": "4906af769f1043d16bc2120dcea00fc59c9f0c41cd2ee92562125d80eec7fb07",
+    "ct-corrected.pdf": "2908e34aa5249a12e7578ab1602c9a45276b251e51dd960ec13860d619c989e8",
+    "ct-corrected.report.json": "7420f7962cee6e523991ca1c504474ee1d5436552589ae6c5cce0301bb14ba0d",
+    "pipeline.webm": "7d0a03dd5f5fcfd7d1c1d8511b1aaece04b3b469d868f65399c350aa757b3b2f",
+    "pipeline.webm.json": "3e34e72679d6f39f4c2eb7cc2293b6943f632fe5e155a4dc79feaf8fff35606c",
+    "population-experiment.zip": "8bb2407ee9b3c9e6bbc7eef644a16a976d89d03c12763a8d5e2bdeb909322a8b",
+    "population-experiment_files_0d5e03f0\\benchmark.csv": "675a1a228a47fca8d2948bff626b1f3d808d86be07ac5656eda1b9f40d79c25e",
+    "population-experiment_files_0d5e03f0\\benchmark.json": "661d231c4e845362c98665077a2a008115aec95a53d6dd83cb067f4f6a6ef7a3",
+    "population-experiment_files_0d5e03f0\\comparison.png": "feccd0617dee483758a1747910db1f996e2b28e7061271680ff2e0b3e8849466",
+    "population-experiment_files_0d5e03f0\\comparison.svg": "756a406d4ddd96e0b6001e5811285c20aed9948faffb58884a83fd65326837a0",
+    "population-experiment_files_0d5e03f0\\environment.json": "1a3387de906389ff848677425b22f10016a901874b5e467bacfaa223b29a8606",
+    "population-experiment_files_0d5e03f0\\experiment.yaml": "1ced71bb180d58d5820c385c9a3b0fafed802bd1394c01072a9f8cec8c0a2acc",
+    "population-experiment_files_0d5e03f0\\manifest.json": "f8a4f1899ccb4810cff479861965ae28c8a6a274e29834254d45c521b90bd99f",
+    "population-experiment_files_0d5e03f0\\METHODS.md": "70a9589ad2660048a4bdbe581584ca12942005f324c15776b94d2bdca5c0c319",
+    "population-experiment_files_0d5e03f0\\metrics.json": "f7ac6098f4165d0d7dc2a88a93e4087d64acfdb01da52d527db60ef4e7c30fb8",
+    "population-experiment_files_0d5e03f0\\references.bib": "a58ca8e03dda5f6279e5070631f1484bceaec48e79ba0a6114754d44a5b4f76f",
+    "population-experiment_files_0d5e03f0\\REPRODUCE.txt": "b5fb206e962d5a406a826b957ea734fb5150f6e18d8ee9096337d3a4b926c233",
+    "population-experiment_files_0d5e03f0\\results.h5": "59fb16ac8a37666a494d2343bf55b9d2378ad2b950db28b911185625eb6e1368",
+    "population.pdf": "7c0bc679e9edd66580852a41c9d3220dd1ed2cf0191b4f336faeb1995bbfd973",
+    "population.report.json": "522b7209fb9416c621dc521e1d96f731d8ec03360390946c3e7c245e13940008",
+    "README.md": "81543cec43ce505b70c12c64f6095131e2a8c81724bb34f483340b62bfdb80f5",
+    "sweep.csv": "f0a785bc7b3d3d0a7105e7277bafea7908717f9f611f617cab5cf52263532c83",
+    "sweep.json": "25ee667d05815406735d68352a02e676381f13d29f0b0e79b0a327625d65a313",
+    "sweep.pdf": "447815a91f92b13befead768e01d4ba1431c63c63ce65927dc4b885b3b0b475f",
+    "sweep.report.json": "eb271204e8a9e484317b6528a155a700bebfbbf5ee47692da6feb1ca33edc36a",
+    "uncertainty-experiment.zip": "f799472e14c14795339b7815c55b7360afb908cfbec006c9aa15e6674165c29a",
+    "uncertainty-experiment_files_d52be58f\\benchmark.csv": "396794ba50c9976d2a33db03c406d0c1aa508969c9d0f28958e4d51ed9c1f604",
+    "uncertainty-experiment_files_d52be58f\\benchmark.json": "c7c7f7ec3ee5bb4f6f28ef47d108e7a1e94965bae45103f7bed3f53c04ac8e50",
+    "uncertainty-experiment_files_d52be58f\\comparison.png": "57fa1b57e84a55d8681e8b5d56d24762a44dd616b0119904bd363f6554e6c9ed",
+    "uncertainty-experiment_files_d52be58f\\comparison.svg": "e23da4424d412062f764ee367e71a2d71b0f336dc04bac94430fe7c620a1c3de",
+    "uncertainty-experiment_files_d52be58f\\environment.json": "e6dfd1c6164e9ffb7a0f6fc81dbb827211ff07947e298f4c7f77213d69dcdfb0",
+    "uncertainty-experiment_files_d52be58f\\experiment.yaml": "07b4a63e0bee3258e0cfe1cc814ad3cafc85605ae0f0f9933c6f292fa690bfd8",
+    "uncertainty-experiment_files_d52be58f\\manifest.json": "59cd011515b51a0af5f3e0b6ab85030d8c6cd54e1f3182abbed68bb16362970e",
+    "uncertainty-experiment_files_d52be58f\\METHODS.md": "6875810876cdef84af4327326ab17dd74efedb9aadb69fbbcbea0f7d2a5e2ec4",
+    "uncertainty-experiment_files_d52be58f\\metrics.json": "5d4f6bf3bec69d2a7e2d004acf91775c8d0b55b9d5403ac237167730c465de37",
+    "uncertainty-experiment_files_d52be58f\\references.bib": "cfc775104ea2f3fe22113f475d004d50f87a4310ef0dc3754f39a055cbff7151",
+    "uncertainty-experiment_files_d52be58f\\REPRODUCE.txt": "cfe616a709536aa12c92c034d739ffefac93e9ffced1cd91ed8c37c991451a23",
+    "uncertainty-experiment_files_d52be58f\\results.h5": "2565a8aff88fb0126e23b0bae0cc2ee33391c5579981eff8bd937accc53e54e0",
+    "uncertainty.csv": "936aee4aea799b1cf40b39166bcdbc98703403bae0769a3ec161088acf8faa52",
+    "uncertainty.json": "ec3066e19bf469e27271a65d893d3fad3e3baa71dd6bc35ba44f580c495710f9",
+    "uncertainty.pdf": "3d4964a793e8aab5fcc870cab6cbfbe45f02617a83f3eeed9ca53d2362ff5d37",
+    "uncertainty.report.json": "94beb6f94476cc2f4e10e354e8b738342954cc6ddb28e603d456ccece0c21888"
+  },
+  "ct_example": {
+    "synthetic_only": true,
+    "same_raw_rf": true,
+    "project": "C:\\Users\\aisya\\AppData\\Local\\Temp\\pam-dsp-ct-eW1tSS\\project",
+    "homogeneous_run": "5d848d51-7909-4d44-acf4-6c20a3d3a7d9",
+    "corrected_run": "0147d208-46da-4b71-b767-e7e437273522",
+    "homogeneous_metrics": {
+      "atp": {
+        "axial_fwhm_m": 0.017896009361991982,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9864452122690723,
+        "lateral_fwhm_m": 0.012345292078271543,
+        "localization_error_m": 0.0,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.045,
+        "truth_nearest_peak_errors_m": [
+          0.0
+        ]
+      },
+      "cf": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.011345297429779102,
+        "localization_error_m": 0.0025000000000000022,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.0475,
+        "truth_nearest_peak_errors_m": [
+          0.0025000000000000022
+        ]
+      },
+      "das": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.013171598074669909,
+        "localization_error_m": 0.0025000000000000022,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.0475,
+        "truth_nearest_peak_errors_m": [
+          0.0025000000000000022
+        ]
+      },
+      "tea": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.01305845140276864,
+        "localization_error_m": 0.0025000000000000022,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.0475,
+        "truth_nearest_peak_errors_m": [
+          0.0025000000000000022
+        ]
+      }
+    },
+    "ct_slowness_metrics": {
+      "atp": {
+        "axial_fwhm_m": 0.0183720499049375,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.013310711581287892,
+        "localization_error_m": 0.0025000000000000022,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.0475,
+        "truth_nearest_peak_errors_m": [
+          0.0025000000000000022
+        ]
+      },
+      "cf": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.010345668024076611,
+        "localization_error_m": 0.0037500000000000033,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.041249999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037500000000000033
+        ]
+      },
+      "das": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.011682448961694023,
+        "localization_error_m": 0.0037500000000000033,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.041249999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037500000000000033
+        ]
+      },
+      "tea": {
+        "axial_fwhm_m": null,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 1.0,
+        "lateral_fwhm_m": 0.013723824654034074,
+        "localization_error_m": 0.0037499999999999964,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 0.0,
+        "peak_z_m": 0.048749999999999995,
+        "truth_nearest_peak_errors_m": [
+          0.0037499999999999964
+        ]
+      }
+    },
+    "note": "Same recorded RF; fixed straight rays are approximate. No universal improvement is asserted.",
+    "bundle": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\examples\\research_refinements\\ct-corrected-experiment.zip",
+    "folder": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\examples\\research_refinements\\ct-corrected-experiment_files_300aed14"
+  },
+  "presentation": {
+    "bubble": {
+      "file": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\examples\\research_refinements\\bubble.webm",
+      "sha256": "53f9c007db5126721d9ab3bead3808442a3e4e980a1e9b0bac86d55ea28b1a05",
+      "bytes": 839446,
+      "decoded": {
+        "width": 960,
+        "height": 640
+      }
+    },
+    "pipeline": {
+      "file": "D:\\Fawwaz\\S2 Imperial\\PAMBench OS Project\\examples\\research_refinements\\pipeline.webm",
+      "sha256": "7d0a03dd5f5fcfd7d1c1d8511b1aaece04b3b469d868f65399c350aa757b3b2f",
+      "bytes": 967362,
+      "decoded": {
+        "width": 960,
+        "height": 640
+      }
+    }
+  }
+}

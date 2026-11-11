@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Cite this reference software and the original methods and libraries in the exported bibliography. Attribution does not imply co-authorship."
+title: PAM Research Studio
+version: 0.11.0
+type: software
+abstract: "A local-first synthetic reference pipeline for passive acoustic mapping research."
+authors:
+  - name: Aisy Fawwaz
+    affiliation: "Bioengineering, Imperial College London"
+  - name: PAM Research Studio contributors
+date-released: 2026-11-11

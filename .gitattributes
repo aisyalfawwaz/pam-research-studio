@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+# Reproducible fixtures and attribution manifests require byte-identical checkout.
+examples/** -text
+datasets/** -text

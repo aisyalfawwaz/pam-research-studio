@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PAM Research Studio: acoustic source, wavefronts and receive array">
+  <rect x="16" y="16" width="480" height="480" rx="104" fill="#173449"/>
+  <circle cx="256" cy="152" r="27" fill="#55d6ca"/>
+  <g fill="none" stroke="#f4fbff" stroke-width="16" stroke-linecap="round">
+    <path d="M205 202 Q256 249 307 202"/>
+    <path d="M164 237 Q256 323 348 237"/>
+    <path d="M123 272 Q256 399 389 272"/>
+  </g>
+  <g fill="#55d6ca">
+    <rect x="102" y="374" width="40" height="42" rx="5"/>
+    <rect x="156" y="374" width="40" height="42" rx="5"/>
+    <rect x="210" y="374" width="40" height="42" rx="5"/>
+    <rect x="264" y="374" width="40" height="42" rx="5"/>
+    <rect x="318" y="374" width="40" height="42" rx="5"/>
+    <rect x="372" y="374" width="40" height="42" rx="5"/>
+  </g>
+</svg>

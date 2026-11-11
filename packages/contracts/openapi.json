@@ -1,0 +1,2873 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PAM Research Studio",
+    "version": "0.11.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/import": {
+      "post": {
+        "summary": "Ct Import",
+        "operationId": "ct_import_ct_import_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BundleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/public": {
+      "post": {
+        "summary": "Ct Public",
+        "operationId": "ct_public_ct_public_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/phantom": {
+      "post": {
+        "summary": "Ct Phantom",
+        "operationId": "ct_phantom_ct_phantom_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/whole": {
+      "post": {
+        "summary": "Ct Whole",
+        "operationId": "ct_whole_ct_whole_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Config"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/info": {
+      "post": {
+        "summary": "Ct Info",
+        "operationId": "ct_info_ct_info_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Config"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ct/preview": {
+      "post": {
+        "summary": "Ct Preview",
+        "operationId": "ct_preview_ct_preview_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Config"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/demo": {
+      "get": {
+        "summary": "Demo",
+        "operationId": "demo_demo_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/methods": {
+      "get": {
+        "summary": "Methods",
+        "operationId": "methods_methods_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/backends": {
+      "get": {
+        "summary": "Backends",
+        "operationId": "backends_backends_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/project": {
+      "get": {
+        "summary": "Info",
+        "operationId": "info_project_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Open Project",
+        "operationId": "open_project_project_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProjectRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/draft": {
+      "put": {
+        "summary": "Draft",
+        "operationId": "draft_draft_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DraftSave"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/simulate": {
+      "post": {
+        "summary": "Simulate",
+        "operationId": "simulate_simulate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RunRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reconstruct": {
+      "post": {
+        "summary": "Reconstruct",
+        "operationId": "reconstruct_reconstruct_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReconstructRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/job": {
+      "get": {
+        "summary": "Job",
+        "operationId": "job_job_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/live": {
+      "get": {
+        "summary": "Live",
+        "operationId": "live_live_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/workflow": {
+      "get": {
+        "summary": "Workflow",
+        "operationId": "workflow_workflow_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Save Workflow",
+        "operationId": "save_workflow_workflow_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "anyOf": [
+                  {
+                    "$ref": "#/components/schemas/Workflow"
+                  },
+                  {
+                    "$ref": "#/components/schemas/WorkflowSave"
+                  }
+                ],
+                "title": "Body"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/workflow/validate": {
+      "post": {
+        "summary": "Validate Workflow",
+        "operationId": "validate_workflow_workflow_validate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkflowRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/workflow/run": {
+      "post": {
+        "summary": "Run Workflow",
+        "operationId": "run_workflow_workflow_run_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/WorkflowRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/cancel": {
+      "post": {
+        "summary": "Cancel",
+        "operationId": "cancel_cancel_post",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies/plan": {
+      "post": {
+        "summary": "Plan Research",
+        "operationId": "plan_research_studies_plan_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies": {
+      "get": {
+        "summary": "List Studies",
+        "operationId": "list_studies_studies_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Start Study",
+        "operationId": "start_study_studies_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyLaunch"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies/{study_id}": {
+      "get": {
+        "summary": "Read Study",
+        "operationId": "read_study_studies__study_id__get",
+        "parameters": [
+          {
+            "name": "study_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Study Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies/{study_id}/resume": {
+      "post": {
+        "summary": "Resume Study",
+        "operationId": "resume_study_studies__study_id__resume_post",
+        "parameters": [
+          {
+            "name": "study_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Study Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyResume"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies/{study_id}/export": {
+      "post": {
+        "summary": "Export Study",
+        "operationId": "export_study_studies__study_id__export_post",
+        "parameters": [
+          {
+            "name": "study_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Study Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StudyExport"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/presentation-context": {
+      "get": {
+        "summary": "Presentation",
+        "operationId": "presentation_runs__run_id__presentation_context_get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/report": {
+      "post": {
+        "summary": "Run Report",
+        "operationId": "run_report_runs__run_id__report_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/studies/{study_id}/report": {
+      "post": {
+        "summary": "Study Report",
+        "operationId": "study_report_studies__study_id__report_post",
+        "parameters": [
+          {
+            "name": "study_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Study Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs": {
+      "get": {
+        "summary": "Runs",
+        "operationId": "runs_runs_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}": {
+      "get": {
+        "summary": "Run",
+        "operationId": "run_runs__run_id__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/arrays/{kind}": {
+      "get": {
+        "summary": "Array",
+        "operationId": "array_runs__run_id__arrays__kind__get",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "kind",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/ArrayKind"
+            }
+          },
+          {
+            "name": "channel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1023,
+              "minimum": 0,
+              "default": 0,
+              "title": "Channel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/benchmark": {
+      "post": {
+        "summary": "Benchmark",
+        "operationId": "benchmark_runs__run_id__benchmark_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BenchmarkSettings"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/benchmarks/evaluate": {
+      "post": {
+        "summary": "Evaluate Benchmarks",
+        "operationId": "evaluate_benchmarks_benchmarks_evaluate_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BenchmarkEvaluation"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/benchmark-export": {
+      "post": {
+        "summary": "Export Benchmark",
+        "operationId": "export_benchmark_benchmark_export_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BenchmarkExport"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/export": {
+      "post": {
+        "summary": "Export",
+        "operationId": "export_runs__run_id__export_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/import": {
+      "post": {
+        "summary": "Import Experiment",
+        "operationId": "import_experiment_import_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BundleRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/runs/{run_id}/rf-export": {
+      "post": {
+        "summary": "Export Rf",
+        "operationId": "export_rf_runs__run_id__rf_export_post",
+        "parameters": [
+          {
+            "name": "run_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "title": "Run Id"
+            }
+          },
+          {
+            "name": "channel",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "maximum": 1023,
+              "minimum": 0,
+              "default": 0,
+              "title": "Channel"
+            }
+          },
+          {
+            "name": "signal",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "enum": [
+                "raw",
+                "processed"
+              ],
+              "type": "string",
+              "default": "raw",
+              "title": "Signal"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ArrayKind": {
+        "type": "string",
+        "enum": [
+          "ct_mask",
+          "rf_processed",
+          "trace_processed",
+          "spectrum_processed",
+          "dsp_response",
+          "wave",
+          "wave_time",
+          "bubble",
+          "rf",
+          "trace",
+          "spectrum",
+          "das",
+          "tea",
+          "cf",
+          "rcb",
+          "atp",
+          "difference"
+        ],
+        "title": "ArrayKind"
+      },
+      "Axis": {
+        "properties": {
+          "parameter": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Parameter"
+          },
+          "values": {
+            "items": {
+              "type": "number"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 2,
+            "title": "Values"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "parameter",
+          "values"
+        ],
+        "title": "Axis"
+      },
+      "BenchmarkEvaluation": {
+        "properties": {
+          "run_ids": {
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 1,
+            "title": "Run Ids"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/BenchmarkSettings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "run_ids"
+        ],
+        "title": "BenchmarkEvaluation"
+      },
+      "BenchmarkExport": {
+        "properties": {
+          "run_ids": {
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "minItems": 1,
+            "title": "Run Ids"
+          },
+          "settings": {
+            "$ref": "#/components/schemas/BenchmarkSettings"
+          },
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "csv",
+              "json"
+            ],
+            "title": "Format"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "run_ids",
+          "path",
+          "format"
+        ],
+        "title": "BenchmarkExport"
+      },
+      "BenchmarkSettings": {
+        "properties": {
+          "roi_radius_m": {
+            "type": "number",
+            "maximum": 0.01,
+            "minimum": 0.0005,
+            "title": "Roi Radius M",
+            "default": 0.002
+          },
+          "histogram_bins": {
+            "type": "integer",
+            "maximum": 256.0,
+            "minimum": 8.0,
+            "title": "Histogram Bins",
+            "default": 100
+          },
+          "peaks": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PeakSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "BenchmarkSettings"
+      },
+      "BubbleSettings": {
+        "properties": {
+          "model": {
+            "type": "string",
+            "enum": [
+              "free",
+              "lipid"
+            ],
+            "title": "Model",
+            "default": "lipid"
+          },
+          "radius_m": {
+            "type": "number",
+            "maximum": 1e-05,
+            "minimum": 5e-07,
+            "title": "Radius M",
+            "default": 2e-06
+          },
+          "drive_pa": {
+            "type": "number",
+            "maximum": 300000.0,
+            "minimum": 0.0,
+            "title": "Drive Pa",
+            "default": 100000.0
+          },
+          "viscosity_pa_s": {
+            "type": "number",
+            "maximum": 0.01,
+            "minimum": 0.0001,
+            "title": "Viscosity Pa S",
+            "default": 0.001
+          },
+          "ringdown_cycles": {
+            "type": "integer",
+            "maximum": 40.0,
+            "minimum": 2.0,
+            "title": "Ringdown Cycles",
+            "default": 8
+          },
+          "rtol": {
+            "type": "number",
+            "maximum": 1e-05,
+            "minimum": 1e-10,
+            "title": "Rtol",
+            "default": 1e-08
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "BubbleSettings"
+      },
+      "BundleRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "BundleRequest"
+      },
+      "CTSettings": {
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$",
+            "title": "Asset Id"
+          },
+          "rows": {
+            "type": "integer",
+            "maximum": 1024.0,
+            "minimum": 8.0,
+            "title": "Rows"
+          },
+          "columns": {
+            "type": "integer",
+            "maximum": 1024.0,
+            "minimum": 8.0,
+            "title": "Columns"
+          },
+          "spacing_x_m": {
+            "type": "number",
+            "maximum": 0.005,
+            "minimum": 5e-05,
+            "title": "Spacing X M"
+          },
+          "spacing_z_m": {
+            "type": "number",
+            "maximum": 0.005,
+            "minimum": 5e-05,
+            "title": "Spacing Z M"
+          },
+          "crop": {
+            "prefixItems": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "integer"
+              }
+            ],
+            "type": "array",
+            "maxItems": 4,
+            "minItems": 4,
+            "title": "Crop"
+          },
+          "origin_x_m": {
+            "type": "number",
+            "maximum": 0.3,
+            "minimum": -0.3,
+            "title": "Origin X M",
+            "default": -0.032
+          },
+          "origin_z_m": {
+            "type": "number",
+            "maximum": 0.3,
+            "minimum": -0.3,
+            "title": "Origin Z M",
+            "default": 0
+          },
+          "contrast": {
+            "type": "boolean",
+            "title": "Contrast",
+            "default": true
+          },
+          "bone_threshold_hu": {
+            "type": "number",
+            "maximum": 1000.0,
+            "minimum": 100.0,
+            "title": "Bone Threshold Hu",
+            "default": 300
+          },
+          "bone_hu": {
+            "type": "number",
+            "maximum": 3000.0,
+            "minimum": 500.0,
+            "title": "Bone Hu",
+            "default": 1000
+          },
+          "bone_speed_m_s": {
+            "type": "number",
+            "maximum": 3500.0,
+            "minimum": 1800.0,
+            "title": "Bone Speed M S",
+            "default": 2800
+          },
+          "bone_density_kg_m3": {
+            "type": "number",
+            "maximum": 2500.0,
+            "minimum": 1200.0,
+            "title": "Bone Density Kg M3",
+            "default": 1900
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "asset_id",
+          "rows",
+          "columns",
+          "spacing_x_m",
+          "spacing_z_m",
+          "crop"
+        ],
+        "title": "CTSettings"
+      },
+      "Config": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "1.0",
+            "title": "Schema Version",
+            "default": "1.0"
+          },
+          "simulation": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/JWaveSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "bubble": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BubbleSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "coupling": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CouplingSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "arrays": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/ReceiveArray"
+                },
+                "type": "array",
+                "maxItems": 8,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Arrays"
+          },
+          "processing": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ProcessingSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "ct": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/CTSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "receiver_offsets_m": {
+            "anyOf": [
+              {
+                "items": {
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "type": "array",
+                  "maxItems": 2,
+                  "minItems": 2
+                },
+                "type": "array",
+                "maxItems": 1024
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Receiver Offsets M"
+          },
+          "sound_speed_m_s": {
+            "type": "number",
+            "maximum": 3000.0,
+            "minimum": 300.0,
+            "title": "Sound Speed M S",
+            "default": 1500
+          },
+          "channels": {
+            "type": "integer",
+            "maximum": 1024.0,
+            "minimum": 4.0,
+            "title": "Channels",
+            "default": 64
+          },
+          "pitch_m": {
+            "type": "number",
+            "maximum": 0.002,
+            "minimum": 5e-05,
+            "title": "Pitch M",
+            "default": 0.0003
+          },
+          "sampling_hz": {
+            "type": "number",
+            "maximum": 100000000.0,
+            "minimum": 1000000.0,
+            "title": "Sampling Hz",
+            "default": 20000000.0
+          },
+          "samples": {
+            "type": "integer",
+            "maximum": 16384.0,
+            "minimum": 512.0,
+            "title": "Samples",
+            "default": 4096
+          },
+          "capture_t0_s": {
+            "type": "number",
+            "maximum": 0.0001,
+            "minimum": -0.0001,
+            "title": "Capture T0 S",
+            "default": 0
+          },
+          "frequency_hz": {
+            "type": "number",
+            "maximum": 10000000.0,
+            "minimum": 100000.0,
+            "title": "Frequency Hz",
+            "default": 1000000.0
+          },
+          "duration_s": {
+            "type": "number",
+            "maximum": 2e-05,
+            "minimum": 1e-06,
+            "title": "Duration S",
+            "default": 4e-06
+          },
+          "emission_kind": {
+            "type": "string",
+            "enum": [
+              "pulse",
+              "harmonic",
+              "broadband"
+            ],
+            "title": "Emission Kind",
+            "default": "pulse"
+          },
+          "bandpass_hz": {
+            "anyOf": [
+              {
+                "prefixItems": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "number"
+                  }
+                ],
+                "type": "array",
+                "maxItems": 2,
+                "minItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Bandpass Hz"
+          },
+          "spreading": {
+            "type": "boolean",
+            "title": "Spreading",
+            "default": false
+          },
+          "snr_db": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 100.0,
+                "minimum": -10.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Snr Db",
+            "default": 30
+          },
+          "seed": {
+            "type": "integer",
+            "maximum": 4294967295.0,
+            "minimum": 0.0,
+            "title": "Seed",
+            "default": 42
+          },
+          "sources": {
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 1,
+            "title": "Sources"
+          },
+          "active_channels": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Active Channels"
+          },
+          "grid_x_min_m": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": -0.1,
+            "title": "Grid X Min M",
+            "default": -0.012
+          },
+          "grid_x_max_m": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": -0.1,
+            "title": "Grid X Max M",
+            "default": 0.012
+          },
+          "grid_z_min_m": {
+            "type": "number",
+            "maximum": 0.15,
+            "minimum": 0.001,
+            "title": "Grid Z Min M",
+            "default": 0.015
+          },
+          "grid_z_max_m": {
+            "type": "number",
+            "maximum": 0.15,
+            "minimum": 0.001,
+            "title": "Grid Z Max M",
+            "default": 0.045
+          },
+          "grid_n": {
+            "type": "integer",
+            "maximum": 192.0,
+            "minimum": 17.0,
+            "title": "Grid N",
+            "default": 128
+          },
+          "gate_start_s": {
+            "type": "number",
+            "maximum": 0.0001,
+            "minimum": 0.0,
+            "title": "Gate Start S",
+            "default": 4e-06
+          },
+          "gate_end_s": {
+            "type": "number",
+            "maximum": 0.0004,
+            "minimum": 0.0,
+            "title": "Gate End S",
+            "default": 1.2e-05
+          },
+          "gate_stride": {
+            "type": "integer",
+            "maximum": 16.0,
+            "minimum": 1.0,
+            "title": "Gate Stride",
+            "default": 4
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Config"
+      },
+      "CouplingSettings": {
+        "properties": {
+          "mode": {
+            "type": "string",
+            "const": "volume_flow_2d",
+            "title": "Mode",
+            "default": "volume_flow_2d"
+          },
+          "effective_length_m": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": 1e-05,
+            "title": "Effective Length M",
+            "default": 0.001
+          },
+          "passband_hz": {
+            "type": "number",
+            "maximum": 10000000.0,
+            "minimum": 100000.0,
+            "title": "Passband Hz",
+            "default": 1000000.0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "CouplingSettings"
+      },
+      "DraftSave": {
+        "properties": {
+          "config": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "session_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{32}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Session Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "config"
+        ],
+        "title": "DraftSave"
+      },
+      "Edge": {
+        "properties": {
+          "source": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Source"
+          },
+          "target": {
+            "type": "string",
+            "maxLength": 40,
+            "title": "Target"
+          },
+          "port": {
+            "type": "string",
+            "maxLength": 20,
+            "title": "Port"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "source",
+          "target",
+          "port"
+        ],
+        "title": "Edge"
+      },
+      "ExportRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          },
+          "include_raw": {
+            "type": "boolean",
+            "title": "Include Raw",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "ExportRequest"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "JWaveSettings": {
+        "properties": {
+          "backend": {
+            "type": "string",
+            "const": "jwave",
+            "title": "Backend",
+            "default": "jwave"
+          },
+          "spacing_m": {
+            "type": "number",
+            "maximum": 0.002,
+            "minimum": 5e-05,
+            "title": "Spacing M",
+            "default": 0.0002
+          },
+          "cfl": {
+            "type": "number",
+            "maximum": 0.5,
+            "minimum": 0.1,
+            "title": "Cfl",
+            "default": 0.3
+          },
+          "pml_cells": {
+            "type": "integer",
+            "maximum": 40.0,
+            "minimum": 12.0,
+            "title": "Pml Cells",
+            "default": 20
+          },
+          "density_kg_m3": {
+            "type": "number",
+            "maximum": 3000.0,
+            "minimum": 500.0,
+            "title": "Density Kg M3",
+            "default": 1000
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "JWaveSettings"
+      },
+      "Node": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{0,39}$",
+            "title": "Id"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "drive",
+              "analytic_source",
+              "bubble",
+              "coupler",
+              "scene",
+              "ct",
+              "probe",
+              "analytic",
+              "jwave",
+              "monopole",
+              "reconstruct",
+              "dsp",
+              "rf_scope",
+              "bubble_scope",
+              "map_scope"
+            ],
+            "title": "Kind"
+          },
+          "x": {
+            "type": "number",
+            "maximum": 8000.0,
+            "minimum": -4000.0,
+            "title": "X"
+          },
+          "y": {
+            "type": "number",
+            "maximum": 8000.0,
+            "minimum": -4000.0,
+            "title": "Y"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 60,
+            "title": "Label",
+            "default": ""
+          },
+          "method": {
+            "type": "string",
+            "enum": [
+              "das",
+              "tea",
+              "cf",
+              "rcb",
+              "atp"
+            ],
+            "title": "Method",
+            "default": "das"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "x",
+          "y"
+        ],
+        "title": "Node"
+      },
+      "PeakSettings": {
+        "properties": {
+          "threshold_db": {
+            "type": "number",
+            "maximum": 0.0,
+            "minimum": -80.0,
+            "title": "Threshold Db",
+            "default": -20
+          },
+          "min_separation_m": {
+            "type": "number",
+            "maximum": 0.05,
+            "minimum": 5e-05,
+            "title": "Min Separation M",
+            "default": 0.001
+          },
+          "match_tolerance_m": {
+            "type": "number",
+            "maximum": 0.05,
+            "minimum": 5e-05,
+            "title": "Match Tolerance M",
+            "default": 0.002
+          },
+          "max_peaks": {
+            "type": "integer",
+            "maximum": 128.0,
+            "minimum": 1.0,
+            "title": "Max Peaks",
+            "default": 32
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "PeakSettings"
+      },
+      "ProcessingSettings": {
+        "properties": {
+          "remove_dc": {
+            "type": "boolean",
+            "title": "Remove Dc",
+            "default": false
+          },
+          "detrend_linear": {
+            "type": "boolean",
+            "title": "Detrend Linear",
+            "default": false
+          },
+          "filter_kind": {
+            "type": "string",
+            "enum": [
+              "none",
+              "lowpass",
+              "highpass",
+              "bandpass"
+            ],
+            "title": "Filter Kind",
+            "default": "none"
+          },
+          "low_hz": {
+            "type": "number",
+            "maximum": 40000000.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Low Hz",
+            "default": 200000.0
+          },
+          "high_hz": {
+            "type": "number",
+            "maximum": 45000000.0,
+            "exclusiveMinimum": 0.0,
+            "title": "High Hz",
+            "default": 2000000.0
+          },
+          "order": {
+            "type": "integer",
+            "maximum": 8.0,
+            "minimum": 2.0,
+            "title": "Order",
+            "default": 4
+          },
+          "notch_hz": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 45000000.0,
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Notch Hz"
+          },
+          "notch_q": {
+            "type": "number",
+            "maximum": 100.0,
+            "minimum": 2.0,
+            "title": "Notch Q",
+            "default": 30
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ProcessingSettings"
+      },
+      "ProjectRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 120,
+            "minLength": 1,
+            "title": "Name",
+            "default": "Point-source study"
+          },
+          "create": {
+            "type": "boolean",
+            "title": "Create",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "ProjectRequest"
+      },
+      "ReceiveArray": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 40,
+            "minLength": 1,
+            "title": "Name",
+            "default": "Array 1"
+          },
+          "elements": {
+            "type": "integer",
+            "maximum": 1024.0,
+            "minimum": 2.0,
+            "title": "Elements",
+            "default": 16
+          },
+          "pitch_m": {
+            "type": "number",
+            "maximum": 0.002,
+            "minimum": 5e-05,
+            "title": "Pitch M",
+            "default": 0.0003
+          },
+          "x_m": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": -0.1,
+            "title": "X M",
+            "default": 0
+          },
+          "z_m": {
+            "type": "number",
+            "maximum": 0.15,
+            "minimum": -0.1,
+            "title": "Z M",
+            "default": 0
+          },
+          "angle_deg": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Angle Deg",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ReceiveArray"
+      },
+      "ReconstructRequest": {
+        "properties": {
+          "input_run_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9-]{36}$",
+            "title": "Input Run Id"
+          },
+          "options": {
+            "$ref": "#/components/schemas/ReconstructionOptions"
+          },
+          "config": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Config"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "input_run_id"
+        ],
+        "title": "ReconstructRequest"
+      },
+      "ReconstructionOptions": {
+        "properties": {
+          "receive_model": {
+            "type": "string",
+            "enum": [
+              "homogeneous",
+              "ct_slowness"
+            ],
+            "title": "Receive Model",
+            "default": "homogeneous"
+          },
+          "ray_step_m": {
+            "type": "number",
+            "maximum": 0.002,
+            "minimum": 5e-05,
+            "title": "Ray Step M",
+            "default": 0.00025
+          },
+          "assumed_sound_speed_m_s": {
+            "anyOf": [
+              {
+                "type": "number",
+                "maximum": 3000.0,
+                "minimum": 300.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assumed Sound Speed M S"
+          },
+          "assumed_receiver_offsets_m": {
+            "anyOf": [
+              {
+                "items": {
+                  "prefixItems": [
+                    {
+                      "type": "number"
+                    },
+                    {
+                      "type": "number"
+                    }
+                  ],
+                  "type": "array",
+                  "maxItems": 2,
+                  "minItems": 2
+                },
+                "type": "array",
+                "maxItems": 1024
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assumed Receiver Offsets M"
+          },
+          "methods": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "das",
+                "tea",
+                "cf",
+                "rcb",
+                "atp"
+              ]
+            },
+            "type": "array",
+            "maxItems": 5,
+            "minItems": 1,
+            "title": "Methods"
+          },
+          "cf_exponent": {
+            "type": "number",
+            "maximum": 4.0,
+            "minimum": 0.0,
+            "title": "Cf Exponent",
+            "default": 1.0
+          },
+          "rcb_radius": {
+            "type": "number",
+            "exclusiveMaximum": 1.0,
+            "minimum": 0.0,
+            "title": "Rcb Radius",
+            "default": 0.1
+          },
+          "rcb_loading": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": 1e-08,
+            "title": "Rcb Loading",
+            "default": 0.001
+          },
+          "rcb_subarray": {
+            "type": "integer",
+            "maximum": 64.0,
+            "minimum": 2.0,
+            "title": "Rcb Subarray",
+            "default": 16
+          },
+          "atp_timing_known": {
+            "type": "boolean",
+            "title": "Atp Timing Known",
+            "default": false
+          },
+          "atp_mode": {
+            "type": "string",
+            "enum": [
+              "emission",
+              "plane_wave"
+            ],
+            "title": "Atp Mode",
+            "default": "emission"
+          },
+          "atp_emission_s": {
+            "type": "number",
+            "maximum": 0.0002,
+            "minimum": -0.0001,
+            "title": "Atp Emission S",
+            "default": 8e-06
+          },
+          "atp_window_s": {
+            "type": "number",
+            "maximum": 2e-05,
+            "minimum": 1e-07,
+            "title": "Atp Window S",
+            "default": 4e-06
+          },
+          "atp_plane_z_m": {
+            "type": "number",
+            "maximum": 0.15,
+            "minimum": -0.15,
+            "title": "Atp Plane Z M",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ReconstructionOptions"
+      },
+      "ReportRequest": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          },
+          "settings": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BenchmarkSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path"
+        ],
+        "title": "ReportRequest"
+      },
+      "RunRequest": {
+        "properties": {
+          "config": {
+            "$ref": "#/components/schemas/Config"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "config"
+        ],
+        "title": "RunRequest"
+      },
+      "Source": {
+        "properties": {
+          "x_m": {
+            "type": "number",
+            "maximum": 0.1,
+            "minimum": -0.1,
+            "title": "X M",
+            "default": 0
+          },
+          "z_m": {
+            "type": "number",
+            "maximum": 0.15,
+            "minimum": 0.001,
+            "title": "Z M",
+            "default": 0.03
+          },
+          "emission_s": {
+            "type": "number",
+            "maximum": 0.0001,
+            "minimum": 0.0,
+            "title": "Emission S",
+            "default": 8e-06
+          },
+          "amplitude": {
+            "type": "number",
+            "maximum": 10.0,
+            "exclusiveMinimum": 0.0,
+            "title": "Amplitude",
+            "default": 1
+          },
+          "bubble": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/BubbleSettings"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Source"
+      },
+      "StudyExport": {
+        "properties": {
+          "path": {
+            "type": "string",
+            "maxLength": 4096,
+            "minLength": 1,
+            "title": "Path"
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "csv",
+              "json"
+            ],
+            "title": "Format"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "path",
+          "format"
+        ],
+        "title": "StudyExport"
+      },
+      "StudyLaunch": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{32}$",
+            "title": "Session Id"
+          },
+          "study": {
+            "$ref": "#/components/schemas/StudyRequest"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "session_id",
+          "study"
+        ],
+        "title": "StudyLaunch"
+      },
+      "StudyRequest": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Name",
+            "default": "Parameter study"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "sweep",
+              "convergence",
+              "uncertainty"
+            ],
+            "title": "Kind",
+            "default": "sweep"
+          },
+          "config": {
+            "$ref": "#/components/schemas/Config"
+          },
+          "options": {
+            "$ref": "#/components/schemas/ReconstructionOptions"
+          },
+          "axes": {
+            "items": {
+              "$ref": "#/components/schemas/Axis"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Axes"
+          },
+          "trials": {
+            "type": "integer",
+            "maximum": 64.0,
+            "minimum": 2.0,
+            "title": "Trials",
+            "default": 16
+          },
+          "seed": {
+            "type": "integer",
+            "maximum": 4294967295.0,
+            "minimum": 0.0,
+            "title": "Seed",
+            "default": 2026
+          },
+          "speed_sigma_m_s": {
+            "type": "number",
+            "maximum": 200.0,
+            "minimum": 0.0,
+            "title": "Speed Sigma M S",
+            "default": 0
+          },
+          "sensor_sigma_m": {
+            "type": "number",
+            "maximum": 0.001,
+            "minimum": 0.0,
+            "title": "Sensor Sigma M",
+            "default": 0
+          },
+          "relative_tolerance": {
+            "type": "number",
+            "maximum": 0.5,
+            "exclusiveMinimum": 0.0,
+            "title": "Relative Tolerance",
+            "default": 0.02
+          },
+          "stop_on_failure": {
+            "type": "boolean",
+            "title": "Stop On Failure",
+            "default": true
+          },
+          "settings": {
+            "$ref": "#/components/schemas/BenchmarkSettings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "config",
+          "options"
+        ],
+        "title": "StudyRequest"
+      },
+      "StudyResume": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{32}$",
+            "title": "Session Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "session_id"
+        ],
+        "title": "StudyResume"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          },
+          "input": {
+            "title": "Input"
+          },
+          "ctx": {
+            "type": "object",
+            "title": "Context"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Workflow": {
+        "properties": {
+          "schema_version": {
+            "type": "string",
+            "const": "1.0",
+            "title": "Schema Version",
+            "default": "1.0"
+          },
+          "nodes": {
+            "items": {
+              "$ref": "#/components/schemas/Node"
+            },
+            "type": "array",
+            "maxItems": 48,
+            "title": "Nodes"
+          },
+          "edges": {
+            "items": {
+              "$ref": "#/components/schemas/Edge"
+            },
+            "type": "array",
+            "maxItems": 96,
+            "title": "Edges"
+          },
+          "analysis": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ReconstructionOptions"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "nodes",
+          "edges"
+        ],
+        "title": "Workflow"
+      },
+      "WorkflowRequest": {
+        "properties": {
+          "workflow": {
+            "$ref": "#/components/schemas/Workflow"
+          },
+          "config": {
+            "additionalProperties": true,
+            "type": "object",
+            "title": "Config"
+          },
+          "options": {
+            "$ref": "#/components/schemas/ReconstructionOptions"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "workflow",
+          "config",
+          "options"
+        ],
+        "title": "WorkflowRequest"
+      },
+      "WorkflowSave": {
+        "properties": {
+          "session_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{32}$",
+            "title": "Session Id"
+          },
+          "workflow": {
+            "$ref": "#/components/schemas/Workflow"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "session_id",
+          "workflow"
+        ],
+        "title": "WorkflowSave"
+      }
+    }
+  }
+}

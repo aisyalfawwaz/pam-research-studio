@@ -1,0 +1,158 @@
+analysis:
+  atp_emission_s: 8.0e-06
+  atp_mode: emission
+  atp_plane_z_m: 0.0
+  atp_timing_known: true
+  atp_window_s: 4.0e-06
+  cf_exponent: 1.0
+  methods:
+  - das
+  - tea
+  - cf
+  - rcb
+  - atp
+  rcb_loading: 0.001
+  rcb_radius: 0.1
+  rcb_subarray: 16
+config:
+  active_channels:
+  - 0
+  - 2
+  - 4
+  - 6
+  - 8
+  - 10
+  - 12
+  - 14
+  - 16
+  - 18
+  - 20
+  - 22
+  - 24
+  - 26
+  - 28
+  - 30
+  - 32
+  - 34
+  - 36
+  - 38
+  - 40
+  - 42
+  - 44
+  - 46
+  - 48
+  - 50
+  - 52
+  - 54
+  - 56
+  - 58
+  - 60
+  - 62
+  bandpass_hz: null
+  capture_t0_s: 0.0
+  channels: 64
+  duration_s: 4.0e-06
+  emission_kind: pulse
+  frequency_hz: 1000000.0
+  gate_end_s: 1.2e-05
+  gate_start_s: 4.0e-06
+  gate_stride: 4
+  grid_n: 129
+  grid_x_max_m: 0.012
+  grid_x_min_m: -0.012
+  grid_z_max_m: 0.045
+  grid_z_min_m: 0.015
+  pitch_m: 0.0003
+  samples: 4096
+  sampling_hz: 20000000.0
+  schema_version: '1.0'
+  seed: 42
+  snr_db: 20.0
+  sound_speed_m_s: 1500.0
+  sources:
+  - amplitude: 1.0
+    emission_s: 8.0e-06
+    x_m: 0.0
+    z_m: 0.03
+  spreading: false
+input_config:
+  active_channels: null
+  bandpass_hz: null
+  capture_t0_s: 0.0
+  channels: 64
+  duration_s: 4.0e-06
+  emission_kind: pulse
+  frequency_hz: 1000000.0
+  gate_end_s: 1.2e-05
+  gate_start_s: 4.0e-06
+  gate_stride: 4
+  grid_n: 129
+  grid_x_max_m: 0.012
+  grid_x_min_m: -0.012
+  grid_z_max_m: 0.045
+  grid_z_min_m: 0.015
+  pitch_m: 0.0003
+  samples: 4096
+  sampling_hz: 20000000.0
+  schema_version: '1.0'
+  seed: 42
+  snr_db: 20.0
+  sound_speed_m_s: 1500.0
+  sources:
+  - amplitude: 1.0
+    emission_s: 8.0e-06
+    x_m: 0.0
+    z_m: 0.03
+  spreading: false
+input_run_id: null
+methods:
+  atp:
+    definition: integral over calibrated emission-time window of (mean_m s_m(u+distance_m/c))^2
+      du; optional axial plane-wave excitation time
+    method_id: pam.atp.short_pulse
+    method_version: 1.0.0
+    quantity: timing_gated_coherent_exposure
+    reference: Davies et al. (2021), DOI 10.1109/TUFFC.2020.3026165; source-emitter/plane-wave
+      variants
+    status: experimental
+    unit: a.u.^2 s
+  cf:
+    definition: max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)
+    method_id: pam.cf.weighted_das
+    method_version: 1.0.0
+    quantity: coherence_weighted_peak_power
+    reference: Mallart and Fink (1994), DOI 10.1121/1.410562
+    status: experimental
+    unit: a.u.^2
+  das:
+    definition: max_u (mean_m s_m(u + distance_m/c))^2
+    method_id: pam.das.passive
+    method_version: 1.0.0
+    quantity: peak_coherent_power
+    status: reference-only
+    unit: a.u.^2
+  rcb:
+    definition: min_a a^H R^-1 a subject to ||a-a0||<=radius||a0||; norm-corrected
+      steering, distortionless weights; analytic signal energy / 2
+    method_id: pam.rcb.spherical
+    method_version: 1.0.0
+    quantity: robust_coherent_exposure
+    reference: Li, Stoica and Wang (2003), DOI 10.1109/TSP.2003.812831
+    status: experimental
+    unit: a.u.^2 s
+  tea:
+    definition: integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy
+      subtraction
+    method_id: pam.tea.time_exposure
+    method_version: 1.0.0
+    quantity: coherent_exposure
+    status: reference-only
+    unit: a.u.^2 s
+raw_included: true
+run_id: f5ab3cb7-985b-4dd0-8891-c514fcbc39a6
+schema_version: '1.0'
+source_kind: synthetic
+warnings:
+- Homogeneous straight-ray scalar model; arbitrary amplitude, no calibrated pressure,
+  scattering or nonlinear propagation.
+- Receiver aperture contains disabled channels; spatial resolution may degrade.

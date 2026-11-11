@@ -1,0 +1,45 @@
+{
+  "das": {
+    "method_id": "pam.das.passive",
+    "method_version": "1.0.0",
+    "status": "reference-only",
+    "quantity": "peak_coherent_power",
+    "unit": "a.u.^2",
+    "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+  },
+  "tea": {
+    "method_id": "pam.tea.time_exposure",
+    "method_version": "1.0.0",
+    "status": "reference-only",
+    "quantity": "coherent_exposure",
+    "unit": "a.u.^2 s",
+    "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+  },
+  "cf": {
+    "method_id": "pam.cf.weighted_das",
+    "method_version": "1.0.0",
+    "status": "experimental",
+    "quantity": "coherence_weighted_peak_power",
+    "unit": "a.u.^2",
+    "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+    "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+  },
+  "rcb": {
+    "method_id": "pam.rcb.spherical",
+    "method_version": "1.0.0",
+    "status": "experimental",
+    "quantity": "robust_coherent_exposure",
+    "unit": "a.u.^2 s",
+    "definition": "min_a a^H R^-1 a subject to ||a-a0||<=radius||a0||; norm-corrected steering, distortionless weights; analytic signal energy / 2",
+    "reference": "Li, Stoica and Wang (2003), DOI 10.1109/TSP.2003.812831"
+  },
+  "atp": {
+    "method_id": "pam.atp.short_pulse",
+    "method_version": "1.0.0",
+    "status": "experimental",
+    "quantity": "timing_gated_coherent_exposure",
+    "unit": "a.u.^2 s",
+    "definition": "integral over calibrated emission-time window of (mean_m s_m(u+distance_m/c))^2 du; optional axial plane-wave excitation time",
+    "reference": "Davies et al. (2021), DOI 10.1109/TUFFC.2020.3026165; source-emitter/plane-wave variants"
+  }
+}

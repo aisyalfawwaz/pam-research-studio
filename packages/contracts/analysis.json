@@ -1,0 +1,17 @@
+{
+  "methods": [
+    "das",
+    "tea"
+  ],
+  "cf_exponent": 1.0,
+  "rcb_radius": 0.1,
+  "rcb_loading": 0.001,
+  "rcb_subarray": 16,
+  "atp_timing_known": false,
+  "atp_mode": "emission",
+  "atp_emission_s": 8e-06,
+  "atp_window_s": 4e-06,
+  "atp_plane_z_m": 0.0,
+  "receive_model": "homogeneous",
+  "ray_step_m": 0.00025
+}

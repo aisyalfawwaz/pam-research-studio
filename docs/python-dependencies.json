@@ -1,0 +1,485 @@
+[
+  {
+    "name": "annotated-doc",
+    "version": "0.0.6",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/fastapi/annotated-doc",
+      "Documentation, https://github.com/fastapi/annotated-doc",
+      "Repository, https://github.com/fastapi/annotated-doc",
+      "Issues, https://github.com/fastapi/annotated-doc/issues",
+      "Changelog, https://github.com/fastapi/annotated-doc/release-notes.md"
+    ]
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/annotated-types/annotated-types",
+      "Source, https://github.com/annotated-types/annotated-types",
+      "Changelog, https://github.com/annotated-types/annotated-types/releases"
+    ]
+  },
+  {
+    "name": "anyio",
+    "version": "4.16.0",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Documentation, https://anyio.readthedocs.io/en/latest/",
+      "Changelog, https://anyio.readthedocs.io/en/stable/versionhistory.html",
+      "Source code, https://github.com/agronholm/anyio",
+      "Issue tracker, https://github.com/agronholm/anyio/issues"
+    ]
+  },
+  {
+    "name": "certifi",
+    "version": "2026.10.23",
+    "license_expression": null,
+    "home_page": "https://github.com/certifi/python-certifi",
+    "project_urls": [
+      "Source, https://github.com/certifi/python-certifi"
+    ]
+  },
+  {
+    "name": "charset-normalizer",
+    "version": "3.5.2",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "Changelog, https://github.com/jawah/charset_normalizer/blob/master/CHANGELOG.md",
+      "Documentation, https://charset-normalizer.readthedocs.io/",
+      "Code, https://github.com/jawah/charset_normalizer",
+      "Issue tracker, https://github.com/jawah/charset_normalizer/issues"
+    ]
+  },
+  {
+    "name": "click",
+    "version": "8.5.1",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Changes, https://click.palletsprojects.com/page/changes/",
+      "Chat, https://discord.gg/pallets",
+      "Documentation, https://click.palletsprojects.com/",
+      "Donate, https://palletsprojects.com/donate",
+      "Source, https://github.com/pallets/click/"
+    ]
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/tartley/colorama"
+    ]
+  },
+  {
+    "name": "contourpy",
+    "version": "1.4.0",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/contourpy/contourpy",
+      "Changelog, https://contourpy.readthedocs.io/en/latest/changelog.html",
+      "Documentation, https://contourpy.readthedocs.io",
+      "Repository, https://github.com/contourpy/contourpy"
+    ]
+  },
+  {
+    "name": "cycler",
+    "version": "0.12.1",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "homepage, https://matplotlib.org/cycler/",
+      "repository, https://github.com/matplotlib/cycler"
+    ]
+  },
+  {
+    "name": "fastapi",
+    "version": "0.162.4",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/fastapi/fastapi",
+      "Documentation, https://fastapi.tiangolo.com/",
+      "Repository, https://github.com/fastapi/fastapi",
+      "Issues, https://github.com/fastapi/fastapi/issues",
+      "Changelog, https://fastapi.tiangolo.com/release-notes/"
+    ]
+  },
+  {
+    "name": "fonttools",
+    "version": "4.68.0",
+    "license_expression": null,
+    "home_page": "http://github.com/fonttools/fonttools",
+    "project_urls": []
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "license_expression": null,
+    "home_page": "https://github.com/python-hyper/h11",
+    "project_urls": []
+  },
+  {
+    "name": "h5py",
+    "version": "3.15.1",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://www.h5py.org/",
+      "Source, https://github.com/h5py/h5py",
+      "Documentation, https://docs.h5py.org/en/stable/",
+      "Release notes, https://docs.h5py.org/en/stable/whatsnew/index.html",
+      "Discussion forum, https://forum.hdfgroup.org/c/hdf5/h5py"
+    ]
+  },
+  {
+    "name": "httpcore",
+    "version": "1.0.9",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Documentation, https://www.encode.io/httpcore",
+      "Homepage, https://www.encode.io/httpcore/",
+      "Source, https://github.com/encode/httpcore"
+    ]
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "Changelog, https://github.com/encode/httpx/blob/master/CHANGELOG.md",
+      "Documentation, https://www.python-httpx.org",
+      "Homepage, https://github.com/encode/httpx",
+      "Source, https://github.com/encode/httpx"
+    ]
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Changelog, https://github.com/kjd/idna/blob/master/HISTORY.md",
+      "Issue tracker, https://github.com/kjd/idna/issues",
+      "Source, https://github.com/kjd/idna"
+    ]
+  },
+  {
+    "name": "iniconfig",
+    "version": "2.3.1",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/iniconfig"
+    ]
+  },
+  {
+    "name": "kiwisolver",
+    "version": "1.5.1",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "homepage, https://github.com/nucleic/kiwi",
+      "documentation, https://kiwisolver.readthedocs.io/en/latest/",
+      "repository, https://github.com/nucleic/kiwi",
+      "changelog, https://github.com/nucleic/kiwi/blob/main/releasenotes.rst"
+    ]
+  },
+  {
+    "name": "matplotlib",
+    "version": "3.10.7",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://matplotlib.org",
+      "Download, https://matplotlib.org/stable/install/index.html",
+      "Documentation, https://matplotlib.org",
+      "Source Code, https://github.com/matplotlib/matplotlib",
+      "Bug Tracker, https://github.com/matplotlib/matplotlib/issues",
+      "Forum, https://discourse.matplotlib.org/",
+      "Donate, https://numfocus.org/donate-to-matplotlib"
+    ]
+  },
+  {
+    "name": "numpy",
+    "version": "2.3.4",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "homepage, https://numpy.org",
+      "documentation, https://numpy.org/doc/",
+      "source, https://github.com/numpy/numpy",
+      "download, https://pypi.org/project/numpy/#files",
+      "tracker, https://github.com/numpy/numpy/issues",
+      "release notes, https://numpy.org/doc/stable/release"
+    ]
+  },
+  {
+    "name": "opentelemetry-api",
+    "version": "1.45.2",
+    "license_expression": "Apache-2.0",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
+      "Repository, https://github.com/open-telemetry/opentelemetry-python"
+    ]
+  },
+  {
+    "name": "packaging",
+    "version": "26.3",
+    "license_expression": "Apache-2.0 OR BSD-2-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Documentation, https://packaging.pypa.io/",
+      "Source, https://github.com/pypa/packaging"
+    ]
+  },
+  {
+    "name": "pam-research-studio",
+    "version": "0.11.0",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": []
+  },
+  {
+    "name": "pillow",
+    "version": "13.0.0",
+    "license_expression": "MIT-CMU",
+    "home_page": null,
+    "project_urls": [
+      "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+      "Changelog, https://github.com/python-pillow/Pillow/releases",
+      "Documentation, https://pillow.readthedocs.io",
+      "Funding, https://tidelift.com/lifter/search/pypi/pillow",
+      "Homepage, https://python-pillow.org",
+      "Mastodon, https://fosstodon.org/@pillow",
+      "Security, https://pillow.readthedocs.io/en/stable/handbook/security.html",
+      "Source, https://github.com/python-pillow/Pillow"
+    ]
+  },
+  {
+    "name": "pluggy",
+    "version": "1.7.0",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/pytest-dev/pluggy",
+      "Documentation, https://pluggy.readthedocs.io/",
+      "Changelog, https://pluggy.readthedocs.io/en/latest/changelog.html",
+      "Repository, https://github.com/pytest-dev/pluggy",
+      "Issues, https://github.com/pytest-dev/pluggy/issues",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-pluggy"
+    ]
+  },
+  {
+    "name": "pydantic",
+    "version": "2.12.3",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/pydantic/pydantic",
+      "Documentation, https://docs.pydantic.dev",
+      "Funding, https://github.com/sponsors/samuelcolvin",
+      "Source, https://github.com/pydantic/pydantic",
+      "Changelog, https://docs.pydantic.dev/latest/changelog/"
+    ]
+  },
+  {
+    "name": "pydantic_core",
+    "version": "2.41.4",
+    "license_expression": "MIT",
+    "home_page": "https://github.com/pydantic/pydantic-core",
+    "project_urls": [
+      "Homepage, https://github.com/pydantic/pydantic-core",
+      "Funding, https://github.com/sponsors/samuelcolvin",
+      "Source, https://github.com/pydantic/pydantic-core"
+    ]
+  },
+  {
+    "name": "pydicom",
+    "version": "3.0.2",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "documentation, https://pydicom.github.io/pydicom",
+      "download, https://github.com/pydicom/pydicom/archive/main.zip",
+      "homepage, https://github.com/pydicom/pydicom",
+      "repository, https://github.com/pydicom/pydicom"
+    ]
+  },
+  {
+    "name": "Pygments",
+    "version": "2.21.0",
+    "license_expression": "BSD-2-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://pygments.org",
+      "Documentation, https://pygments.org/docs",
+      "Source, https://github.com/pygments/pygments",
+      "Bug Tracker, https://github.com/pygments/pygments/issues",
+      "Changelog, https://github.com/pygments/pygments/blob/master/CHANGES"
+    ]
+  },
+  {
+    "name": "pyparsing",
+    "version": "3.3.3",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Documentation, https://pyparsing-docs.readthedocs.io/en/latest/",
+      "Homepage, https://github.com/pyparsing/pyparsing/",
+      "Source, https://github.com/pyparsing/pyparsing.git"
+    ]
+  },
+  {
+    "name": "pytest",
+    "version": "9.2.0",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Changelog, https://docs.pytest.org/en/stable/changelog.html",
+      "Contact, https://docs.pytest.org/en/stable/contact.html",
+      "Funding, https://docs.pytest.org/en/stable/sponsor.html",
+      "Homepage, https://docs.pytest.org/en/latest/",
+      "Source, https://github.com/pytest-dev/pytest",
+      "Tracker, https://github.com/pytest-dev/pytest/issues"
+    ]
+  },
+  {
+    "name": "python-dateutil",
+    "version": "4.0.0",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/dateutil/dateutil",
+      "Documentation, https://dateutil.readthedocs.io/en/stable/",
+      "Source, https://github.com/dateutil/dateutil"
+    ]
+  },
+  {
+    "name": "python-gdcm",
+    "version": "3.2.6",
+    "license_expression": "Apache-2.0",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/tfmoraes/python-gdcm/",
+      "issues, https://github.com/tfmoraes/python-gdcm/issues"
+    ]
+  },
+  {
+    "name": "PyYAML",
+    "version": "6.0.3",
+    "license_expression": null,
+    "home_page": "https://pyyaml.org/",
+    "project_urls": [
+      "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+      "CI, https://github.com/yaml/pyyaml/actions",
+      "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+      "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+      "Source Code, https://github.com/yaml/pyyaml"
+    ]
+  },
+  {
+    "name": "reportlab",
+    "version": "5.1.0",
+    "license_expression": null,
+    "home_page": "https://www.reportlab.com/",
+    "project_urls": []
+  },
+  {
+    "name": "ruff",
+    "version": "0.14.3",
+    "license_expression": null,
+    "home_page": "https://docs.astral.sh/ruff",
+    "project_urls": [
+      "Repository, https://github.com/astral-sh/ruff",
+      "Documentation, https://docs.astral.sh/ruff/",
+      "Changelog, https://github.com/astral-sh/ruff/blob/main/CHANGELOG.md"
+    ]
+  },
+  {
+    "name": "scipy",
+    "version": "1.16.3",
+    "license_expression": null,
+    "home_page": null,
+    "project_urls": [
+      "homepage, https://scipy.org/",
+      "documentation, https://docs.scipy.org/doc/scipy/",
+      "source, https://github.com/scipy/scipy",
+      "download, https://github.com/scipy/scipy/releases",
+      "tracker, https://github.com/scipy/scipy/issues"
+    ]
+  },
+  {
+    "name": "starlette",
+    "version": "1.10.0",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/Kludex/starlette",
+      "Documentation, https://starlette.dev/",
+      "Changelog, https://starlette.dev/release-notes/",
+      "Funding, https://github.com/sponsors/Kludex",
+      "Source, https://github.com/Kludex/starlette"
+    ]
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.5",
+    "license_expression": "MIT",
+    "home_page": null,
+    "project_urls": [
+      "Homepage, https://github.com/pydantic/typing-inspection",
+      "Documentation, https://pydantic.github.io/typing-inspection/dev/",
+      "Source, https://github.com/pydantic/typing-inspection",
+      "Changelog, https://github.com/pydantic/typing-inspection/blob/main/HISTORY.md"
+    ]
+  },
+  {
+    "name": "typing_extensions",
+    "version": "4.16.0",
+    "license_expression": "PSF-2.0",
+    "home_page": null,
+    "project_urls": [
+      "Bug Tracker, https://github.com/python/typing_extensions/issues",
+      "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+      "Documentation, https://typing-extensions.readthedocs.io/",
+      "Home, https://github.com/python/typing_extensions",
+      "Q & A, https://github.com/python/typing/discussions",
+      "Repository, https://github.com/python/typing_extensions"
+    ]
+  },
+  {
+    "name": "tzdata",
+    "version": "2026.6",
+    "license_expression": null,
+    "home_page": "https://github.com/python/tzdata",
+    "project_urls": [
+      "Bug Reports, https://github.com/python/tzdata/issues",
+      "Source, https://github.com/python/tzdata",
+      "Documentation, https://tzdata.python.org"
+    ]
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.38.0",
+    "license_expression": "BSD-3-Clause",
+    "home_page": null,
+    "project_urls": [
+      "Changelog, https://uvicorn.dev/release-notes",
+      "Funding, https://github.com/sponsors/encode",
+      "Homepage, https://uvicorn.dev/",
+      "Source, https://github.com/Kludex/uvicorn"
+    ]
+  }
+]

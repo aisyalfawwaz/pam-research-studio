@@ -1,0 +1,914 @@
+{
+  "definition_version": "1.0.0",
+  "run": {
+    "id": "be894a37-dfed-4d8d-bdde-f4c5e4c69e34",
+    "created": "2026-11-11T19:46:31.173694+00:00",
+    "status": "complete",
+    "config": {
+      "active_channels": null,
+      "bandpass_hz": null,
+      "bubble": {
+        "drive_pa": 20000,
+        "model": "lipid",
+        "radius_m": 0.000002,
+        "ringdown_cycles": 4,
+        "rtol": 1e-8,
+        "viscosity_pa_s": 0.001
+      },
+      "capture_t0_s": 0,
+      "channels": 16,
+      "coupling": {
+        "effective_length_m": 0.001,
+        "mode": "volume_flow_2d",
+        "passband_hz": 700000
+      },
+      "duration_s": 0.000004,
+      "emission_kind": "pulse",
+      "frequency_hz": 500000,
+      "gate_end_s": 0.000036,
+      "gate_start_s": 0.000004,
+      "gate_stride": 1,
+      "grid_n": 33,
+      "grid_x_max_m": 0.012,
+      "grid_x_min_m": -0.008,
+      "grid_z_max_m": 0.02,
+      "grid_z_min_m": 0.004,
+      "pitch_m": 0.0003,
+      "samples": 512,
+      "sampling_hz": 10000000,
+      "schema_version": "1.0",
+      "seed": 42,
+      "simulation": {
+        "backend": "jwave",
+        "cfl": 0.3,
+        "density_kg_m3": 1000,
+        "pml_cells": 20,
+        "spacing_m": 0.00025
+      },
+      "snr_db": null,
+      "sound_speed_m_s": 1500,
+      "sources": [
+        {
+          "amplitude": 1,
+          "emission_s": 0.000008,
+          "x_m": -0.002,
+          "z_m": 0.012
+        },
+        {
+          "amplitude": 1,
+          "bubble": {
+            "drive_pa": 15000,
+            "model": "free",
+            "radius_m": 0.0000015,
+            "ringdown_cycles": 3,
+            "rtol": 1e-8,
+            "viscosity_pa_s": 0.001
+          },
+          "emission_s": 0.000008,
+          "x_m": 0.002,
+          "z_m": 0.014
+        }
+      ],
+      "spreading": false
+    },
+    "parent": null,
+    "metrics": {
+      "diagnostics": {
+        "active_channels": 16,
+        "gate_actual_s": [
+          0.000004,
+          0.000036
+        ],
+        "gate_samples": 321,
+        "method_status": "reference/experimental",
+        "pixel_batch_size": 64,
+        "scratch_target_bytes": 33554432
+      },
+      "map_bytes": 26136,
+      "methods": {
+        "cf": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1,
+          "lateral_fwhm_m": null,
+          "localization_error_m": 0.0031249999999999993,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": -0.0011250000000000001,
+          "peak_z_m": 0.009000000000000001,
+          "truth_nearest_peak_errors_m": [
+            0.0031249999999999993,
+            0.005896238207535377
+          ]
+        },
+        "das": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 1,
+          "lateral_fwhm_m": null,
+          "localization_error_m": 0.0031249999999999993,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": -0.0011250000000000001,
+          "peak_z_m": 0.009000000000000001,
+          "truth_nearest_peak_errors_m": [
+            0.0031249999999999993,
+            0.005896238207535377
+          ]
+        },
+        "tea": {
+          "axial_fwhm_m": null,
+          "background_exclusion_radius_m": 0.002,
+          "background_peak_ratio": 0.9940153743872127,
+          "lateral_fwhm_m": null,
+          "localization_error_m": 0.0008749999999999999,
+          "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+          "peak_x_m": -0.0011250000000000001,
+          "peak_z_m": 0.012,
+          "truth_nearest_peak_errors_m": [
+            0.0008749999999999999,
+            0.0037102055199139576
+          ]
+        }
+      },
+      "rf_bytes": 65536,
+      "rf_peak": 0.0000344041665535049,
+      "rf_rms": 0.000004396193148371726,
+      "runtime_ms": 42.537700006505474,
+      "runtime_scope": "selected reconstruction methods, shared wall time"
+    },
+    "provenance": {
+      "backend": "numpy-cpu",
+      "config_sha256": "10bf8cff7b9fe5a5e9160733ec2ac0b599aa0747957645784f57733fed4f951a",
+      "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+      "engine_source_sha256": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+      "engine_version": "0.10.0",
+      "frontend_dependencies": {
+        "lucide-react": "0.548.0",
+        "react": "19.3.1",
+        "react-dom": "19.3.1",
+        "zod": "4.6.7"
+      },
+      "git_commit": "uncommitted",
+      "node": "not recorded (CLI)",
+      "os": "Windows-11-10.0.26200-SP0",
+      "packages": {
+        "fastapi": "0.162.4",
+        "h5py": "3.15.1",
+        "matplotlib": "3.10.7",
+        "numpy": "2.3.4",
+        "pydantic": "2.12.3",
+        "pydicom": "3.0.2",
+        "python-gdcm": "3.2.6",
+        "scipy": "1.16.3"
+      },
+      "precision": "float64",
+      "python": "3.13.12",
+      "reconstruction_options": {
+        "atp_emission_s": 0.000008,
+        "atp_mode": "emission",
+        "atp_plane_z_m": 0,
+        "atp_timing_known": false,
+        "atp_window_s": 0.000004,
+        "cf_exponent": 1,
+        "methods": [
+          "das",
+          "tea",
+          "cf"
+        ],
+        "rcb_loading": 0.001,
+        "rcb_radius": 0.1,
+        "rcb_subarray": 16
+      },
+      "simulation": {
+        "adapter_version": "1.0.0",
+        "bubble": {
+          "adapter_version": "1.0.0",
+          "atol": 1e-10,
+          "compute": "jax-cpu",
+          "converged": true,
+          "devices": [
+            "TFRT_CPU_0"
+          ],
+          "drive": "Hann-windowed sine; centre equals source emission_s",
+          "emission_999_energy_upper_hz": 2829964.3281807373,
+          "energy_above_acquisition_nyquist_fraction": 0.000002372470960849367,
+          "equation": "Keller-Miksis",
+          "final_emission_relative_peak": 1.597483651438604e-7,
+          "id": "jbubble",
+          "license": "MIT",
+          "max_radius_ratio": 1.012831311810832,
+          "max_steps": 100000,
+          "max_wall_mach": 0.00006138860324590885,
+          "min_radius_ratio": 0.9874988014781002,
+          "os": "Windows-11-10.0.26200",
+          "oversampling": 7,
+          "package": "jbubble",
+          "packages": {
+            "diffrax": "0.7.2",
+            "equinox": "0.13.4",
+            "jax": "0.8.2",
+            "jaxlib": "0.8.2",
+            "jbubble": "0.2.0",
+            "numpy": "2.3.4",
+            "scipy": "1.16.3"
+          },
+          "parameters": {
+            "P_amb": 101325,
+            "R0": 0.000002,
+            "c_L": 1500,
+            "cycle_num": 2,
+            "freq": 500000,
+            "gamma": 1.095,
+            "mu": 0.001,
+            "pressure": 20000,
+            "rho_L": 1000
+          },
+          "peak_emission_pa_at_reference": 1.2906818330203942,
+          "population": [
+            {
+              "settings": {
+                "drive_pa": 20000,
+                "model": "lipid",
+                "radius_m": 0.000002,
+                "ringdown_cycles": 4,
+                "rtol": 1e-8,
+                "viscosity_pa_s": 0.001
+              },
+              "simulation": {
+                "adapter_version": "1.0.0",
+                "atol": 1e-10,
+                "compute": "jax-cpu",
+                "converged": true,
+                "devices": [
+                  "TFRT_CPU_0"
+                ],
+                "drive": "Hann-windowed sine; centre equals source emission_s",
+                "emission_999_energy_upper_hz": 2829964.3281807373,
+                "energy_above_acquisition_nyquist_fraction": 0.000002372470960849367,
+                "equation": "Keller-Miksis",
+                "final_emission_relative_peak": 1.597483651438604e-7,
+                "id": "jbubble",
+                "license": "MIT",
+                "max_radius_ratio": 1.012831311810832,
+                "max_steps": 100000,
+                "max_wall_mach": 0.00006138860324590885,
+                "min_radius_ratio": 0.9874988014781002,
+                "os": "Windows-11-10.0.26200",
+                "oversampling": 7,
+                "package": "jbubble",
+                "packages": {
+                  "diffrax": "0.7.2",
+                  "equinox": "0.13.4",
+                  "jax": "0.8.2",
+                  "jaxlib": "0.8.2",
+                  "jbubble": "0.2.0",
+                  "numpy": "2.3.4",
+                  "scipy": "1.16.3"
+                },
+                "parameters": {
+                  "P_amb": 101325,
+                  "R0": 0.000002,
+                  "c_L": 1500,
+                  "cycle_num": 2,
+                  "freq": 500000,
+                  "gamma": 1.095,
+                  "mu": 0.001,
+                  "pressure": 20000,
+                  "rho_L": 1000
+                },
+                "peak_emission_pa_at_reference": 1.2906818330203942,
+                "precision": "float64",
+                "preset": "lipid",
+                "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+                "python": "3.13.12",
+                "reference_distance_m": 0.001,
+                "rtol": 1e-8,
+                "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+                "runtime": "isolated-native-cpu",
+                "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+                "runtime_ms": 2297.186199997668,
+                "shell_parameters": {
+                  "R_buckle_ratio": 0.98058,
+                  "chi": 0.5,
+                  "kappa_s": 7.5e-9,
+                  "sigma_rupture": 0.072,
+                  "smoothing": 0.01
+                },
+                "solver": "diffrax.Dopri5",
+                "source": "https://github.com/imperial-nsb/jbubble",
+                "source_sampling_hz": 70000000,
+                "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+                "validation": "experimental",
+                "version": "0.2.0"
+              },
+              "source_index": 0
+            },
+            {
+              "settings": {
+                "drive_pa": 15000,
+                "model": "free",
+                "radius_m": 0.0000015,
+                "ringdown_cycles": 3,
+                "rtol": 1e-8,
+                "viscosity_pa_s": 0.001
+              },
+              "simulation": {
+                "adapter_version": "1.0.0",
+                "atol": 1e-10,
+                "compute": "jax-cpu",
+                "converged": true,
+                "devices": [
+                  "TFRT_CPU_0"
+                ],
+                "drive": "Hann-windowed sine; centre equals source emission_s",
+                "emission_999_energy_upper_hz": 2995720.3994293865,
+                "energy_above_acquisition_nyquist_fraction": 0.000001617982722385909,
+                "equation": "Keller-Miksis",
+                "final_emission_relative_peak": 0.00008993767158267961,
+                "id": "jbubble",
+                "license": "MIT",
+                "max_radius_ratio": 1.019602285537973,
+                "max_steps": 100000,
+                "max_wall_mach": 0.00006747274032207699,
+                "min_radius_ratio": 0.9825138698579414,
+                "os": "Windows-11-10.0.26200",
+                "oversampling": 7,
+                "package": "jbubble",
+                "packages": {
+                  "diffrax": "0.7.2",
+                  "equinox": "0.13.4",
+                  "jax": "0.8.2",
+                  "jaxlib": "0.8.2",
+                  "jbubble": "0.2.0",
+                  "numpy": "2.3.4",
+                  "scipy": "1.16.3"
+                },
+                "parameters": {
+                  "P_amb": 101325,
+                  "R0": 0.0000015,
+                  "c_L": 1500,
+                  "cycle_num": 2,
+                  "freq": 500000,
+                  "gamma": 1.4,
+                  "mu": 0.001,
+                  "pressure": 15000,
+                  "rho_L": 1000
+                },
+                "peak_emission_pa_at_reference": 0.9010667210802779,
+                "precision": "float64",
+                "preset": "free",
+                "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+                "python": "3.13.12",
+                "reference_distance_m": 0.001,
+                "rtol": 1e-8,
+                "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+                "runtime": "isolated-native-cpu",
+                "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+                "runtime_ms": 2078.6996000024374,
+                "shell_parameters": {
+                  "sigma": 0.072
+                },
+                "solver": "diffrax.Dopri5",
+                "source": "https://github.com/imperial-nsb/jbubble",
+                "source_sampling_hz": 70000000,
+                "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+                "validation": "experimental",
+                "version": "0.2.0"
+              },
+              "source_index": 1
+            }
+          ],
+          "population_assumption": "Independent bubbles, shared frequency/duration and host medium; no mutual acoustic feedback",
+          "precision": "float64",
+          "preset": "lipid",
+          "propagation": "3D quasi-acoustic monopole, homogeneous retarded time",
+          "python": "3.13.12",
+          "reference_distance_m": 0.001,
+          "rtol": 1e-8,
+          "runner_sha256": "ed8a05f4f61c36cf29c736493ef927959e9d887f2705561fbc9d95fc34b891e9",
+          "runtime": "isolated-native-cpu",
+          "runtime_lock_sha256": "c1710af48f3508db2f6ff674c2959912c3ad9f57c2cc60445d48dd551d3d5f7a",
+          "runtime_ms": 2297.186199997668,
+          "shell_parameters": {
+            "R_buckle_ratio": 0.98058,
+            "chi": 0.5,
+            "kappa_s": 7.5e-9,
+            "sigma_rupture": 0.072,
+            "smoothing": 0.01
+          },
+          "solver": "diffrax.Dopri5",
+          "source": "https://github.com/imperial-nsb/jbubble",
+          "source_sampling_hz": 70000000,
+          "source_time_convention": "trajectory t=0 is drive centre; retarded propagation adds r/c once",
+          "unique_radial_solves": 2,
+          "validation": "experimental",
+          "version": "0.2.0"
+        },
+        "compute": "jax-cpu",
+        "coupling": {
+          "assumptions": "one-way equivalent line source; no acoustic feedback or 3D pressure equivalence",
+          "columns": "source_time_s, then per-source filtered volume flow in source order",
+          "effective_length_m": 0.001,
+          "filter": "causal 80 dB Kaiser FIR, full convolution; group delay retained",
+          "filter_taps": 1005,
+          "injection_equation": "jwave Sources value=rho*c*Q_3D/(2*L*dx); summed density rate=rho*Q_3D/(L*dx^2)",
+          "mode": "volume_flow_2d",
+          "normalization_pa": 20000,
+          "passband_hz": 700000,
+          "q_equation": "Q_3D=4*pi*R^2*Rdot [m^3/s]; Q_2D=Q_3D/L [m^2/s]",
+          "source_delay_s": 0.000007171428571428572,
+          "source_time_range_s": [
+            -0.000002,
+            0.00002434285714285714
+          ],
+          "stopband_hz": 1050000,
+          "waveform_sha256": "af5a161924a3d8bed9a91bbbcccae0d52bbae61cf293f54b2cb1b3955220555b"
+        },
+        "id": "jbubble-jwave",
+        "precision": "float64",
+        "propagation": {
+          "adapter_version": "1.0.0",
+          "attenuation": "none",
+          "boundary": "absorbing PML; no rigid or reflecting boundary",
+          "compute": "jax-cpu",
+          "devices": [
+            "TFRT_CPU_0"
+          ],
+          "doi": "10.1016/j.softx.2023.101338",
+          "id": "jwave",
+          "license": "LGPL-3.0-only",
+          "live_geometry": {
+            "extent_m": [
+              -0.01025,
+              0.011749999999999998,
+              -0.008,
+              0.023
+            ],
+            "observer": "ordered actual solver samples; no effect on numerical state",
+            "pressure_shape": [
+              63,
+              45
+            ],
+            "spatial_filter": "Fourier low-pass at 0.45/stride cycles per original sample, before preview decimation"
+          },
+          "os": "Windows-11-10.0.26200",
+          "package": "jwave",
+          "packages": {
+            "equinox": "0.11.12",
+            "jax": "0.4.38",
+            "jaxdf": "0.2.8",
+            "jaxlib": "0.4.38",
+            "jwave": "0.2.1",
+            "numpy": "2.3.4",
+            "scipy": "1.18.1"
+          },
+          "plan": {
+            "actual_cfl": 0.3,
+            "dimension": "2D x-z; line-source spreading, not a 3D point emitter",
+            "dt_s": 5e-8,
+            "mapping": "bilinear source injection and receiver interpolation; channel order preserved",
+            "origin_xz_m": [
+              -0.01025,
+              -0.008
+            ],
+            "pml_cells": 20,
+            "points_per_shortest_wavelength": 5.714285714285714,
+            "sensor_grid_xz": [
+              [
+                32,
+                32
+              ],
+              [
+                33.2,
+                32
+              ],
+              [
+                34.4,
+                32
+              ],
+              [
+                35.6,
+                32
+              ],
+              [
+                36.8,
+                32
+              ],
+              [
+                38,
+                32
+              ],
+              [
+                39.199999999999996,
+                32
+              ],
+              [
+                40.4,
+                32
+              ],
+              [
+                41.6,
+                32
+              ],
+              [
+                42.800000000000004,
+                32
+              ],
+              [
+                44,
+                32
+              ],
+              [
+                45.2,
+                32
+              ],
+              [
+                46.400000000000006,
+                32
+              ],
+              [
+                47.6,
+                32
+              ],
+              [
+                48.800000000000004,
+                32
+              ],
+              [
+                50,
+                32
+              ]
+            ],
+            "shape": [
+              90,
+              125
+            ],
+            "source_band_upper_hz": 1050000,
+            "source_grid_xz": [
+              [
+                33,
+                80
+              ],
+              [
+                49,
+                88
+              ]
+            ],
+            "spacing_m": 0.00025,
+            "start_s": 0,
+            "steps": 1048,
+            "substeps": 2,
+            "time_convention": "source evaluated at step midpoint; pressure recorded after step at start+(n+1)*dt; resampled to capture_t0+n/fs"
+          },
+          "precision": "float64",
+          "python": "3.12.12",
+          "runner_sha256": "279cfe56c87fdc2adffc497ed0f56ef371d62913a8c21ff066e0daa5ad3df7e6",
+          "runtime": "isolated-native-cpu",
+          "runtime_lock_sha256": "2e3825c31443a39e2474ef3517d3b3ef74cfa7981fce191cbcffc8086dae4bbd",
+          "runtime_ms": 2236.28810000082,
+          "signal_unit": "arbitrary_unit",
+          "source": "https://github.com/ucl-bug/jwave/tree/v0.2.1",
+          "validation": "experimental",
+          "version": "0.2.1"
+        },
+        "rf_unit": "2D model pressure divided by drive pressure"
+      }
+    },
+    "error": null,
+    "methods": {
+      "cf": {
+        "method_id": "pam.cf.weighted_das",
+        "method_version": "1.0.0",
+        "status": "experimental",
+        "quantity": "coherence_weighted_peak_power",
+        "unit": "a.u.^2",
+        "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+        "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+      },
+      "das": {
+        "method_id": "pam.das.passive",
+        "method_version": "1.0.0",
+        "status": "reference-only",
+        "quantity": "peak_coherent_power",
+        "unit": "a.u.^2",
+        "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+      },
+      "tea": {
+        "method_id": "pam.tea.time_exposure",
+        "method_version": "1.0.0",
+        "status": "reference-only",
+        "quantity": "coherent_exposure",
+        "unit": "a.u.^2 s",
+        "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+      }
+    },
+    "warnings": [
+      "Experimental one-way jbubble volume-flow → j-Wave 2D coupling. An explicit out-of-plane equivalent line length defines the 3D-to-2D conversion. FIR bandwidth filtering, homogeneous medium and no acoustic feedback. RF is 2D model pressure divided by drive pressure; no 3D pressure equivalence or calibrated measurement."
+    ]
+  },
+  "benchmark": {
+    "id": "pam.benchmark.map",
+    "version": "1.1.0",
+    "run_id": "be894a37-dfed-4d8d-bdde-f4c5e4c69e34",
+    "created": "2026-11-11T19:46:31.173694+00:00",
+    "settings": {
+      "roi_radius_m": 0.002,
+      "histogram_bins": 100
+    },
+    "methods": {
+      "cf": {
+        "localization_error_m": 0.0031249999999999993,
+        "lateral_fwhm_m": null,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.1737065506688944,
+        "background_peak_db": 0,
+        "contrast_db": 4.0033716241440676,
+        "cnr": 0.7447312016059053,
+        "gcnr": 0.7192460317460319,
+        "normalized_entropy": 0.8743156577902074,
+        "half_power_area_m2": 0.00008140625,
+        "peak_x_m": -0.0011250000000000001,
+        "peak_z_m": 0.009000000000000001,
+        "truth_nearest_peak_errors_m": [
+          0.0031249999999999993,
+          0.005896238207535377
+        ],
+        "background_peak_ratio": 1,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 81,
+        "background_pixels": 1008,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Multiple sources: global-peak error is not source detection recall; FWHM is disabled and truth disks form a union.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "b1cb11b5c77027233041b3984a685ffb7e49ed90e19c82a59e6adce06b7d74f4"
+      },
+      "das": {
+        "localization_error_m": 0.0031249999999999993,
+        "lateral_fwhm_m": null,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.15946056532790615,
+        "background_peak_db": 0,
+        "contrast_db": 3.5359907211774773,
+        "cnr": 0.8579753302896027,
+        "gcnr": 0.7182539682539681,
+        "normalized_entropy": 0.9202706789357752,
+        "half_power_area_m2": 0.00009640625,
+        "peak_x_m": -0.0011250000000000001,
+        "peak_z_m": 0.009000000000000001,
+        "truth_nearest_peak_errors_m": [
+          0.0031249999999999993,
+          0.005896238207535377
+        ],
+        "background_peak_ratio": 1,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 81,
+        "background_pixels": 1008,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Multiple sources: global-peak error is not source detection recall; FWHM is disabled and truth disks form a union.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "00afe1e3b4af2777686d97c56b330069101c971cd1fe8b053c0c4645dfd2632c"
+      },
+      "tea": {
+        "localization_error_m": 0.0008749999999999999,
+        "lateral_fwhm_m": null,
+        "axial_fwhm_m": null,
+        "roi_concentration": 0.16132671000975915,
+        "background_peak_db": -0.026068983392135196,
+        "contrast_db": 3.597157069918903,
+        "cnr": 0.9914002080874618,
+        "gcnr": 0.699404761904762,
+        "normalized_entropy": 0.9298864132599861,
+        "half_power_area_m2": 0.00009921875,
+        "peak_x_m": -0.0011250000000000001,
+        "peak_z_m": 0.012,
+        "truth_nearest_peak_errors_m": [
+          0.0008749999999999999,
+          0.0037102055199139576
+        ],
+        "background_peak_ratio": 0.9940153743872127,
+        "background_exclusion_radius_m": 0.002,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "target_pixels": 81,
+        "background_pixels": 1008,
+        "roi_clipped": false,
+        "half_power_boundary": true,
+        "warnings": [
+          "Half-power component touches the map boundary; its area may be truncated.",
+          "Multiple sources: global-peak error is not source detection recall; FWHM is disabled and truth disks form a union.",
+          "Fewer regional pixels than histogram bins; gCNR is sensitive to undersampling. Inspect bin/radius sensitivity."
+        ],
+        "map_sha256": "09fc2eed8bbc13b557fc43eb038cc92ba8b450ebc57ea1170d55b9f959f5929d"
+      }
+    },
+    "fingerprints": {
+      "raw_rf": "0b1b50bb038e1bde7b5adb399643fb864d483e970e0626dbae24ae7699a9c4b8",
+      "capture": "05c332c3662995b400f6c76c2b19dfd956204d2388579bb22c9b0407663d1e70",
+      "analysis": "fa5dd23ccd87a5e6436ce00b3231d23552587a20cb29e557d495fc0fccdb3479",
+      "engine": "371bb8c0962a08de44ae09bf669445c860b4241dd0efc8b3c9a6844caa2acc18",
+      "method_options": "{\"atp_emission_s\":8e-06,\"atp_mode\":\"emission\",\"atp_plane_z_m\":0.0,\"atp_timing_known\":false,\"atp_window_s\":4e-06,\"cf_exponent\":1.0,\"methods\":[\"cf\",\"das\",\"tea\"],\"rcb_loading\":0.001,\"rcb_radius\":0.1,\"rcb_subarray\":16}",
+      "implementation": "a358915aa0b25d2f7def651a5ea33b59466500b88102f02224a2d726f3bf5b8b"
+    },
+    "context": {
+      "capture": {
+        "schema_version": "1.0",
+        "simulation": {
+          "backend": "jwave",
+          "spacing_m": 0.00025,
+          "cfl": 0.3,
+          "pml_cells": 20,
+          "density_kg_m3": 1000
+        },
+        "bubble": {
+          "model": "lipid",
+          "radius_m": 0.000002,
+          "drive_pa": 20000,
+          "viscosity_pa_s": 0.001,
+          "ringdown_cycles": 4,
+          "rtol": 1e-8
+        },
+        "coupling": {
+          "mode": "volume_flow_2d",
+          "effective_length_m": 0.001,
+          "passband_hz": 700000
+        },
+        "sound_speed_m_s": 1500,
+        "channels": 16,
+        "pitch_m": 0.0003,
+        "sampling_hz": 10000000,
+        "samples": 512,
+        "capture_t0_s": 0,
+        "frequency_hz": 500000,
+        "duration_s": 0.000004,
+        "emission_kind": "pulse",
+        "bandpass_hz": null,
+        "spreading": false,
+        "snr_db": null,
+        "seed": 42,
+        "sources": [
+          {
+            "x_m": -0.002,
+            "z_m": 0.012,
+            "emission_s": 0.000008,
+            "amplitude": 1
+          },
+          {
+            "x_m": 0.002,
+            "z_m": 0.014,
+            "emission_s": 0.000008,
+            "amplitude": 1,
+            "bubble": {
+              "model": "free",
+              "radius_m": 0.0000015,
+              "drive_pa": 15000,
+              "viscosity_pa_s": 0.001,
+              "ringdown_cycles": 3,
+              "rtol": 1e-8
+            }
+          }
+        ]
+      },
+      "analysis": {
+        "active_channels": null,
+        "gate_end_s": 0.000036,
+        "gate_start_s": 0.000004,
+        "gate_stride": 1,
+        "grid_n": 33,
+        "grid_x_max_m": 0.012,
+        "grid_x_min_m": -0.008,
+        "grid_z_max_m": 0.02,
+        "grid_z_min_m": 0.004,
+        "processing": null
+      },
+      "method_options": {
+        "atp_emission_s": 0.000008,
+        "atp_mode": "emission",
+        "atp_plane_z_m": 0,
+        "atp_timing_known": false,
+        "atp_window_s": 0.000004,
+        "cf_exponent": 1,
+        "methods": [
+          "cf",
+          "das",
+          "tea"
+        ],
+        "rcb_loading": 0.001,
+        "rcb_radius": 0.1,
+        "rcb_subarray": 16
+      },
+      "implementation": {
+        "methods": {
+          "cf": {
+            "method_id": "pam.cf.weighted_das",
+            "method_version": "1.0.0",
+            "status": "experimental",
+            "quantity": "coherence_weighted_peak_power",
+            "unit": "a.u.^2",
+            "definition": "max_u [CF(u)^p mean_m y_m(u)]^2; CF=|sum y|^2/(M sum |y|^2)",
+            "reference": "Mallart and Fink (1994), DOI 10.1121/1.410562"
+          },
+          "das": {
+            "method_id": "pam.das.passive",
+            "method_version": "1.0.0",
+            "status": "reference-only",
+            "quantity": "peak_coherent_power",
+            "unit": "a.u.^2",
+            "definition": "max_u (mean_m s_m(u + distance_m/c))^2"
+          },
+          "tea": {
+            "method_id": "pam.tea.time_exposure",
+            "method_version": "1.0.0",
+            "status": "reference-only",
+            "quantity": "coherent_exposure",
+            "unit": "a.u.^2 s",
+            "definition": "integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy subtraction"
+          }
+        },
+        "packages": {
+          "fastapi": "0.162.4",
+          "h5py": "3.15.1",
+          "matplotlib": "3.10.7",
+          "numpy": "2.3.4",
+          "pydantic": "2.12.3",
+          "pydicom": "3.0.2",
+          "python-gdcm": "3.2.6",
+          "scipy": "1.16.3"
+        },
+        "engine_version": "0.10.0"
+      }
+    },
+    "definitions": {
+      "localization_error_m": "Global map peak to nearest configured source; not per-source detection recall. Lower is better.",
+      "lateral_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+      "axial_fwhm_m": "Half-power width through global peak, interpolated; single source only, unavailable for boundary-truncated lobes.",
+      "roi_concentration": "Integral of linear map inside the union of truth disks / integral over the ROI grid, using trapezoidal spatial weights. Map concentration, not physical acoustic energy. Higher is better for this target definition.",
+      "background_peak_db": "10 log10(max map outside truth disks / global peak). Lower is better. This is an exclusion-region background measure, not a PSF sidelobe level.",
+      "contrast_db": "10 log10(mean linear target / mean linear background); pixel means, signed contrast. Higher favours bright targets.",
+      "cnr": "abs(mean target - mean background) / sqrt(population variance target + population variance background). Descriptive; dynamic-range sensitive.",
+      "gcnr": "1 - sum(min(target PMF, background PMF)); shared uniform histogram bins on linear map/global peak in [0,1]. Descriptive region separation [0,1], not a clinical detection probability. Finite bins/sample counts can bias this estimator.",
+      "normalized_entropy": "-sum(p log p)/log(number of pixels), p=linear map/sum(map). Lower is more concentrated, which can also indicate a misplaced artefact.",
+      "half_power_area_m2": "Trapezoidal area of the 4-connected >=half-global-peak component containing the peak; boundary contact is flagged. Smaller alone does not establish correct localization."
+    },
+    "reference": "https://doi.org/10.1109/TUFFC.2019.2956855",
+    "runtime_ms": 42.537700006505474,
+    "runtime_scope": "shared selected-method reconstruction wall time; not individual method timing",
+    "rf_bytes": 65536,
+    "map_bytes": 26136,
+    "grid_spacing_m": [
+      0.0006249999999999997,
+      0.0005000000000000004
+    ],
+    "notes": [
+      "Descriptive synthetic-truth evaluation; no universal composite score or clinical validity.",
+      "Regional scores use linear maps and a common truth radius. Display dB/colour settings do not affect them.",
+      "Runtime is shared; storage bytes are not peak RAM. Histogram estimates depend on bins and grid resolution."
+    ]
+  },
+  "results_h5_sha256": "f0ef331c9499290ee10ada0200276c2815336630e9605bb4220a766fa56fe857",
+  "rf_sha256": "0b1b50bb038e1bde7b5adb399643fb864d483e970e0626dbae24ae7699a9c4b8",
+  "references": [
+    "Gyongy, Miklos and Coussios, Constantin-C.. Passive cavitation mapping for localization and tracking of bubble dynamics. 2010. doi:10.1121/1.3467491",
+    "Harris, Charles R. and others. Array programming with NumPy. 2020. doi:10.1038/s41586-020-2649-2",
+    "Virtanen, Pauli and others. SciPy 1.0: fundamental algorithms for scientific computing in Python. 2020. doi:10.1038/s41592-019-0686-2",
+    "Mallart, Rene and Fink, Mathias. Adaptive focusing in scattering media through sound-speed inhomogeneities: The van Cittert Zernike approach and focusing criterion. 1994. doi:10.1121/1.410562",
+    "Li, Jian and Stoica, Petre and Wang, Zhisong. On robust Capon beamforming and diagonal loading. 2003. doi:10.1109/TSP.2003.812831",
+    "Davies, Harry J. and Morse, Sophie V. and Copping, Matthew J. and Sujarittam, Krit and Bourgin, Victor D. and Tang, Meng-Xing and Choi, James J.. Imaging With Therapeutic Acoustic Wavelets: Short Pulses Enable Acoustic Localization When Time of Arrival is Combined With Delay and Sum. 2021. doi:10.1109/TUFFC.2020.3026165",
+    "Stanziola, Antonio and Arridge, Simon R. and Cox, Ben T. and Treeby, Bradley E.. j-Wave: An open-source differentiable wave simulator. 2023. doi:10.1016/j.softx.2023.101338",
+    "Tilbury, Callum Rhys and Mohammed, Shima and MacIntosh-LaRocque, Anthea and Xu, Rui and Moseley, Ben and Choi, James J.. jbubble: differentiable microbubble dynamics in JAX. 2026. https://github.com/imperial-nsb/jbubble",
+    "Marmottant, Philippe and van der Meer, Sander and Emmer, Marcia and Versluis, Michel and de Jong, Nico and Hilgenfeldt, Sascha and Lohse, Detlef. A model for large amplitude oscillations of coated bubbles accounting for buckling and rupture. 2005. doi:10.1121/1.2109427",
+    "Blagosklonova, Evgenia and Dolotova, Daria and Polunina, Natalia and Grigorieva, Elena and Pakhomov, Denis and Krylov, Vladimir and Gavrilov, Andrey. Open dataset of annotated DICOM images of head CTA for intracranial aneurysm detection. doi:10.5281/zenodo.15697196",
+    "Rodriguez-Molares, Rindal, D'Hooge, Masoy, Austeng, Lediju Bell and Torp. Generalized Contrast-to-Noise Ratio (2020). doi:10.1109/TUFFC.2019.2956855. PAM truth-disk use here is descriptive.",
+    "ReportLab: Andy Robinson, Robin Becker, ReportLab team and community. ReportLab Toolkit 5.1.0; BSD license. No remote rendering.",
+    "SciPy bootstrap percentile mean intervals: Virtanen and contributors; scipy.stats.bootstrap. Small-sample coverage is not validated for these PAM scores."
+  ],
+  "credit": "Aisy Fawwaz | MRes Project | Bioengineering | Imperial College London",
+  "limitations": "Synthetic/model research output; reference/experimental methods. Not a clinical calibration or safety assessment.",
+  "video": {
+    "mode": "bubble",
+    "source_index": 1,
+    "fps": 20,
+    "duration_s": 6,
+    "width": 960,
+    "height": 640,
+    "mime": "video/webm;codecs=vp8",
+    "method": "das",
+    "physical_time_range_s": [
+      -0.0000019999999949504854,
+      0.000007999999979801942
+    ],
+    "sha256": "53f9c007db5126721d9ab3bead3808442a3e4e980a1e9b0bac86d55ea28b1a05",
+    "requested_fps": 20,
+    "encoded_frame_count": 120,
+    "encoder": "Chromium WebCodecs VP8",
+    "muxer": "Mediabunny 1.65.2",
+    "notes": "Timestamped VP8 frames encoded with Chromium WebCodecs and Mediabunny 1.65.2, MPL-2.0. Recorded numerical data resampled for slow-motion presentation. Pipeline final PAM appears only after acquisition; ending is held for inspection. No synthetic pressure frames or fragment animation."
+  }
+}

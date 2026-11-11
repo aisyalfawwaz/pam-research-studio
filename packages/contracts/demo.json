@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "sound_speed_m_s": 1500.0,
+  "channels": 64,
+  "pitch_m": 0.0003,
+  "sampling_hz": 20000000.0,
+  "samples": 4096,
+  "capture_t0_s": 0.0,
+  "frequency_hz": 1000000.0,
+  "duration_s": 4e-6,
+  "emission_kind": "pulse",
+  "bandpass_hz": null,
+  "spreading": false,
+  "snr_db": 30.0,
+  "seed": 42,
+  "sources": [
+    {
+      "x_m": 0.0,
+      "z_m": 0.03,
+      "emission_s": 8e-6,
+      "amplitude": 1.0
+    }
+  ],
+  "active_channels": null,
+  "grid_x_min_m": -0.012,
+  "grid_x_max_m": 0.012,
+  "grid_z_min_m": 0.015,
+  "grid_z_max_m": 0.045,
+  "grid_n": 128,
+  "gate_start_s": 4e-6,
+  "gate_end_s": 0.000012,
+  "gate_stride": 4
+}

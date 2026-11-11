@@ -1,0 +1,457 @@
+{
+  "run_id": "446d3a2a-4770-44f3-9ee5-5aa4449e9179",
+  "zip_sha256": "fc70d4edcd6fc19a8e9f49df804c17e4510d28755beb2d67db8c2e756f6a74a9",
+  "environment": {
+    "backend": "numpy-cpu",
+    "config_sha256": "9cbdd977e3c964ab38d9010377d4c37fe458abc22fad945413812521b2add1b0",
+    "cpu": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "engine_source_sha256": "c10689a5313bb214866e5fb80a531af91e483c3a032b5ee477482ccc854618c1",
+    "engine_version": "0.3.0",
+    "frontend_dependencies": {
+      "lucide-react": "0.548.0",
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "zod": "4.6.7"
+    },
+    "git_commit": "uncommitted",
+    "node": "not recorded (CLI)",
+    "os": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "fastapi": "0.162.4",
+      "h5py": "3.15.1",
+      "matplotlib": "3.10.7",
+      "numpy": "2.3.4",
+      "pydantic": "2.12.3",
+      "scipy": "1.16.3"
+    },
+    "precision": "float64",
+    "python": "3.13.12",
+    "reconstruction_options": {
+      "atp_emission_s": 8e-06,
+      "atp_mode": "emission",
+      "atp_plane_z_m": 0.0,
+      "atp_timing_known": true,
+      "atp_window_s": 4e-06,
+      "cf_exponent": 1.0,
+      "methods": [
+        "das",
+        "tea",
+        "cf",
+        "rcb",
+        "atp"
+      ],
+      "rcb_loading": 0.001,
+      "rcb_radius": 0.1,
+      "rcb_subarray": 16
+    },
+    "simulation": {
+      "adapter_version": "1.0.0",
+      "attenuation": "none",
+      "boundary": "absorbing PML; no rigid or reflecting boundary",
+      "compute": "jax-cpu",
+      "devices": [
+        "TFRT_CPU_0"
+      ],
+      "doi": "10.1016/j.softx.2023.101338",
+      "id": "jwave",
+      "license": "LGPL-3.0-only",
+      "os": "Windows-11-10.0.26200",
+      "package": "jwave",
+      "packages": {
+        "equinox": "0.11.12",
+        "jax": "0.4.38",
+        "jaxdf": "0.2.8",
+        "jaxlib": "0.4.38",
+        "jwave": "0.2.1",
+        "numpy": "2.3.4",
+        "scipy": "1.18.1"
+      },
+      "plan": {
+        "actual_cfl": 0.18749999999999997,
+        "dimension": "2D x-z; line-source spreading, not a 3D point emitter",
+        "dt_s": 2.5e-08,
+        "mapping": "bilinear source injection and receiver interpolation; channel order preserved",
+        "origin_xz_m": [
+          -0.016,
+          -0.0064
+        ],
+        "pml_cells": 20,
+        "points_per_shortest_wavelength": 4.3478260869565215,
+        "sensor_grid_xz": [
+          [
+            32.75000000000001,
+            32.0
+          ],
+          [
+            34.25000000000001,
+            32.0
+          ],
+          [
+            35.75000000000001,
+            32.0
+          ],
+          [
+            37.25000000000001,
+            32.0
+          ],
+          [
+            38.75000000000001,
+            32.0
+          ],
+          [
+            40.25000000000001,
+            32.0
+          ],
+          [
+            41.75,
+            32.0
+          ],
+          [
+            43.25000000000001,
+            32.0
+          ],
+          [
+            44.75000000000001,
+            32.0
+          ],
+          [
+            46.25000000000001,
+            32.0
+          ],
+          [
+            47.75000000000001,
+            32.0
+          ],
+          [
+            49.25,
+            32.0
+          ],
+          [
+            50.75,
+            32.0
+          ],
+          [
+            52.25,
+            32.0
+          ],
+          [
+            53.75,
+            32.0
+          ],
+          [
+            55.25,
+            32.0
+          ],
+          [
+            56.75,
+            32.0
+          ],
+          [
+            58.25,
+            32.0
+          ],
+          [
+            59.75,
+            32.0
+          ],
+          [
+            61.25,
+            32.0
+          ],
+          [
+            62.75,
+            32.0
+          ],
+          [
+            64.25,
+            32.0
+          ],
+          [
+            65.75,
+            32.0
+          ],
+          [
+            67.25,
+            32.0
+          ],
+          [
+            68.75,
+            32.0
+          ],
+          [
+            70.25,
+            32.0
+          ],
+          [
+            71.75,
+            32.0
+          ],
+          [
+            73.25,
+            32.0
+          ],
+          [
+            74.75,
+            32.0
+          ],
+          [
+            76.25,
+            32.0
+          ],
+          [
+            77.75,
+            32.0
+          ],
+          [
+            79.25,
+            32.0
+          ],
+          [
+            80.75,
+            32.0
+          ],
+          [
+            82.24999999999999,
+            32.0
+          ],
+          [
+            83.75,
+            32.0
+          ],
+          [
+            85.24999999999999,
+            32.0
+          ],
+          [
+            86.75,
+            32.0
+          ],
+          [
+            88.24999999999999,
+            32.0
+          ],
+          [
+            89.75,
+            32.0
+          ],
+          [
+            91.24999999999999,
+            32.0
+          ],
+          [
+            92.75,
+            32.0
+          ],
+          [
+            94.24999999999999,
+            32.0
+          ],
+          [
+            95.75,
+            32.0
+          ],
+          [
+            97.24999999999999,
+            32.0
+          ],
+          [
+            98.75,
+            32.0
+          ],
+          [
+            100.24999999999999,
+            32.0
+          ],
+          [
+            101.75,
+            32.0
+          ],
+          [
+            103.25,
+            32.0
+          ],
+          [
+            104.75,
+            32.0
+          ],
+          [
+            106.24999999999999,
+            32.0
+          ],
+          [
+            107.75,
+            32.0
+          ],
+          [
+            109.25,
+            32.0
+          ],
+          [
+            110.74999999999999,
+            32.0
+          ],
+          [
+            112.24999999999999,
+            32.0
+          ],
+          [
+            113.74999999999999,
+            32.0
+          ],
+          [
+            115.25,
+            32.0
+          ],
+          [
+            116.74999999999999,
+            32.0
+          ],
+          [
+            118.25,
+            32.0
+          ],
+          [
+            119.74999999999999,
+            32.0
+          ],
+          [
+            121.25,
+            32.0
+          ],
+          [
+            122.74999999999999,
+            32.0
+          ],
+          [
+            124.24999999999999,
+            32.0
+          ],
+          [
+            125.74999999999999,
+            32.0
+          ],
+          [
+            127.25,
+            32.0
+          ]
+        ],
+        "shape": [
+          162,
+          216
+        ],
+        "source_band_upper_hz": 1725000.0,
+        "source_grid_xz": [
+          [
+            80.0,
+            182.0
+          ]
+        ],
+        "spacing_m": 0.0002,
+        "start_s": 0.0,
+        "steps": 8215,
+        "substeps": 2,
+        "time_convention": "source evaluated at step midpoint; pressure recorded after step at start+(n+1)*dt; resampled to capture_t0+n/fs"
+      },
+      "precision": "float64",
+      "python": "3.12.12",
+      "runner_sha256": "57a78f45af6f5d75759c1669912552680122c17b27c69910b6fe819df81dcf7d",
+      "runtime": "isolated-native-cpu",
+      "runtime_lock_sha256": "2e3825c31443a39e2474ef3517d3b3ef74cfa7981fce191cbcffc8086dae4bbd",
+      "runtime_ms": 17780.401500000153,
+      "signal_unit": "arbitrary_unit",
+      "source": "https://github.com/ucl-bug/jwave/tree/v0.2.1",
+      "validation": "experimental",
+      "version": "0.2.1"
+    }
+  },
+  "reconstruction": {
+    "diagnostics": {
+      "active_channels": 64,
+      "gate_actual_s": [
+        4e-06,
+        1.2e-05
+      ],
+      "gate_samples": 41,
+      "method_status": "reference/experimental",
+      "rcb_condition_max": 648429.2515831413,
+      "rcb_constraint_residual_max": 0.10000000000000021,
+      "rcb_loaded_condition_max": 15579.826725868108,
+      "rcb_snapshots": 41,
+      "rcb_subarray": 16
+    },
+    "map_bytes": 655360,
+    "methods": {
+      "atp": {
+        "axial_fwhm_m": 0.006023064333419759,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9081125978530141,
+        "lateral_fwhm_m": 0.0021282071856792454,
+        "localization_error_m": 0.00036671278810063087,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 9.448818897637816e-05,
+        "peak_z_m": 0.030354330708661417,
+        "truth_nearest_peak_errors_m": [
+          0.00036671278810063087
+        ]
+      },
+      "cf": {
+        "axial_fwhm_m": 0.012826020738994658,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9803097696229799,
+        "lateral_fwhm_m": 0.0018486698897045302,
+        "localization_error_m": 0.00015125490324644454,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 9.448818897637816e-05,
+        "peak_z_m": 0.03011811023622047,
+        "truth_nearest_peak_errors_m": [
+          0.00015125490324644454
+        ]
+      },
+      "das": {
+        "axial_fwhm_m": 0.013158035101129475,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9811189485264294,
+        "lateral_fwhm_m": 0.002070362358283666,
+        "localization_error_m": 0.00015125490324644454,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 9.448818897637816e-05,
+        "peak_z_m": 0.03011811023622047,
+        "truth_nearest_peak_errors_m": [
+          0.00015125490324644454
+        ]
+      },
+      "rcb": {
+        "axial_fwhm_m": 0.012071755401576543,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9970832947381439,
+        "lateral_fwhm_m": 0.0013592851016620095,
+        "localization_error_m": 0.000598062467771915,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 9.448818897637816e-05,
+        "peak_z_m": 0.030590551181102363,
+        "truth_nearest_peak_errors_m": [
+          0.000598062467771915
+        ]
+      },
+      "tea": {
+        "axial_fwhm_m": 0.011850440067988851,
+        "background_exclusion_radius_m": 0.002,
+        "background_peak_ratio": 0.9867943951012697,
+        "lateral_fwhm_m": 0.0021283093367668697,
+        "localization_error_m": 0.00036671278810063087,
+        "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+        "peak_x_m": 9.448818897637816e-05,
+        "peak_z_m": 0.030354330708661417,
+        "truth_nearest_peak_errors_m": [
+          0.00036671278810063087
+        ]
+      }
+    },
+    "rf_bytes": 2097152,
+    "runtime_ms": 8781.649299999117,
+    "runtime_scope": "selected reconstruction methods, shared wall time"
+  },
+  "arrival_envelope_max_error_s": 5.0000000000001215e-08,
+  "arrival_envelope_rms_error_s": 2.0752376740552594e-08,
+  "arrival_note": "Numerical RF envelope peak vs homogeneous nominal distance/c; 2D phase/spreading differ from analytic 3D model."
+}

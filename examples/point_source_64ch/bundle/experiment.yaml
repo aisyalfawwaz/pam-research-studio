@@ -1,0 +1,53 @@
+config:
+  active_channels: null
+  bandpass_hz: null
+  capture_t0_s: 0.0
+  channels: 64
+  duration_s: 4.0e-06
+  emission_kind: pulse
+  frequency_hz: 1000000.0
+  gate_end_s: 1.2e-05
+  gate_start_s: 4.0e-06
+  gate_stride: 4
+  grid_n: 128
+  grid_x_max_m: 0.012
+  grid_x_min_m: -0.012
+  grid_z_max_m: 0.045
+  grid_z_min_m: 0.015
+  pitch_m: 0.0003
+  samples: 4096
+  sampling_hz: 20000000.0
+  schema_version: '1.0'
+  seed: 42
+  snr_db: 30.0
+  sound_speed_m_s: 1500.0
+  sources:
+  - amplitude: 1.0
+    emission_s: 8.0e-06
+    x_m: 0.0
+    z_m: 0.03
+  spreading: false
+input_run_id: 5c86cb73-3027-42df-84f4-0b65fd15f4c3
+methods:
+  das:
+    definition: max_u (mean_m s_m(u + distance_m/c))^2
+    method_id: pam.das.passive
+    method_version: 1.0.0
+    quantity: peak_coherent_power
+    status: reference-only
+    unit: a.u.^2
+  tea:
+    definition: integral_gate (mean_m s_m(u + distance_m/c))^2 du; no self-energy
+      subtraction
+    method_id: pam.tea.time_exposure
+    method_version: 1.0.0
+    quantity: coherent_exposure
+    status: reference-only
+    unit: a.u.^2 s
+raw_included: true
+run_id: 97ee1004-a168-45d5-9f25-3a8e4fff258d
+schema_version: '1.0'
+source_kind: synthetic
+warnings:
+- Homogeneous straight-ray scalar model; arbitrary amplitude, no calibrated pressure,
+  scattering or nonlinear propagation.

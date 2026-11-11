@@ -1,0 +1,116 @@
+{
+  "synthetic_only": true,
+  "same_raw_rf": true,
+  "project": "C:\\Users\\aisya\\AppData\\Local\\Temp\\pam-dsp-ct-eW1tSS\\project",
+  "homogeneous_run": "5d848d51-7909-4d44-acf4-6c20a3d3a7d9",
+  "corrected_run": "0147d208-46da-4b71-b767-e7e437273522",
+  "homogeneous_metrics": {
+    "atp": {
+      "axial_fwhm_m": 0.017896009361991982,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 0.9864452122690723,
+      "lateral_fwhm_m": 0.012345292078271543,
+      "localization_error_m": 0.0,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.045,
+      "truth_nearest_peak_errors_m": [
+        0.0
+      ]
+    },
+    "cf": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.011345297429779102,
+      "localization_error_m": 0.0025000000000000022,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.0475,
+      "truth_nearest_peak_errors_m": [
+        0.0025000000000000022
+      ]
+    },
+    "das": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.013171598074669909,
+      "localization_error_m": 0.0025000000000000022,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.0475,
+      "truth_nearest_peak_errors_m": [
+        0.0025000000000000022
+      ]
+    },
+    "tea": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.01305845140276864,
+      "localization_error_m": 0.0025000000000000022,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.0475,
+      "truth_nearest_peak_errors_m": [
+        0.0025000000000000022
+      ]
+    }
+  },
+  "ct_slowness_metrics": {
+    "atp": {
+      "axial_fwhm_m": 0.0183720499049375,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.013310711581287892,
+      "localization_error_m": 0.0025000000000000022,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.0475,
+      "truth_nearest_peak_errors_m": [
+        0.0025000000000000022
+      ]
+    },
+    "cf": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.010345668024076611,
+      "localization_error_m": 0.0037500000000000033,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.041249999999999995,
+      "truth_nearest_peak_errors_m": [
+        0.0037500000000000033
+      ]
+    },
+    "das": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.011682448961694023,
+      "localization_error_m": 0.0037500000000000033,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.041249999999999995,
+      "truth_nearest_peak_errors_m": [
+        0.0037500000000000033
+      ]
+    },
+    "tea": {
+      "axial_fwhm_m": null,
+      "background_exclusion_radius_m": 0.002,
+      "background_peak_ratio": 1.0,
+      "lateral_fwhm_m": 0.013723824654034074,
+      "localization_error_m": 0.0037499999999999964,
+      "metric_note": "Global peak to nearest truth; multi-source FWHM disabled. Broad/boundary-truncated lobes have no FWHM.",
+      "peak_x_m": 0.0,
+      "peak_z_m": 0.048749999999999995,
+      "truth_nearest_peak_errors_m": [
+        0.0037499999999999964
+      ]
+    }
+  },
+  "note": "Same recorded RF; fixed straight rays are approximate. No universal improvement is asserted."
+}
